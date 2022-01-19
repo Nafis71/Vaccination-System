@@ -35,6 +35,7 @@ namespace Vaccination_System
                 login login = new login();
                 login.Show();
                 this.Hide();
+                
 
 
             }
