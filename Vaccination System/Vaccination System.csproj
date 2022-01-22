@@ -96,6 +96,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="child.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="child.Designer.cs">
+      <DependentUpon>child.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +122,9 @@
     <Compile Include="Registration2.Designer.cs">
       <DependentUpon>Registration2.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="child.resx">
+      <DependentUpon>child.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

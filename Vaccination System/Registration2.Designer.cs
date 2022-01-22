@@ -33,8 +33,8 @@
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.close = new FontAwesome.Sharp.IconButton();
             this.registration = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
+            this.Teenager = new FontAwesome.Sharp.IconButton();
+            this.adult = new FontAwesome.Sharp.IconButton();
             this.label2 = new System.Windows.Forms.Label();
             this.back = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
@@ -117,48 +117,49 @@
             this.registration.TabIndex = 7;
             this.registration.Text = "Child";
             this.registration.UseVisualStyleBackColor = false;
+            this.registration.Click += new System.EventHandler(this.registration_Click);
             // 
-            // iconButton2
+            // Teenager
             // 
-            this.iconButton2.BackColor = System.Drawing.Color.MistyRose;
-            this.iconButton2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.iconButton2.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
-            this.iconButton2.FlatAppearance.BorderSize = 0;
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton2.ForeColor = System.Drawing.Color.DarkCyan;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Child;
-            this.iconButton2.IconColor = System.Drawing.Color.Black;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.IconSize = 25;
-            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.Location = new System.Drawing.Point(327, 161);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(151, 35);
-            this.iconButton2.TabIndex = 8;
-            this.iconButton2.Text = "Teenager";
-            this.iconButton2.UseVisualStyleBackColor = false;
+            this.Teenager.BackColor = System.Drawing.Color.MistyRose;
+            this.Teenager.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Teenager.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
+            this.Teenager.FlatAppearance.BorderSize = 0;
+            this.Teenager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Teenager.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Teenager.ForeColor = System.Drawing.Color.DarkCyan;
+            this.Teenager.IconChar = FontAwesome.Sharp.IconChar.Child;
+            this.Teenager.IconColor = System.Drawing.Color.Black;
+            this.Teenager.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Teenager.IconSize = 25;
+            this.Teenager.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Teenager.Location = new System.Drawing.Point(327, 161);
+            this.Teenager.Name = "Teenager";
+            this.Teenager.Size = new System.Drawing.Size(151, 35);
+            this.Teenager.TabIndex = 8;
+            this.Teenager.Text = "Teenager";
+            this.Teenager.UseVisualStyleBackColor = false;
             // 
-            // iconButton3
+            // adult
             // 
-            this.iconButton3.BackColor = System.Drawing.Color.MistyRose;
-            this.iconButton3.Cursor = System.Windows.Forms.Cursors.Default;
-            this.iconButton3.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
-            this.iconButton3.FlatAppearance.BorderSize = 0;
-            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton3.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton3.ForeColor = System.Drawing.Color.Crimson;
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.User;
-            this.iconButton3.IconColor = System.Drawing.Color.Black;
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.IconSize = 25;
-            this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton3.Location = new System.Drawing.Point(327, 218);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Size = new System.Drawing.Size(151, 35);
-            this.iconButton3.TabIndex = 9;
-            this.iconButton3.Text = "Adult";
-            this.iconButton3.UseVisualStyleBackColor = false;
+            this.adult.BackColor = System.Drawing.Color.MistyRose;
+            this.adult.Cursor = System.Windows.Forms.Cursors.Default;
+            this.adult.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
+            this.adult.FlatAppearance.BorderSize = 0;
+            this.adult.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.adult.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adult.ForeColor = System.Drawing.Color.Crimson;
+            this.adult.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.adult.IconColor = System.Drawing.Color.Black;
+            this.adult.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.adult.IconSize = 25;
+            this.adult.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.adult.Location = new System.Drawing.Point(327, 218);
+            this.adult.Name = "adult";
+            this.adult.Size = new System.Drawing.Size(151, 35);
+            this.adult.TabIndex = 9;
+            this.adult.Text = "Adult";
+            this.adult.UseVisualStyleBackColor = false;
             // 
             // label2
             // 
@@ -202,10 +203,11 @@
             this.ClientSize = new System.Drawing.Size(783, 319);
             this.Controls.Add(this.back);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.iconButton3);
-            this.Controls.Add(this.iconButton2);
+            this.Controls.Add(this.adult);
+            this.Controls.Add(this.Teenager);
             this.Controls.Add(this.registration);
             this.Controls.Add(this.panel1);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Registration2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -225,8 +227,8 @@
         private FontAwesome.Sharp.IconButton iconButton1;
         private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconButton registration;
-        private FontAwesome.Sharp.IconButton iconButton2;
-        private FontAwesome.Sharp.IconButton iconButton3;
+        private FontAwesome.Sharp.IconButton Teenager;
+        private FontAwesome.Sharp.IconButton adult;
         private System.Windows.Forms.Label label2;
         private FontAwesome.Sharp.IconButton back;
     }

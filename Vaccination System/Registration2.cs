@@ -36,7 +36,7 @@ namespace Vaccination_System
             login.Show();
         }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        //The extern modifier is used to declare a method that is implemented externally
+        
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         //using System.Runtime.InteropServices;
@@ -50,6 +50,13 @@ namespace Vaccination_System
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
             
+        }
+
+        private void registration_Click(object sender, EventArgs e)
+        {
+            child child = new child();
+            child.Show();
+            this.Hide();
         }
     }
 }
