@@ -107,7 +107,7 @@ namespace Vaccination_System
                         string con = "datasource =127.0.0.1; username =root;password=; database= vaccination_system";
                 MySqlConnection connect = new MySqlConnection(con);
                 string cmd = "insert into registration(name,father_name,mother_name,father_nid,mother_nid,parent_num,birth_certificate_num,gender,indicator) values('" + name.Text + "','" + fname.Text + "','" + mname.Text + "','" + fnid.Text + "','" + mnid.Text + "','" + pnum.Text + "','" + birthnum.Text + "','" + gender + "','"+indicator+"');";
-                string reg = "Select *from registration where father_nid = '" + fnid.Text + "'";
+                string reg = "Select *from registration where father_nid = '" + fnid.Text + "'and indicator ='"+indicator+"'";
                 MySqlCommand command = new MySqlCommand(cmd, connect);
                 MySqlCommand command2 = new MySqlCommand(reg, connect);
                

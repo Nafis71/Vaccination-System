@@ -64,10 +64,31 @@ namespace Vaccination_System
 
         private void register_Click(object sender, EventArgs e)
         {
-            if (name.Text == String.Empty && fname.Text == String.Empty && mname.Text == String.Empty && fnid.Text == String.Empty && mnid.Text == String.Empty && pnum.Text == String.Empty)
+            if (name.Text ==String.Empty)
             {
-                MessageBox.Show("Please fill out all Box", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please fill up name field","Registration Failed",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
+            else if (fname.Text == String.Empty)
+            {
+                MessageBox.Show("Please fill up Father's name field", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (mname.Text == String.Empty)
+            {
+                MessageBox.Show("Please fill up Mother's name field", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (fnid.Text == String.Empty)
+            {
+                MessageBox.Show("Please fill up Father's NID field", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (mnid.Text == String.Empty)
+            {
+                MessageBox.Show("Please fill up Mother's NID field", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (pnum.Text == String.Empty)
+            {
+                MessageBox.Show("Please fill up Parent's Number field", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
             else if (radiobuttonmale.Checked == false && radiobuttonfemale.Checked == false)
             {
                 MessageBox.Show("Please Choose the gender of your child", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -89,14 +110,60 @@ namespace Vaccination_System
                 MySqlConnection connect = new MySqlConnection(con);
                 String query = "insert into registration(name,father_name,mother_name,father_nid,mother_nid,parent_num,birth_certificate_num,gender,indicator)values('"+name.Text+"','"+fname.Text+"','"+mname.Text+"','"+fnid.Text+"','"+mnid.Text+"','"+pnum.Text+"','"+birthnum.Text+"','"+gender+"','"+indicator+"');";
                 MySqlCommand command = new MySqlCommand(query, connect);
+                String reg = "Select *from registration where father_nid = '"+fnid.Text+"' and indicator='"+indicator+"'";
+                MySqlCommand command2 = new MySqlCommand(reg,connect);
                 
                 try
                 {
-                    connect.Open();
-                    command.ExecuteNonQuery();
-                    MessageBox.Show("Done!");
-                    connect.Close();
-                    clear();
+                    if (MessageBox.Show("Please make sure you have entered information correctly & Press Yes", "Confirm Registration", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        connect.Open();
+                        command.ExecuteNonQuery();
+                        MySqlDataReader reader = command2.ExecuteReader();
+                        MessageBox.Show("Registration Done Please Collect your registration number", "Registration Successfull", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        child_final final = new child_final();
+                        while(reader.Read())
+                        {
+                            final.regno.Text = reader["reg_no"].ToString();
+                            final.name.Text = reader["name"].ToString();
+                            final.fname.Text = reader["father_name"].ToString();
+                            final.mname.Text = reader["mother_name"].ToString();
+                            final.fnid.Text = reader["father_nid"].ToString();
+                            final.mnid.Text = reader["mother_nid"].ToString();
+                            final.pnum.Text = reader["parent_num"].ToString();
+                            int birthnum = int.Parse(reader["birth_certificate_num"].ToString());
+                            if(birthnum == 0)
+                            {
+                                final.birthnum.Text = "(NO Data)";
+                            }
+                            else
+                            {
+                                final.birthnum.Text = reader["birth_certificate_num"].ToString();
+                                
+                            }
+                            int doze1 = int.Parse(reader["doze_1"].ToString());
+                            if (doze1 == 0)
+                            {
+                                final.doze1.Text = "Incomplete";
+                            }
+                            else
+                            {
+                                final.doze1.Text = "Complete";
+                            }
+                            int doze2 = int.Parse(reader["doze_2"].ToString());
+                            if (doze2 == 0)
+                            {
+                                final.doze2.Text = "Incomplete";
+                            }
+                            else
+                            {
+                                final.doze2.Text = "Complete";
+                            }
+                        }
+                        connect.Close();
+                        clear();
+                        final.ShowDialog();
+                    }
                 }
                 catch (Exception ex)
                 {
