@@ -58,5 +58,12 @@ namespace Vaccination_System
             child.Show();
             this.Hide();
         }
+
+        private void Teenager_Click(object sender, EventArgs e)
+        {
+            teenager teen =new teenager();
+                   teen.Show();
+                      this.Hide();
+                }
     }
 }

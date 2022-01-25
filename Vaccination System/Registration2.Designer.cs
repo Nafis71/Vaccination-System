@@ -99,10 +99,9 @@
             // 
             // registration
             // 
-            this.registration.BackColor = System.Drawing.Color.MistyRose;
+            this.registration.BackColor = System.Drawing.Color.Gainsboro;
             this.registration.Cursor = System.Windows.Forms.Cursors.Default;
-            this.registration.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
-            this.registration.FlatAppearance.BorderSize = 0;
+            this.registration.FlatAppearance.BorderColor = System.Drawing.Color.MediumSeaGreen;
             this.registration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.registration.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.registration.ForeColor = System.Drawing.Color.MediumSeaGreen;
@@ -121,10 +120,9 @@
             // 
             // Teenager
             // 
-            this.Teenager.BackColor = System.Drawing.Color.MistyRose;
+            this.Teenager.BackColor = System.Drawing.Color.Gainsboro;
             this.Teenager.Cursor = System.Windows.Forms.Cursors.Default;
-            this.Teenager.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
-            this.Teenager.FlatAppearance.BorderSize = 0;
+            this.Teenager.FlatAppearance.BorderColor = System.Drawing.Color.DarkCyan;
             this.Teenager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Teenager.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Teenager.ForeColor = System.Drawing.Color.DarkCyan;
@@ -139,13 +137,13 @@
             this.Teenager.TabIndex = 8;
             this.Teenager.Text = "Teenager";
             this.Teenager.UseVisualStyleBackColor = false;
+            this.Teenager.Click += new System.EventHandler(this.Teenager_Click);
             // 
             // adult
             // 
-            this.adult.BackColor = System.Drawing.Color.MistyRose;
+            this.adult.BackColor = System.Drawing.Color.Gainsboro;
             this.adult.Cursor = System.Windows.Forms.Cursors.Default;
             this.adult.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
-            this.adult.FlatAppearance.BorderSize = 0;
             this.adult.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.adult.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.adult.ForeColor = System.Drawing.Color.Crimson;
@@ -176,10 +174,9 @@
             // back
             // 
             this.back.AutoSize = true;
-            this.back.BackColor = System.Drawing.Color.MistyRose;
+            this.back.BackColor = System.Drawing.Color.Gainsboro;
             this.back.Cursor = System.Windows.Forms.Cursors.Default;
-            this.back.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
-            this.back.FlatAppearance.BorderSize = 0;
+            this.back.FlatAppearance.BorderColor = System.Drawing.Color.SlateGray;
             this.back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.back.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.back.IconChar = FontAwesome.Sharp.IconChar.SignInAlt;
@@ -199,7 +196,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.PeachPuff;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(163)))), ((int)(((byte)(164)))));
             this.ClientSize = new System.Drawing.Size(783, 319);
             this.Controls.Add(this.back);
             this.Controls.Add(this.label2);

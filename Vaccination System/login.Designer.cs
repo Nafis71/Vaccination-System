@@ -51,7 +51,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(254, 2);
+            this.label1.Location = new System.Drawing.Point(254, 6);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(332, 29);
             this.label1.TabIndex = 1;
@@ -95,7 +95,7 @@
             // titlebar
             // 
             this.titlebar.AutoSize = true;
-            this.titlebar.BackColor = System.Drawing.Color.PeachPuff;
+            this.titlebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(163)))), ((int)(((byte)(164)))));
             this.titlebar.Controls.Add(this.label1);
             this.titlebar.Controls.Add(this.animate);
             this.titlebar.Controls.Add(this.iconButton1);
@@ -109,11 +109,11 @@
             // 
             // animate
             // 
-            this.animate.BackColor = System.Drawing.Color.Salmon;
+            this.animate.BackColor = System.Drawing.Color.LightGray;
             this.animate.Controls.Add(this.label2);
-            this.animate.Location = new System.Drawing.Point(3, 35);
+            this.animate.Location = new System.Drawing.Point(3, 38);
             this.animate.Name = "animate";
-            this.animate.Size = new System.Drawing.Size(11, 48);
+            this.animate.Size = new System.Drawing.Size(11, 44);
             this.animate.TabIndex = 11;
             this.animate.Paint += new System.Windows.Forms.PaintEventHandler(this.animate_Paint);
             // 
@@ -123,18 +123,18 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(123, 13);
+            this.label2.Location = new System.Drawing.Point(135, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(541, 29);
+            this.label2.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.label2.Size = new System.Drawing.Size(541, 34);
             this.label2.TabIndex = 10;
             this.label2.Text = "Please wear mask and maintain physical distance\r\n";
             // 
             // registration
             // 
-            this.registration.BackColor = System.Drawing.Color.MistyRose;
+            this.registration.BackColor = System.Drawing.Color.Gainsboro;
             this.registration.Cursor = System.Windows.Forms.Cursors.Default;
-            this.registration.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
-            this.registration.FlatAppearance.BorderSize = 0;
+            this.registration.FlatAppearance.BorderColor = System.Drawing.Color.DarkSalmon;
             this.registration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.registration.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.registration.IconChar = FontAwesome.Sharp.IconChar.Edit;
@@ -153,10 +153,9 @@
             // regcard
             // 
             this.regcard.AutoSize = true;
-            this.regcard.BackColor = System.Drawing.Color.MistyRose;
+            this.regcard.BackColor = System.Drawing.Color.Gainsboro;
             this.regcard.Cursor = System.Windows.Forms.Cursors.Default;
-            this.regcard.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
-            this.regcard.FlatAppearance.BorderSize = 0;
+            this.regcard.FlatAppearance.BorderColor = System.Drawing.Color.MediumAquamarine;
             this.regcard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.regcard.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.regcard.IconChar = FontAwesome.Sharp.IconChar.AddressCard;
@@ -174,10 +173,9 @@
             // login1
             // 
             this.login1.AutoSize = true;
-            this.login1.BackColor = System.Drawing.Color.MistyRose;
+            this.login1.BackColor = System.Drawing.Color.Gainsboro;
             this.login1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.login1.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
-            this.login1.FlatAppearance.BorderSize = 0;
+            this.login1.FlatAppearance.BorderColor = System.Drawing.Color.SkyBlue;
             this.login1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.login1.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.login1.IconChar = FontAwesome.Sharp.IconChar.SignInAlt;
@@ -194,23 +192,22 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.PeachPuff;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(163)))), ((int)(((byte)(164)))));
             this.panel1.Controls.Add(this.certificate);
             this.panel1.Controls.Add(this.registration);
             this.panel1.Controls.Add(this.login1);
             this.panel1.Controls.Add(this.regcard);
-            this.panel1.Location = new System.Drawing.Point(0, 80);
+            this.panel1.Location = new System.Drawing.Point(0, 88);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(799, 267);
+            this.panel1.Size = new System.Drawing.Size(799, 259);
             this.panel1.TabIndex = 10;
             // 
             // certificate
             // 
             this.certificate.AutoSize = true;
-            this.certificate.BackColor = System.Drawing.Color.MistyRose;
+            this.certificate.BackColor = System.Drawing.Color.Gainsboro;
             this.certificate.Cursor = System.Windows.Forms.Cursors.Default;
-            this.certificate.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
-            this.certificate.FlatAppearance.BorderSize = 0;
+            this.certificate.FlatAppearance.BorderColor = System.Drawing.Color.MediumAquamarine;
             this.certificate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.certificate.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.certificate.IconChar = FontAwesome.Sharp.IconChar.AddressCard;

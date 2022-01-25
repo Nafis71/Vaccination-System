@@ -108,6 +108,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="child_final.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="child_final.Designer.cs">
+      <DependentUpon>child_final.cs</DependentUpon>
+    </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,11 +128,20 @@
     <Compile Include="Registration2.Designer.cs">
       <DependentUpon>Registration2.cs</DependentUpon>
     </Compile>
+    <Compile Include="teenager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="teenager.Designer.cs">
+      <DependentUpon>teenager.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="child.resx">
       <DependentUpon>child.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="child_final.resx">
+      <DependentUpon>child_final.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
@@ -142,6 +157,9 @@
     </Compile>
     <EmbeddedResource Include="Registration2.resx">
       <DependentUpon>Registration2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="teenager.resx">
+      <DependentUpon>teenager.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
