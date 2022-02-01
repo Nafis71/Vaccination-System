@@ -41,8 +41,8 @@ namespace Vaccination_System
 
         private void back_Click(object sender, EventArgs e)
         {
-            Registration2 reg = new Registration2();
-            reg.Show();
+            child_option option = new child_option();
+            option.Show();
             this.Hide();
         }
         private void clear()

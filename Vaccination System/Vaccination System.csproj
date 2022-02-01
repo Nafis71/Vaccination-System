@@ -114,6 +114,24 @@
     <Compile Include="child_final.Designer.cs">
       <DependentUpon>child_final.cs</DependentUpon>
     </Compile>
+    <Compile Include="child_option.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="child_option.Designer.cs">
+      <DependentUpon>child_option.cs</DependentUpon>
+    </Compile>
+    <Compile Include="update_child2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="update_child2.Designer.cs">
+      <DependentUpon>update_child2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="update_childbirth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="update_childbirth.Designer.cs">
+      <DependentUpon>update_childbirth.cs</DependentUpon>
+    </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +161,9 @@
     <EmbeddedResource Include="child_final.resx">
       <DependentUpon>child_final.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="child_option.resx">
+      <DependentUpon>child_option.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
@@ -160,6 +181,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="teenager.resx">
       <DependentUpon>teenager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="update_child2.resx">
+      <DependentUpon>update_child2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="update_childbirth.resx">
+      <DependentUpon>update_childbirth.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

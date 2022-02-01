@@ -54,7 +54,7 @@ namespace Vaccination_System
 
         private void registration_Click(object sender, EventArgs e)
         {
-            child child = new child();
+            child_option child = new child_option();
             child.Show();
             this.Hide();
         }
