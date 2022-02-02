@@ -57,8 +57,19 @@ namespace Vaccination_System
             radiobuttonfemale.Checked = false;
             radiobuttonmale.Checked = false;
         }
-       
 
+        private void intcheck(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+
+            }
+            else
+            {
+                e.Handled = false;
+            }
+        }
 
         private void register_Click(object sender, EventArgs e)
         {

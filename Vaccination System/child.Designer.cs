@@ -178,6 +178,7 @@
             this.fnid.Name = "fnid";
             this.fnid.Size = new System.Drawing.Size(255, 27);
             this.fnid.TabIndex = 7;
+            this.fnid.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.intcheck);
             // 
             // mnid
             // 
@@ -190,6 +191,7 @@
             this.mnid.Name = "mnid";
             this.mnid.Size = new System.Drawing.Size(255, 27);
             this.mnid.TabIndex = 8;
+            this.mnid.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.intcheck);
             // 
             // label3
             // 
@@ -262,6 +264,7 @@
             this.pnum.Name = "pnum";
             this.pnum.Size = new System.Drawing.Size(255, 27);
             this.pnum.TabIndex = 9;
+            this.pnum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.intcheck);
             // 
             // label8
             // 
@@ -354,6 +357,7 @@
             this.birthnum.Name = "birthnum";
             this.birthnum.Size = new System.Drawing.Size(255, 27);
             this.birthnum.TabIndex = 22;
+            this.birthnum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.intcheck);
             // 
             // label9
             // 

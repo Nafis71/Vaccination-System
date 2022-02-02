@@ -32,7 +32,7 @@ namespace Vaccination_System
             if(loading.Width>=599)
             {
                 timer1.Stop();
-                login login = new login();
+                home login = new home();
                 login.Show();
                 this.Hide();
                 

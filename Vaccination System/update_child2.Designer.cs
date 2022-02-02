@@ -34,6 +34,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.infobox = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.regno = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -50,8 +52,6 @@
             this.mname = new System.Windows.Forms.TextBox();
             this.fname = new System.Windows.Forms.TextBox();
             this.name = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.regno = new System.Windows.Forms.TextBox();
             this.newbnum = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.update = new FontAwesome.Sharp.IconButton();
@@ -164,6 +164,31 @@
             this.infobox.TabIndex = 28;
             this.infobox.TabStop = false;
             this.infobox.Text = "INFO";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(16, 31);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(115, 17);
+            this.label11.TabIndex = 45;
+            this.label11.Text = "Registration No :";
+            // 
+            // regno
+            // 
+            this.regno.BackColor = System.Drawing.Color.Silver;
+            this.regno.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.regno.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.regno.Location = new System.Drawing.Point(160, 29);
+            this.regno.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.regno.Multiline = true;
+            this.regno.Name = "regno";
+            this.regno.ReadOnly = true;
+            this.regno.Size = new System.Drawing.Size(226, 22);
+            this.regno.TabIndex = 44;
             // 
             // label9
             // 
@@ -365,31 +390,6 @@
             this.name.Size = new System.Drawing.Size(226, 22);
             this.name.TabIndex = 28;
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(16, 31);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(115, 17);
-            this.label11.TabIndex = 45;
-            this.label11.Text = "Registration No :";
-            // 
-            // regno
-            // 
-            this.regno.BackColor = System.Drawing.Color.Silver;
-            this.regno.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.regno.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.regno.Location = new System.Drawing.Point(160, 29);
-            this.regno.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.regno.Multiline = true;
-            this.regno.Name = "regno";
-            this.regno.ReadOnly = true;
-            this.regno.Size = new System.Drawing.Size(226, 22);
-            this.regno.TabIndex = 44;
-            // 
             // newbnum
             // 
             this.newbnum.BackColor = System.Drawing.Color.FloralWhite;
@@ -435,6 +435,7 @@
             this.update.TabIndex = 48;
             this.update.Text = "Update";
             this.update.UseVisualStyleBackColor = false;
+            this.update.Click += new System.EventHandler(this.update_Click);
             // 
             // back
             // 
