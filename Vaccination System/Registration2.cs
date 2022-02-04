@@ -31,7 +31,7 @@ namespace Vaccination_System
 
         private void back_Click(object sender, EventArgs e)
         {
-            login login = new login();
+            home login = new home();
             this.Hide();
             login.Show();
         }
@@ -54,14 +54,14 @@ namespace Vaccination_System
 
         private void registration_Click(object sender, EventArgs e)
         {
-            child child = new child();
+            child_option child = new child_option();
             child.Show();
             this.Hide();
         }
 
         private void Teenager_Click(object sender, EventArgs e)
         {
-            teenager teen =new teenager();
+            teenager_option teen =new teenager_option();
                    teen.Show();
                       this.Hide();
                 }

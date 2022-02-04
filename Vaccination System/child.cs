@@ -41,8 +41,8 @@ namespace Vaccination_System
 
         private void back_Click(object sender, EventArgs e)
         {
-            Registration2 reg = new Registration2();
-            reg.Show();
+            child_option option = new child_option();
+            option.Show();
             this.Hide();
         }
         private void clear()
@@ -57,8 +57,19 @@ namespace Vaccination_System
             radiobuttonfemale.Checked = false;
             radiobuttonmale.Checked = false;
         }
-       
 
+        private void intcheck(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+
+            }
+            else
+            {
+                e.Handled = false;
+            }
+        }
 
         private void register_Click(object sender, EventArgs e)
         {

@@ -43,9 +43,9 @@ namespace Vaccination_System
 
         private void back_Click(object sender, EventArgs e)
         {
-            Registration2 reg = new Registration2();
+            teenager_option teen = new teenager_option();
             this.Hide();
-            reg.Show();
+            teen.Show();
             
 
         }
@@ -131,7 +131,7 @@ namespace Vaccination_System
                             final.fnid.Text = reader["father_nid"].ToString();
                             final.mnid.Text = reader["mother_nid"].ToString();
                             final.pnum.Text = reader["parent_num"].ToString();
-                            int birthnum = int.Parse(reader["birth_certificate_num"].ToString());
+                            int birthnum = int.Parse(reader["birth_certificate_num"].ToString()); //32bit long
                             if(birthnum == 0)
                             {
                                 final.birthnum.Text = "NO Data (Must be updated later on)";
@@ -170,6 +170,29 @@ namespace Vaccination_System
                     MessageBox.Show(ex.Message);
                 }
             }
+        }
+
+        private void fnid_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+       
+        private void intcheck(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+
+            }
+            else
+            {
+                e.Handled = false;
+            }
+        }
+
+        private void fnid_TextChanged(object sender, KeyPressEventArgs e)
+        {
+
         }
     }
 }
