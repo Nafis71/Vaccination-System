@@ -96,6 +96,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="adult.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="adult.Designer.cs">
+      <DependentUpon>adult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adult2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="adult2.Designer.cs">
+      <DependentUpon>adult2.cs</DependentUpon>
+    </Compile>
     <Compile Include="child.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +146,12 @@
     <Compile Include="teenager.Designer.cs">
       <DependentUpon>teenager.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="adult.resx">
+      <DependentUpon>adult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adult2.resx">
+      <DependentUpon>adult2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="child.resx">
       <DependentUpon>child.cs</DependentUpon>
     </EmbeddedResource>

@@ -10,25 +10,13 @@ using System.Windows.Forms;
 
 namespace Vaccination_System
 {
-    public partial class child_final : Form
+    public partial class adult : UserControl
     {
-        public child_final()
+        public adult()
         {
             InitializeComponent();
-            
         }
 
-        private void back_Click(object sender, EventArgs e)
-        {
-            
-            this.Hide();
-           
-
-        }
-
-        private void doze2_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

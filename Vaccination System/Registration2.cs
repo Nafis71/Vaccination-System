@@ -65,5 +65,12 @@ namespace Vaccination_System
                    teen.Show();
                       this.Hide();
                 }
+
+        private void Adult_Click(object sender, EventArgs e)
+        {
+            adult adu  = new adult();
+            adult.Show();
+            this.Hide();
+        }
     }
 }

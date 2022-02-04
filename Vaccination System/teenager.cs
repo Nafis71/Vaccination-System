@@ -134,7 +134,7 @@ namespace Vaccination_System
                             int birthnum = int.Parse(reader["birth_certificate_num"].ToString());
                             if(birthnum == 0)
                             {
-                                final.birthnum.Text = "(NO Data)";
+                                final.birthnum.Text = "NO Data (Must be updated later on)";
                             }
                             else
                             {
