@@ -26,7 +26,9 @@ namespace Vaccination_System
 
         private void update_Click(object sender, EventArgs e)
         {
-
+            update_teenagerbirth teen = new update_teenagerbirth();
+            this.Close();
+            teen.Show();
         }
 
         private void back_Click(object sender, EventArgs e)

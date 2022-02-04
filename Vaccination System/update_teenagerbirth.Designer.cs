@@ -37,7 +37,7 @@
             this.regno = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.minimize = new FontAwesome.Sharp.IconButton();
             this.close = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -55,6 +55,7 @@
             this.reg.Size = new System.Drawing.Size(101, 20);
             this.reg.TabIndex = 33;
             this.reg.Text = "Register Here";
+            this.reg.Click += new System.EventHandler(this.reg_Click);
             // 
             // label3
             // 
@@ -88,6 +89,7 @@
             this.back.TabIndex = 31;
             this.back.Text = "Go Back";
             this.back.UseVisualStyleBackColor = false;
+            this.back.Click += new System.EventHandler(this.back_Click);
             // 
             // label2
             // 
@@ -121,6 +123,7 @@
             this.proceed.TabIndex = 29;
             this.proceed.Text = "Proceed";
             this.proceed.UseVisualStyleBackColor = false;
+            this.proceed.Click += new System.EventHandler(this.proceed_Click);
             // 
             // label10
             // 
@@ -149,7 +152,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.iconButton1);
+            this.panel1.Controls.Add(this.minimize);
             this.panel1.Controls.Add(this.close);
             this.panel1.Location = new System.Drawing.Point(0, 1);
             this.panel1.Name = "panel1";
@@ -167,21 +170,22 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Covid-19 Vaccination System";
             // 
-            // iconButton1
+            // minimize
             // 
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.ForeColor = System.Drawing.Color.IndianRed;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
-            this.iconButton1.IconColor = System.Drawing.Color.IndianRed;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 25;
-            this.iconButton1.Location = new System.Drawing.Point(703, 3);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(44, 28);
-            this.iconButton1.TabIndex = 4;
-            this.iconButton1.UseVisualStyleBackColor = true;
+            this.minimize.FlatAppearance.BorderSize = 0;
+            this.minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.minimize.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.minimize.ForeColor = System.Drawing.Color.IndianRed;
+            this.minimize.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
+            this.minimize.IconColor = System.Drawing.Color.IndianRed;
+            this.minimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.minimize.IconSize = 25;
+            this.minimize.Location = new System.Drawing.Point(703, 3);
+            this.minimize.Name = "minimize";
+            this.minimize.Size = new System.Drawing.Size(44, 28);
+            this.minimize.TabIndex = 4;
+            this.minimize.UseVisualStyleBackColor = true;
+            this.minimize.Click += new System.EventHandler(this.minimize_Click);
             // 
             // close
             // 
@@ -198,6 +202,7 @@
             this.close.Size = new System.Drawing.Size(44, 28);
             this.close.TabIndex = 3;
             this.close.UseVisualStyleBackColor = true;
+            this.close.Click += new System.EventHandler(this.close_Click);
             // 
             // update_teenagerbirth
             // 
@@ -236,7 +241,7 @@
         private System.Windows.Forms.TextBox regno;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton minimize;
         private FontAwesome.Sharp.IconButton close;
     }
 }

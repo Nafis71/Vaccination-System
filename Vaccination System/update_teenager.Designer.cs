@@ -1,6 +1,6 @@
 ﻿namespace Vaccination_System
 {
-    partial class update_child2
+    partial class update_teenager
     {
         /// <summary>
         /// Required designer variable.
@@ -28,13 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.toppanel = new System.Windows.Forms.Panel();
-            this.close = new FontAwesome.Sharp.IconButton();
-            this.minimize = new FontAwesome.Sharp.IconButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.infobox = new System.Windows.Forms.GroupBox();
+            this.back = new FontAwesome.Sharp.IconButton();
+            this.update = new FontAwesome.Sharp.IconButton();
+            this.label12 = new System.Windows.Forms.Label();
+            this.newbnum = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.infobox = new System.Windows.Forms.GroupBox();
             this.regno = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -52,87 +51,97 @@
             this.mname = new System.Windows.Forms.TextBox();
             this.fname = new System.Windows.Forms.TextBox();
             this.name = new System.Windows.Forms.TextBox();
-            this.newbnum = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.update = new FontAwesome.Sharp.IconButton();
-            this.back = new FontAwesome.Sharp.IconButton();
+            this.toppanel = new System.Windows.Forms.Panel();
+            this.close = new FontAwesome.Sharp.IconButton();
+            this.minimize = new FontAwesome.Sharp.IconButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.success = new System.Windows.Forms.Label();
-            this.toppanel.SuspendLayout();
             this.infobox.SuspendLayout();
+            this.toppanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // toppanel
+            // back
             // 
-            this.toppanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.toppanel.Controls.Add(this.close);
-            this.toppanel.Controls.Add(this.minimize);
-            this.toppanel.Controls.Add(this.label1);
-            this.toppanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.toppanel.Location = new System.Drawing.Point(0, 0);
-            this.toppanel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.toppanel.Name = "toppanel";
-            this.toppanel.Size = new System.Drawing.Size(929, 39);
-            this.toppanel.TabIndex = 1;
+            this.back.BackColor = System.Drawing.Color.Snow;
+            this.back.Cursor = System.Windows.Forms.Cursors.Default;
+            this.back.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
+            this.back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.back.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.back.ForeColor = System.Drawing.Color.Crimson;
+            this.back.IconChar = FontAwesome.Sharp.IconChar.Backward;
+            this.back.IconColor = System.Drawing.Color.Crimson;
+            this.back.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.back.IconSize = 23;
+            this.back.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.back.Location = new System.Drawing.Point(720, 391);
+            this.back.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.back.Name = "back";
+            this.back.Size = new System.Drawing.Size(138, 45);
+            this.back.TabIndex = 56;
+            this.back.Text = "Go Back";
+            this.back.UseVisualStyleBackColor = false;
+            this.back.Click += new System.EventHandler(this.back_Click);
             // 
-            // close
+            // update
             // 
-            this.close.FlatAppearance.BorderSize = 0;
-            this.close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.close.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.close.ForeColor = System.Drawing.Color.IndianRed;
-            this.close.IconChar = FontAwesome.Sharp.IconChar.Times;
-            this.close.IconColor = System.Drawing.Color.IndianRed;
-            this.close.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.close.IconSize = 25;
-            this.close.Location = new System.Drawing.Point(877, 3);
-            this.close.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.close.Name = "close";
-            this.close.Size = new System.Drawing.Size(51, 32);
-            this.close.TabIndex = 4;
-            this.close.UseVisualStyleBackColor = true;
-            this.close.Click += new System.EventHandler(this.close_Click);
+            this.update.BackColor = System.Drawing.Color.Snow;
+            this.update.Cursor = System.Windows.Forms.Cursors.Default;
+            this.update.FlatAppearance.BorderColor = System.Drawing.Color.YellowGreen;
+            this.update.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MistyRose;
+            this.update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.update.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.update.ForeColor = System.Drawing.Color.ForestGreen;
+            this.update.IconChar = FontAwesome.Sharp.IconChar.Save;
+            this.update.IconColor = System.Drawing.Color.ForestGreen;
+            this.update.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.update.IconSize = 23;
+            this.update.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.update.Location = new System.Drawing.Point(605, 217);
+            this.update.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.update.Name = "update";
+            this.update.Size = new System.Drawing.Size(136, 43);
+            this.update.TabIndex = 55;
+            this.update.Text = "Update";
+            this.update.UseVisualStyleBackColor = false;
+            this.update.Click += new System.EventHandler(this.update_Click);
             // 
-            // minimize
+            // label12
             // 
-            this.minimize.FlatAppearance.BorderSize = 0;
-            this.minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.minimize.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.minimize.ForeColor = System.Drawing.Color.IndianRed;
-            this.minimize.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
-            this.minimize.IconColor = System.Drawing.Color.IndianRed;
-            this.minimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.minimize.IconSize = 25;
-            this.minimize.Location = new System.Drawing.Point(842, 3);
-            this.minimize.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.minimize.Name = "minimize";
-            this.minimize.Size = new System.Drawing.Size(51, 32);
-            this.minimize.TabIndex = 5;
-            this.minimize.UseVisualStyleBackColor = true;
-            this.minimize.Click += new System.EventHandler(this.minimize_Click);
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(486, 165);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(276, 19);
+            this.label12.TabIndex = 54;
+            this.label12.Text = "Please Enter Birth Certificate Number :";
             // 
-            // label1
+            // newbnum
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(320, 8);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(332, 29);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Covid-19 Vaccination System";
+            this.newbnum.BackColor = System.Drawing.Color.FloralWhite;
+            this.newbnum.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.newbnum.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newbnum.Location = new System.Drawing.Point(490, 187);
+            this.newbnum.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.newbnum.Multiline = true;
+            this.newbnum.Name = "newbnum";
+            this.newbnum.Size = new System.Drawing.Size(368, 22);
+            this.newbnum.TabIndex = 53;
+            this.newbnum.TextChanged += new System.EventHandler(this.newbnum_TextChanged);
             // 
-            // label10
+            // label11
             // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(339, 42);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(300, 23);
-            this.label10.TabIndex = 7;
-            this.label10.Text = "Birth Certificate Number Updation";
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(16, 31);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(115, 17);
+            this.label11.TabIndex = 45;
+            this.label11.Text = "Registration No :";
             // 
             // infobox
             // 
@@ -159,24 +168,12 @@
             this.infobox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.infobox.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.infobox.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.infobox.Location = new System.Drawing.Point(12, 68);
+            this.infobox.Location = new System.Drawing.Point(12, 87);
             this.infobox.Name = "infobox";
             this.infobox.Size = new System.Drawing.Size(405, 363);
-            this.infobox.TabIndex = 28;
+            this.infobox.TabIndex = 52;
             this.infobox.TabStop = false;
             this.infobox.Text = "INFO";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(16, 31);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(115, 17);
-            this.label11.TabIndex = 45;
-            this.label11.Text = "Registration No :";
             // 
             // regno
             // 
@@ -283,9 +280,9 @@
             this.label2.Location = new System.Drawing.Point(16, 68);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 17);
+            this.label2.Size = new System.Drawing.Size(53, 17);
             this.label2.TabIndex = 36;
-            this.label2.Text = "Child\'s Name :\r\n";
+            this.label2.Text = "Name :\r\n";
             // 
             // gender
             // 
@@ -391,75 +388,78 @@
             this.name.Size = new System.Drawing.Size(226, 22);
             this.name.TabIndex = 28;
             // 
-            // newbnum
+            // toppanel
             // 
-            this.newbnum.BackColor = System.Drawing.Color.FloralWhite;
-            this.newbnum.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.newbnum.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.newbnum.Location = new System.Drawing.Point(490, 168);
-            this.newbnum.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.newbnum.Multiline = true;
-            this.newbnum.Name = "newbnum";
-            this.newbnum.Size = new System.Drawing.Size(368, 22);
-            this.newbnum.TabIndex = 46;
-            this.newbnum.TextChanged += new System.EventHandler(this.newbnum_TextChanged);
+            this.toppanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.toppanel.Controls.Add(this.close);
+            this.toppanel.Controls.Add(this.minimize);
+            this.toppanel.Controls.Add(this.label1);
+            this.toppanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.toppanel.Location = new System.Drawing.Point(0, 0);
+            this.toppanel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.toppanel.Name = "toppanel";
+            this.toppanel.Size = new System.Drawing.Size(929, 39);
+            this.toppanel.TabIndex = 50;
             // 
-            // label12
+            // close
             // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(486, 146);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(276, 19);
-            this.label12.TabIndex = 47;
-            this.label12.Text = "Please Enter Birth Certificate Number :";
+            this.close.FlatAppearance.BorderSize = 0;
+            this.close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.close.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.close.ForeColor = System.Drawing.Color.IndianRed;
+            this.close.IconChar = FontAwesome.Sharp.IconChar.Times;
+            this.close.IconColor = System.Drawing.Color.IndianRed;
+            this.close.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.close.IconSize = 25;
+            this.close.Location = new System.Drawing.Point(877, 3);
+            this.close.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.close.Name = "close";
+            this.close.Size = new System.Drawing.Size(51, 32);
+            this.close.TabIndex = 4;
+            this.close.UseVisualStyleBackColor = true;
+            this.close.Click += new System.EventHandler(this.close_Click);
             // 
-            // update
+            // minimize
             // 
-            this.update.BackColor = System.Drawing.Color.Snow;
-            this.update.Cursor = System.Windows.Forms.Cursors.Default;
-            this.update.FlatAppearance.BorderColor = System.Drawing.Color.YellowGreen;
-            this.update.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MistyRose;
-            this.update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.update.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.update.ForeColor = System.Drawing.Color.ForestGreen;
-            this.update.IconChar = FontAwesome.Sharp.IconChar.Save;
-            this.update.IconColor = System.Drawing.Color.ForestGreen;
-            this.update.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.update.IconSize = 23;
-            this.update.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.update.Location = new System.Drawing.Point(605, 198);
-            this.update.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.update.Name = "update";
-            this.update.Size = new System.Drawing.Size(136, 43);
-            this.update.TabIndex = 48;
-            this.update.Text = "Update";
-            this.update.UseVisualStyleBackColor = false;
-            this.update.Click += new System.EventHandler(this.update_Click);
+            this.minimize.FlatAppearance.BorderSize = 0;
+            this.minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.minimize.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.minimize.ForeColor = System.Drawing.Color.IndianRed;
+            this.minimize.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
+            this.minimize.IconColor = System.Drawing.Color.IndianRed;
+            this.minimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.minimize.IconSize = 25;
+            this.minimize.Location = new System.Drawing.Point(842, 3);
+            this.minimize.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.minimize.Name = "minimize";
+            this.minimize.Size = new System.Drawing.Size(51, 32);
+            this.minimize.TabIndex = 5;
+            this.minimize.UseVisualStyleBackColor = true;
+            this.minimize.Click += new System.EventHandler(this.minimize_Click);
             // 
-            // back
+            // label1
             // 
-            this.back.BackColor = System.Drawing.Color.Snow;
-            this.back.Cursor = System.Windows.Forms.Cursors.Default;
-            this.back.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
-            this.back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.back.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.back.ForeColor = System.Drawing.Color.Crimson;
-            this.back.IconChar = FontAwesome.Sharp.IconChar.Backward;
-            this.back.IconColor = System.Drawing.Color.Crimson;
-            this.back.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.back.IconSize = 23;
-            this.back.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.back.Location = new System.Drawing.Point(720, 372);
-            this.back.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.back.Name = "back";
-            this.back.Size = new System.Drawing.Size(138, 45);
-            this.back.TabIndex = 49;
-            this.back.Text = "Go Back";
-            this.back.UseVisualStyleBackColor = false;
-            this.back.Click += new System.EventHandler(this.back_Click);
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(320, 8);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(332, 29);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Covid-19 Vaccination System";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(339, 52);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(300, 23);
+            this.label10.TabIndex = 51;
+            this.label10.Text = "Birth Certificate Number Updation";
             // 
             // success
             // 
@@ -467,16 +467,15 @@
             this.success.BackColor = System.Drawing.Color.Transparent;
             this.success.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.success.ForeColor = System.Drawing.Color.ForestGreen;
-            this.success.Location = new System.Drawing.Point(573, 278);
+            this.success.Location = new System.Drawing.Point(564, 301);
             this.success.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.success.Name = "success";
             this.success.Size = new System.Drawing.Size(198, 23);
-            this.success.TabIndex = 50;
+            this.success.TabIndex = 57;
             this.success.Text = "Updated Successfully";
             this.success.Visible = false;
-            this.success.Click += new System.EventHandler(this.success_Click);
             // 
-            // update_child2
+            // update_teenager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -488,17 +487,17 @@
             this.Controls.Add(this.label12);
             this.Controls.Add(this.newbnum);
             this.Controls.Add(this.infobox);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.toppanel);
+            this.Controls.Add(this.label10);
             this.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "update_child2";
+            this.Name = "update_teenager";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "update_child2";
-            this.toppanel.ResumeLayout(false);
-            this.toppanel.PerformLayout();
+            this.Text = "update_teenager";
             this.infobox.ResumeLayout(false);
             this.infobox.PerformLayout();
+            this.toppanel.ResumeLayout(false);
+            this.toppanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -506,12 +505,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel toppanel;
-        private FontAwesome.Sharp.IconButton close;
-        private FontAwesome.Sharp.IconButton minimize;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label10;
+        private FontAwesome.Sharp.IconButton back;
+        private FontAwesome.Sharp.IconButton update;
+        private System.Windows.Forms.Label label12;
+        public System.Windows.Forms.TextBox newbnum;
+        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.GroupBox infobox;
+        public System.Windows.Forms.TextBox regno;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -528,12 +528,11 @@
         public System.Windows.Forms.TextBox mname;
         public System.Windows.Forms.TextBox fname;
         public System.Windows.Forms.TextBox name;
-        private System.Windows.Forms.Label label11;
-        public System.Windows.Forms.TextBox regno;
-        public System.Windows.Forms.TextBox newbnum;
-        private System.Windows.Forms.Label label12;
-        private FontAwesome.Sharp.IconButton update;
-        private FontAwesome.Sharp.IconButton back;
+        private System.Windows.Forms.Panel toppanel;
+        private FontAwesome.Sharp.IconButton close;
+        private FontAwesome.Sharp.IconButton minimize;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label success;
     }
 }

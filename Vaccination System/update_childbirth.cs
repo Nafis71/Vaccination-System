@@ -108,5 +108,10 @@ namespace Vaccination_System
             }
            
         }
+
+        private void regno_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -153,6 +153,12 @@
     <Compile Include="child_option.Designer.cs">
       <DependentUpon>child_option.cs</DependentUpon>
     </Compile>
+    <Compile Include="update_teenager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="update_teenager.Designer.cs">
+      <DependentUpon>update_teenager.cs</DependentUpon>
+    </Compile>
     <Compile Include="update_teenagerbirth.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -235,6 +241,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="update_childbirth.resx">
       <DependentUpon>update_childbirth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="update_teenager.resx">
+      <DependentUpon>update_teenager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="update_teenagerbirth.resx">
       <DependentUpon>update_teenagerbirth.cs</DependentUpon>

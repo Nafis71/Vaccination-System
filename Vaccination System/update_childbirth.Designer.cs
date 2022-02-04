@@ -108,6 +108,7 @@
             this.regno.Name = "regno";
             this.regno.Size = new System.Drawing.Size(271, 23);
             this.regno.TabIndex = 2;
+            this.regno.TextChanged += new System.EventHandler(this.regno_TextChanged);
             // 
             // label10
             // 
