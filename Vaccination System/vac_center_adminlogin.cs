@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Vaccination_System
 {
-    public partial class adult2 : UserControl
+    public partial class vac_center_adminlogin : Form
     {
-        public adult2()
+        public vac_center_adminlogin()
         {
             InitializeComponent();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

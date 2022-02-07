@@ -95,7 +95,7 @@
             // titlebar
             // 
             this.titlebar.AutoSize = true;
-            this.titlebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(163)))), ((int)(((byte)(164)))));
+            this.titlebar.BackColor = System.Drawing.SystemColors.ControlDark;
             this.titlebar.Controls.Add(this.label1);
             this.titlebar.Controls.Add(this.animate);
             this.titlebar.Controls.Add(this.iconButton1);
@@ -189,10 +189,11 @@
             this.login1.TabIndex = 9;
             this.login1.Text = "Login";
             this.login1.UseVisualStyleBackColor = false;
+            this.login1.Click += new System.EventHandler(this.login1_Click);
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(163)))), ((int)(((byte)(164)))));
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlDark;
             this.panel1.Controls.Add(this.certificate);
             this.panel1.Controls.Add(this.registration);
             this.panel1.Controls.Add(this.login1);
@@ -225,10 +226,10 @@
             // timer1
             // 
             this.timer1.Enabled = true;
-            this.timer1.Interval = 19;
+            this.timer1.Interval = 21;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // login
+            // home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -239,7 +240,7 @@
             this.Controls.Add(this.titlebar);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "login";
+            this.Name = "home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "login";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.login_MouseDown);

@@ -130,16 +130,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="adult.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="adult.Designer.cs">
       <DependentUpon>adult.cs</DependentUpon>
-    </Compile>
-    <Compile Include="adult2.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="adult2.Designer.cs">
-      <DependentUpon>adult2.cs</DependentUpon>
     </Compile>
     <Compile Include="child.cs">
       <SubType>Form</SubType>
@@ -164,6 +158,12 @@
     </Compile>
     <Compile Include="child_option.Designer.cs">
       <DependentUpon>child_option.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
     </Compile>
     <Compile Include="update_teenager.cs">
       <SubType>Form</SubType>
@@ -215,11 +215,14 @@
     <Compile Include="teenager.Designer.cs">
       <DependentUpon>teenager.cs</DependentUpon>
     </Compile>
+    <Compile Include="vac_center_adminlogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vac_center_adminlogin.Designer.cs">
+      <DependentUpon>vac_center_adminlogin.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="adult.resx">
       <DependentUpon>adult.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="adult2.resx">
-      <DependentUpon>adult2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="child.resx">
       <DependentUpon>child.cs</DependentUpon>
@@ -235,6 +238,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="home.resx">
       <DependentUpon>home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -271,6 +277,9 @@
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\fontawesome-webfont.woff2" />
     <Content Include="fonts\FontAwesome.otf" />
+    <EmbeddedResource Include="vac_center_adminlogin.resx">
+      <DependentUpon>vac_center_adminlogin.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

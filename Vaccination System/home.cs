@@ -78,8 +78,15 @@ namespace Vaccination_System
         private void registration_Click(object sender, EventArgs e)
         {
             Registration2 reg2 = new Registration2();
+            this.Close();
             reg2.Show();
-            this.Hide();
+        }
+
+        private void login1_Click(object sender, EventArgs e)
+        {
+            login login = new login();
+            this.Close();
+            login.Show();
         }
     }
    

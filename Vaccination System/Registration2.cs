@@ -66,11 +66,14 @@ namespace Vaccination_System
                       this.Hide();
                 }
 
-        private void Adult_Click(object sender, EventArgs e)
+       
+
+        private void adult_Click_1(object sender, EventArgs e)
         {
-            adult adu  = new adult();
-            adult.Show();
-            this.Hide();
+            adult adu = new adult();
+            this.Close();
+            adu.Show();
+            
         }
     }
 }

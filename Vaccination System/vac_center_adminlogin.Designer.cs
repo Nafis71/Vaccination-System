@@ -1,6 +1,6 @@
 ﻿namespace Vaccination_System
 {
-    partial class update_teenagerbirth
+    partial class vac_center_adminlogin
     {
         /// <summary>
         /// Required designer variable.
@@ -28,46 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.reg = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.back = new FontAwesome.Sharp.IconButton();
             this.label2 = new System.Windows.Forms.Label();
-            this.proceed = new FontAwesome.Sharp.IconButton();
+            this.login = new FontAwesome.Sharp.IconButton();
             this.label10 = new System.Windows.Forms.Label();
-            this.regno = new System.Windows.Forms.TextBox();
+            this.id = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.minimize = new FontAwesome.Sharp.IconButton();
             this.close = new FontAwesome.Sharp.IconButton();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pass = new System.Windows.Forms.TextBox();
+            this.eye = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // reg
-            // 
-            this.reg.AutoSize = true;
-            this.reg.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.reg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.reg.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.reg.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reg.Location = new System.Drawing.Point(373, 217);
-            this.reg.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.reg.Name = "reg";
-            this.reg.Size = new System.Drawing.Size(101, 20);
-            this.reg.TabIndex = 33;
-            this.reg.Text = "Register Here";
-            this.reg.Click += new System.EventHandler(this.reg_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(296, 190);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(263, 18);
-            this.label3.TabIndex = 32;
-            this.label3.Text = "Haven\'t registered yet for vaccination?";
             // 
             // back
             // 
@@ -82,82 +56,82 @@
             this.back.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.back.IconSize = 23;
             this.back.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.back.Location = new System.Drawing.Point(22, 264);
+            this.back.Location = new System.Drawing.Point(22, 261);
             this.back.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.back.Name = "back";
             this.back.Size = new System.Drawing.Size(136, 35);
-            this.back.TabIndex = 31;
+            this.back.TabIndex = 39;
             this.back.Text = "Go Back";
             this.back.UseVisualStyleBackColor = false;
-            this.back.Click += new System.EventHandler(this.back_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(275, 53);
+            this.label2.Location = new System.Drawing.Point(262, 48);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(294, 23);
-            this.label2.TabIndex = 30;
-            this.label2.Text = "Birth Certificate Number Updation";
+            this.label2.Size = new System.Drawing.Size(300, 23);
+            this.label2.TabIndex = 38;
+            this.label2.Text = "Vaccine Center Admin Login Panel";
             // 
-            // proceed
+            // login
             // 
-            this.proceed.BackColor = System.Drawing.Color.Snow;
-            this.proceed.Cursor = System.Windows.Forms.Cursors.Default;
-            this.proceed.FlatAppearance.BorderColor = System.Drawing.Color.DarkOrange;
-            this.proceed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.proceed.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.proceed.ForeColor = System.Drawing.Color.DarkOrange;
-            this.proceed.IconChar = FontAwesome.Sharp.IconChar.SignInAlt;
-            this.proceed.IconColor = System.Drawing.Color.Orange;
-            this.proceed.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.proceed.IconSize = 23;
-            this.proceed.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.proceed.Location = new System.Drawing.Point(570, 130);
-            this.proceed.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.proceed.Name = "proceed";
-            this.proceed.Size = new System.Drawing.Size(136, 35);
-            this.proceed.TabIndex = 29;
-            this.proceed.Text = "Proceed";
-            this.proceed.UseVisualStyleBackColor = false;
-            this.proceed.Click += new System.EventHandler(this.proceed_Click);
+            this.login.BackColor = System.Drawing.Color.Snow;
+            this.login.Cursor = System.Windows.Forms.Cursors.Default;
+            this.login.FlatAppearance.BorderColor = System.Drawing.Color.DarkOrange;
+            this.login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.login.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.login.ForeColor = System.Drawing.Color.DarkOrange;
+            this.login.IconChar = FontAwesome.Sharp.IconChar.SignInAlt;
+            this.login.IconColor = System.Drawing.Color.Orange;
+            this.login.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.login.IconSize = 23;
+            this.login.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.login.Location = new System.Drawing.Point(563, 161);
+            this.login.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.login.Name = "login";
+            this.login.Size = new System.Drawing.Size(136, 35);
+            this.login.TabIndex = 37;
+            this.login.Text = "LOGIN";
+            this.login.UseVisualStyleBackColor = false;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(133, 137);
+            this.label10.Font = new System.Drawing.Font("Roboto", 12.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(284, 114);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(131, 23);
-            this.label10.TabIndex = 28;
-            this.label10.Text = "Enter Reg No :";
+            this.label10.Size = new System.Drawing.Size(86, 20);
+            this.label10.TabIndex = 36;
+            this.label10.Text = "Center ID :";
             // 
-            // regno
+            // id
             // 
-            this.regno.BackColor = System.Drawing.Color.Snow;
-            this.regno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.regno.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.regno.Location = new System.Drawing.Point(279, 137);
-            this.regno.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.regno.Multiline = true;
-            this.regno.Name = "regno";
-            this.regno.Size = new System.Drawing.Size(271, 23);
-            this.regno.TabIndex = 27;
+            this.id.BackColor = System.Drawing.Color.Snow;
+            this.id.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.id.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.id.Location = new System.Drawing.Point(288, 137);
+            this.id.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.id.Multiline = true;
+            this.id.Name = "id";
+            this.id.Size = new System.Drawing.Size(249, 23);
+            this.id.TabIndex = 35;
             // 
             // panel1
             // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.minimize);
             this.panel1.Controls.Add(this.close);
-            this.panel1.Location = new System.Drawing.Point(0, 1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(783, 36);
-            this.panel1.TabIndex = 26;
+            this.panel1.TabIndex = 34;
             // 
             // label1
             // 
@@ -185,7 +159,6 @@
             this.minimize.Size = new System.Drawing.Size(44, 28);
             this.minimize.TabIndex = 4;
             this.minimize.UseVisualStyleBackColor = true;
-            this.minimize.Click += new System.EventHandler(this.minimize_Click);
             // 
             // close
             // 
@@ -202,27 +175,67 @@
             this.close.Size = new System.Drawing.Size(44, 28);
             this.close.TabIndex = 3;
             this.close.UseVisualStyleBackColor = true;
-            this.close.Click += new System.EventHandler(this.close_Click);
             // 
-            // update_teenagerbirth
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Roboto", 12.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(284, 168);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(90, 20);
+            this.label3.TabIndex = 40;
+            this.label3.Text = "Password :";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // pass
+            // 
+            this.pass.BackColor = System.Drawing.Color.Snow;
+            this.pass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pass.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pass.Location = new System.Drawing.Point(288, 191);
+            this.pass.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.pass.Multiline = true;
+            this.pass.Name = "pass";
+            this.pass.PasswordChar = '*';
+            this.pass.Size = new System.Drawing.Size(249, 23);
+            this.pass.TabIndex = 41;
+            // 
+            // eye
+            // 
+            this.eye.BackColor = System.Drawing.Color.White;
+            this.eye.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.eye.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.eye.IconChar = FontAwesome.Sharp.IconChar.Eye;
+            this.eye.IconColor = System.Drawing.Color.Black;
+            this.eye.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.eye.IconSize = 25;
+            this.eye.Location = new System.Drawing.Point(498, 191);
+            this.eye.Name = "eye";
+            this.eye.Size = new System.Drawing.Size(39, 23);
+            this.eye.TabIndex = 43;
+            this.eye.UseVisualStyleBackColor = false;
+            // 
+            // vac_center_adminlogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(783, 319);
-            this.Controls.Add(this.reg);
+            this.Controls.Add(this.eye);
+            this.Controls.Add(this.pass);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.back);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.proceed);
+            this.Controls.Add(this.login);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.regno);
+            this.Controls.Add(this.id);
             this.Controls.Add(this.panel1);
-            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "update_teenagerbirth";
+            this.Name = "vac_center_adminlogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form3";
+            this.Text = "vac_center_admin_login";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -232,16 +245,17 @@
 
         #endregion
 
-        private System.Windows.Forms.Label reg;
-        private System.Windows.Forms.Label label3;
         private FontAwesome.Sharp.IconButton back;
         private System.Windows.Forms.Label label2;
-        private FontAwesome.Sharp.IconButton proceed;
+        private FontAwesome.Sharp.IconButton login;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox regno;
+        private System.Windows.Forms.TextBox id;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconButton minimize;
         private FontAwesome.Sharp.IconButton close;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox pass;
+        private FontAwesome.Sharp.IconButton eye;
     }
 }

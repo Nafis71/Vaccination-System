@@ -158,6 +158,7 @@
             this.adult.TabIndex = 9;
             this.adult.Text = "Adult";
             this.adult.UseVisualStyleBackColor = false;
+            this.adult.Click += new System.EventHandler(this.adult_Click_1);
             // 
             // label2
             // 
@@ -196,7 +197,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(163)))), ((int)(((byte)(164)))));
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(783, 319);
             this.Controls.Add(this.back);
             this.Controls.Add(this.label2);
@@ -205,6 +206,7 @@
             this.Controls.Add(this.registration);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Registration2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
