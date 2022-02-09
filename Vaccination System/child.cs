@@ -16,6 +16,7 @@ namespace Vaccination_System
         public child()
         {
             InitializeComponent();
+            fillcombo();
         }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
 
@@ -56,6 +57,27 @@ namespace Vaccination_System
             pnum.Text = String.Empty;
             radiobuttonfemale.Checked = false;
             radiobuttonmale.Checked = false;
+        }
+        private void fillcombo()
+        {
+            string con = "datasource =127.0.0.1; username =root;password=; database= vaccination_system";
+            MySqlConnection connect = new MySqlConnection(con);
+            string query = "select DISTINCT center_name from center natural join vaccine_stock where vaccine_quantity>0";
+            MySqlCommand command = new MySqlCommand(query, connect);
+            try
+            {
+                connect.Open();
+                MySqlDataReader reader = command.ExecuteReader();
+                while(reader.Read())
+                {
+                    center.Items.Add(reader["center_name"].ToString());
+                }
+                connect.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void intcheck(object sender, KeyPressEventArgs e)
@@ -101,9 +123,13 @@ namespace Vaccination_System
             {
                 MessageBox.Show("Please Choose the gender of your child", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            else if (center.Text==String.Empty)
+            {
+                MessageBox.Show("Please Choose a center ", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             else
             {
-
+                
                 string gender;
                 int indicator = 0;
                 if (radiobuttonmale.Checked)
@@ -117,7 +143,7 @@ namespace Vaccination_System
           
                         string con = "datasource =127.0.0.1; username =root;password=; database= vaccination_system";
                 MySqlConnection connect = new MySqlConnection(con);
-                string cmd = "insert into registration(name,father_name,mother_name,father_nid,mother_nid,parent_num,birth_certificate_num,gender,indicator) values('" + name.Text + "','" + fname.Text + "','" + mname.Text + "','" + fnid.Text + "','" + mnid.Text + "','" + pnum.Text + "','" + birthnum.Text + "','" + gender + "','"+indicator+"');";
+                string cmd = "insert into registration(name,father_name,mother_name,father_nid,mother_nid,parent_num,birth_certificate_num,gender,indicator,center_name) values('" + name.Text + "','" + fname.Text + "','" + mname.Text + "','" + fnid.Text + "','" + mnid.Text + "','" + pnum.Text + "','" + birthnum.Text + "','" + gender + "','"+indicator+"','"+center.Text+"');";
                 string reg = "Select *from registration where father_nid = '" + fnid.Text + "'and indicator ='"+indicator+"'";
                 MySqlCommand command = new MySqlCommand(cmd, connect);
                 MySqlCommand command2 = new MySqlCommand(reg, connect);

@@ -54,6 +54,8 @@
             this.back = new FontAwesome.Sharp.IconButton();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.center = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,7 +68,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(947, 60);
+            this.panel1.Size = new System.Drawing.Size(947, 49);
             this.panel1.TabIndex = 0;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.teenager_MouseDown);
             // 
@@ -80,7 +82,7 @@
             this.close.IconColor = System.Drawing.Color.IndianRed;
             this.close.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.close.IconSize = 25;
-            this.close.Location = new System.Drawing.Point(901, 19);
+            this.close.Location = new System.Drawing.Point(902, 9);
             this.close.Name = "close";
             this.close.Size = new System.Drawing.Size(44, 28);
             this.close.TabIndex = 7;
@@ -92,7 +94,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(311, 16);
+            this.label1.Location = new System.Drawing.Point(311, 8);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(332, 29);
             this.label1.TabIndex = 4;
@@ -108,7 +110,7 @@
             this.minimize.IconColor = System.Drawing.Color.IndianRed;
             this.minimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.minimize.IconSize = 25;
-            this.minimize.Location = new System.Drawing.Point(865, 20);
+            this.minimize.Location = new System.Drawing.Point(864, 9);
             this.minimize.Name = "minimize";
             this.minimize.Size = new System.Drawing.Size(44, 28);
             this.minimize.TabIndex = 6;
@@ -119,7 +121,7 @@
             // 
             this.radiobuttonmale.AutoSize = true;
             this.radiobuttonmale.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radiobuttonmale.Location = new System.Drawing.Point(638, 278);
+            this.radiobuttonmale.Location = new System.Drawing.Point(638, 323);
             this.radiobuttonmale.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.radiobuttonmale.Name = "radiobuttonmale";
             this.radiobuttonmale.Size = new System.Drawing.Size(53, 19);
@@ -132,7 +134,7 @@
             // 
             this.radiobuttonfemale.AutoSize = true;
             this.radiobuttonfemale.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radiobuttonfemale.Location = new System.Drawing.Point(699, 278);
+            this.radiobuttonfemale.Location = new System.Drawing.Point(699, 323);
             this.radiobuttonfemale.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.radiobuttonfemale.Name = "radiobuttonfemale";
             this.radiobuttonfemale.Size = new System.Drawing.Size(67, 19);
@@ -230,7 +232,7 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(453, 278);
+            this.label8.Location = new System.Drawing.Point(453, 323);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(62, 17);
@@ -242,7 +244,7 @@
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(329, 72);
+            this.label10.Location = new System.Drawing.Point(329, 61);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(298, 23);
@@ -350,7 +352,7 @@
             this.register.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.register.IconSize = 23;
             this.register.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.register.Location = new System.Drawing.Point(491, 374);
+            this.register.Location = new System.Drawing.Point(492, 394);
             this.register.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.register.Name = "register";
             this.register.Size = new System.Drawing.Size(152, 45);
@@ -372,7 +374,7 @@
             this.back.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.back.IconSize = 23;
             this.back.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.back.Location = new System.Drawing.Point(316, 374);
+            this.back.Location = new System.Drawing.Point(317, 394);
             this.back.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.back.Name = "back";
             this.back.Size = new System.Drawing.Size(152, 45);
@@ -405,12 +407,34 @@
             this.label12.TabIndex = 41;
             this.label12.Text = "You must enter birth certificate number later on\r\n";
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(453, 282);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(118, 17);
+            this.label14.TabIndex = 45;
+            this.label14.Text = "Choose a center :";
+            // 
+            // center
+            // 
+            this.center.FormattingEnabled = true;
+            this.center.Location = new System.Drawing.Point(638, 278);
+            this.center.Name = "center";
+            this.center.Size = new System.Drawing.Size(255, 21);
+            this.center.TabIndex = 46;
+            // 
             // teenager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(947, 468);
+            this.Controls.Add(this.center);
+            this.Controls.Add(this.label14);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.back);
@@ -476,5 +500,7 @@
         private FontAwesome.Sharp.IconButton back;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ComboBox center;
     }
 }

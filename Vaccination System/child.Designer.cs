@@ -54,6 +54,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.center = new System.Windows.Forms.ComboBox();
             this.toppanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -271,7 +273,7 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(476, 283);
+            this.label8.Location = new System.Drawing.Point(476, 327);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(62, 17);
@@ -281,7 +283,7 @@
             // radiobuttonmale
             // 
             this.radiobuttonmale.AutoSize = true;
-            this.radiobuttonmale.Location = new System.Drawing.Point(673, 281);
+            this.radiobuttonmale.Location = new System.Drawing.Point(673, 325);
             this.radiobuttonmale.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.radiobuttonmale.Name = "radiobuttonmale";
             this.radiobuttonmale.Size = new System.Drawing.Size(53, 19);
@@ -293,7 +295,7 @@
             // radiobuttonfemale
             // 
             this.radiobuttonfemale.AutoSize = true;
-            this.radiobuttonfemale.Location = new System.Drawing.Point(734, 281);
+            this.radiobuttonfemale.Location = new System.Drawing.Point(734, 325);
             this.radiobuttonfemale.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.radiobuttonfemale.Name = "radiobuttonfemale";
             this.radiobuttonfemale.Size = new System.Drawing.Size(67, 19);
@@ -315,7 +317,7 @@
             this.register.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.register.IconSize = 23;
             this.register.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.register.Location = new System.Drawing.Point(512, 369);
+            this.register.Location = new System.Drawing.Point(524, 399);
             this.register.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.register.Name = "register";
             this.register.Size = new System.Drawing.Size(152, 45);
@@ -337,7 +339,7 @@
             this.back.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.back.IconSize = 23;
             this.back.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.back.Location = new System.Drawing.Point(326, 369);
+            this.back.Location = new System.Drawing.Point(317, 399);
             this.back.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.back.Name = "back";
             this.back.Size = new System.Drawing.Size(152, 45);
@@ -407,12 +409,34 @@
             this.label12.TabIndex = 42;
             this.label12.Text = "You must enter birth certificate number later on\r\n";
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(476, 287);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(118, 17);
+            this.label13.TabIndex = 43;
+            this.label13.Text = "Choose a center :";
+            // 
+            // center
+            // 
+            this.center.FormattingEnabled = true;
+            this.center.Location = new System.Drawing.Point(673, 281);
+            this.center.Name = "center";
+            this.center.Size = new System.Drawing.Size(255, 23);
+            this.center.TabIndex = 44;
+            // 
             // child
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(986, 468);
+            this.Controls.Add(this.center);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
@@ -479,5 +503,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox center;
     }
 }

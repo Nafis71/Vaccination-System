@@ -17,6 +17,7 @@ namespace Vaccination_System
         public teenager()
         {
             InitializeComponent();
+            fillcombo();
         }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
 
@@ -48,6 +49,27 @@ namespace Vaccination_System
             teen.Show();
             
 
+        }
+        private void fillcombo()
+        {
+            string con = "datasource =127.0.0.1; username =root;password=; database= vaccination_system";
+            MySqlConnection connect = new MySqlConnection(con);
+            string query = "select DISTINCT center_name from center natural join vaccine_stock where vaccine_quantity>0";
+            MySqlCommand command = new MySqlCommand(query, connect);
+            try
+            {
+                connect.Open();
+                MySqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    center.Items.Add(reader["center_name"].ToString());
+                }
+                connect.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         private void clear()
         {
@@ -108,7 +130,7 @@ namespace Vaccination_System
 
                 String con = "datasource = 127.0.0.1; username=root; password=; database=vaccination_system";
                 MySqlConnection connect = new MySqlConnection(con);
-                String query = "insert into registration(name,father_name,mother_name,father_nid,mother_nid,parent_num,birth_certificate_num,gender,indicator)values('"+name.Text+"','"+fname.Text+"','"+mname.Text+"','"+fnid.Text+"','"+mnid.Text+"','"+pnum.Text+"','"+birthnum.Text+"','"+gender+"','"+indicator+"');";
+                String query = "insert into registration(name,father_name,mother_name,father_nid,mother_nid,parent_num,birth_certificate_num,gender,indicator,center_name)values('"+name.Text+"','"+fname.Text+"','"+mname.Text+"','"+fnid.Text+"','"+mnid.Text+"','"+pnum.Text+"','"+birthnum.Text+"','"+gender+"','"+indicator+"','"+center.Text+"');";
                 MySqlCommand command = new MySqlCommand(query, connect);
                 String reg = "Select *from registration where father_nid = '"+fnid.Text+"' and indicator='"+indicator+"'";
                 MySqlCommand command2 = new MySqlCommand(reg,connect);
