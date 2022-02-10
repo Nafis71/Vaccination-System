@@ -136,7 +136,7 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.name);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(168, 88);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(469, 380);
@@ -211,7 +211,7 @@
             this.center.FormattingEnabled = true;
             this.center.Location = new System.Drawing.Point(178, 194);
             this.center.Name = "center";
-            this.center.Size = new System.Drawing.Size(255, 27);
+            this.center.Size = new System.Drawing.Size(255, 31);
             this.center.TabIndex = 65;
             // 
             // label7
