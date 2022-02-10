@@ -10,21 +10,21 @@ using System.Windows.Forms;
 
 namespace Vaccination_System
 {
-    public partial class adult : Form
+    public partial class adult_nid : Form
     {
-        public adult()
+        public adult_nid()
         {
             InitializeComponent();
         }
 
-        private void minimize_Click(object sender, EventArgs e)
+        private void label10_Click(object sender, EventArgs e)
         {
-            WindowState = FormWindowState.Minimized;
+
         }
 
-        private void close_Click(object sender, EventArgs e)
+        private void label5_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+
         }
     }
 }

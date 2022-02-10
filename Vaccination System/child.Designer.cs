@@ -423,6 +423,7 @@
             // 
             // center
             // 
+            this.center.BackColor = System.Drawing.Color.SeaShell;
             this.center.FormattingEnabled = true;
             this.center.Location = new System.Drawing.Point(673, 281);
             this.center.Name = "center";

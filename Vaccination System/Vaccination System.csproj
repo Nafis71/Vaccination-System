@@ -132,11 +132,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="adult.cs">
+    <Compile Include="adult_nid.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="adult.Designer.cs">
-      <DependentUpon>adult.cs</DependentUpon>
+    <Compile Include="adult_nid.Designer.cs">
+      <DependentUpon>adult_nid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adult_option.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adult_option.Designer.cs">
+      <DependentUpon>adult_option.cs</DependentUpon>
     </Compile>
     <Compile Include="child.cs">
       <SubType>Form</SubType>
@@ -224,8 +230,11 @@
     <Compile Include="vac_center_adminlogin.Designer.cs">
       <DependentUpon>vac_center_adminlogin.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="adult.resx">
-      <DependentUpon>adult.cs</DependentUpon>
+    <EmbeddedResource Include="adult_nid.resx">
+      <DependentUpon>adult_nid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adult_option.resx">
+      <DependentUpon>adult_option.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="child.resx">
       <DependentUpon>child.cs</DependentUpon>

@@ -126,7 +126,7 @@
             this.Teenager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Teenager.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Teenager.ForeColor = System.Drawing.Color.DarkCyan;
-            this.Teenager.IconChar = FontAwesome.Sharp.IconChar.Child;
+            this.Teenager.IconChar = FontAwesome.Sharp.IconChar.UserClock;
             this.Teenager.IconColor = System.Drawing.Color.Black;
             this.Teenager.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Teenager.IconSize = 25;

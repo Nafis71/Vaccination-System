@@ -70,7 +70,7 @@ namespace Vaccination_System
 
         private void adult_Click_1(object sender, EventArgs e)
         {
-            adult adu = new adult();
+            adult_option adu = new adult_option();
             this.Close();
             adu.Show();
             

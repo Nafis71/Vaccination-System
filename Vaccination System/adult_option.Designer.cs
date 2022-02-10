@@ -1,6 +1,6 @@
 ﻿namespace Vaccination_System
 {
-    partial class adult
+    partial class adult_option
     {
         /// <summary>
         /// Required designer variable.
@@ -32,12 +32,13 @@
             this.close = new FontAwesome.Sharp.IconButton();
             this.minimize = new FontAwesome.Sharp.IconButton();
             this.label4 = new System.Windows.Forms.Label();
-            this.back = new FontAwesome.Sharp.IconButton();
+            this.proceed = new FontAwesome.Sharp.IconButton();
             this.label3 = new System.Windows.Forms.Label();
             this.radiobuttonbirth = new System.Windows.Forms.RadioButton();
             this.radiobuttonnid = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.back = new FontAwesome.Sharp.IconButton();
             this.toppanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -101,26 +102,26 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Covid-19 Vaccination System";
             // 
-            // back
+            // proceed
             // 
-            this.back.BackColor = System.Drawing.Color.Snow;
-            this.back.Cursor = System.Windows.Forms.Cursors.Default;
-            this.back.FlatAppearance.BorderColor = System.Drawing.Color.Cyan;
-            this.back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.back.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.back.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.back.IconChar = FontAwesome.Sharp.IconChar.Forward;
-            this.back.IconColor = System.Drawing.Color.DeepSkyBlue;
-            this.back.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.back.IconSize = 23;
-            this.back.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.back.Location = new System.Drawing.Point(330, 252);
-            this.back.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.back.Name = "back";
-            this.back.Size = new System.Drawing.Size(116, 39);
-            this.back.TabIndex = 51;
-            this.back.Text = "   Proceed";
-            this.back.UseVisualStyleBackColor = false;
+            this.proceed.BackColor = System.Drawing.Color.Snow;
+            this.proceed.Cursor = System.Windows.Forms.Cursors.Default;
+            this.proceed.FlatAppearance.BorderColor = System.Drawing.Color.Cyan;
+            this.proceed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.proceed.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.proceed.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.proceed.IconChar = FontAwesome.Sharp.IconChar.Forward;
+            this.proceed.IconColor = System.Drawing.Color.DeepSkyBlue;
+            this.proceed.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.proceed.IconSize = 23;
+            this.proceed.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.proceed.Location = new System.Drawing.Point(418, 252);
+            this.proceed.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.proceed.Name = "proceed";
+            this.proceed.Size = new System.Drawing.Size(116, 39);
+            this.proceed.TabIndex = 51;
+            this.proceed.Text = "   Proceed";
+            this.proceed.UseVisualStyleBackColor = false;
             // 
             // label3
             // 
@@ -186,21 +187,44 @@
             this.label10.TabIndex = 45;
             this.label10.Text = "Registration for Adult (18 years and above)\r\n";
             // 
-            // adult
+            // back
+            // 
+            this.back.BackColor = System.Drawing.Color.Snow;
+            this.back.Cursor = System.Windows.Forms.Cursors.Default;
+            this.back.FlatAppearance.BorderColor = System.Drawing.Color.Cyan;
+            this.back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.back.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.back.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.back.IconChar = FontAwesome.Sharp.IconChar.Backward;
+            this.back.IconColor = System.Drawing.Color.DeepSkyBlue;
+            this.back.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.back.IconSize = 23;
+            this.back.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.back.Location = new System.Drawing.Point(244, 252);
+            this.back.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.back.Name = "back";
+            this.back.Size = new System.Drawing.Size(116, 39);
+            this.back.TabIndex = 52;
+            this.back.Text = "Back";
+            this.back.UseVisualStyleBackColor = false;
+            this.back.Click += new System.EventHandler(this.back_Click);
+            // 
+            // adult_option
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(783, 319);
-            this.Controls.Add(this.toppanel);
             this.Controls.Add(this.back);
+            this.Controls.Add(this.toppanel);
+            this.Controls.Add(this.proceed);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.radiobuttonbirth);
             this.Controls.Add(this.radiobuttonnid);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label10);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "adult";
+            this.Name = "adult_option";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "adult";
             this.toppanel.ResumeLayout(false);
@@ -216,11 +240,12 @@
         private FontAwesome.Sharp.IconButton close;
         private FontAwesome.Sharp.IconButton minimize;
         private System.Windows.Forms.Label label4;
-        private FontAwesome.Sharp.IconButton back;
+        private FontAwesome.Sharp.IconButton proceed;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.RadioButton radiobuttonbirth;
         private System.Windows.Forms.RadioButton radiobuttonnid;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label10;
+        private FontAwesome.Sharp.IconButton back;
     }
 }
