@@ -28,26 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label10 = new System.Windows.Forms.Label();
             this.close = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
             this.minimize = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.name = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.nid = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.center = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.radiobuttonmale = new System.Windows.Forms.RadioButton();
-            this.radiobuttonfemale = new System.Windows.Forms.RadioButton();
-            this.register = new FontAwesome.Sharp.IconButton();
-            this.phone = new System.Windows.Forms.TextBox();
+            this.progressbar = new System.Windows.Forms.ProgressBar();
             this.label2 = new System.Windows.Forms.Label();
+            this.phone = new System.Windows.Forms.TextBox();
+            this.register = new FontAwesome.Sharp.IconButton();
+            this.radiobuttonfemale = new System.Windows.Forms.RadioButton();
+            this.radiobuttonmale = new System.Windows.Forms.RadioButton();
+            this.label7 = new System.Windows.Forms.Label();
+            this.center = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.nid = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.name = new System.Windows.Forms.TextBox();
             this.back = new FontAwesome.Sharp.IconButton();
             this.goback = new FontAwesome.Sharp.IconButton();
+            this.timer = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -80,6 +83,7 @@
             this.close.Size = new System.Drawing.Size(44, 28);
             this.close.TabIndex = 7;
             this.close.UseVisualStyleBackColor = true;
+            this.close.Click += new System.EventHandler(this.close_Click);
             // 
             // label1
             // 
@@ -107,6 +111,7 @@
             this.minimize.Size = new System.Drawing.Size(44, 28);
             this.minimize.TabIndex = 6;
             this.minimize.UseVisualStyleBackColor = true;
+            this.minimize.Click += new System.EventHandler(this.minimize_Click);
             // 
             // panel1
             // 
@@ -123,6 +128,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.progressbar);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.phone);
             this.groupBox1.Controls.Add(this.register);
@@ -144,114 +150,36 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registration";
             // 
-            // name
+            // progressbar
             // 
-            this.name.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.name.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.name.Location = new System.Drawing.Point(178, 43);
-            this.name.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.name.Multiline = true;
-            this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(255, 27);
-            this.name.TabIndex = 60;
+            this.progressbar.Location = new System.Drawing.Point(111, 282);
+            this.progressbar.Name = "progressbar";
+            this.progressbar.Size = new System.Drawing.Size(299, 23);
+            this.progressbar.TabIndex = 71;
             // 
-            // label4
+            // label2
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Roboto", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(14, 43);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 18);
-            this.label4.TabIndex = 61;
-            this.label4.Text = "Name :\r\n";
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Roboto", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(15, 146);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(109, 18);
+            this.label2.TabIndex = 70;
+            this.label2.Text = "Phone Number:\r\n";
             // 
-            // nid
+            // phone
             // 
-            this.nid.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.nid.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.nid.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nid.Location = new System.Drawing.Point(178, 91);
-            this.nid.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.nid.Multiline = true;
-            this.nid.Name = "nid";
-            this.nid.Size = new System.Drawing.Size(255, 27);
-            this.nid.TabIndex = 62;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Roboto", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(14, 93);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 18);
-            this.label5.TabIndex = 63;
-            this.label5.Text = "NID :\r\n";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Roboto", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(15, 198);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(124, 18);
-            this.label6.TabIndex = 64;
-            this.label6.Text = "Choose a center :";
-            // 
-            // center
-            // 
-            this.center.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.center.FormattingEnabled = true;
-            this.center.Location = new System.Drawing.Point(178, 194);
-            this.center.Name = "center";
-            this.center.Size = new System.Drawing.Size(255, 31);
-            this.center.TabIndex = 65;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Roboto", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(15, 260);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(63, 18);
-            this.label7.TabIndex = 66;
-            this.label7.Text = "Gender :";
-            // 
-            // radiobuttonmale
-            // 
-            this.radiobuttonmale.AutoSize = true;
-            this.radiobuttonmale.BackColor = System.Drawing.Color.Transparent;
-            this.radiobuttonmale.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radiobuttonmale.Location = new System.Drawing.Point(178, 255);
-            this.radiobuttonmale.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.radiobuttonmale.Name = "radiobuttonmale";
-            this.radiobuttonmale.Size = new System.Drawing.Size(62, 23);
-            this.radiobuttonmale.TabIndex = 67;
-            this.radiobuttonmale.TabStop = true;
-            this.radiobuttonmale.Text = "Male";
-            this.radiobuttonmale.UseVisualStyleBackColor = false;
-            // 
-            // radiobuttonfemale
-            // 
-            this.radiobuttonfemale.AutoSize = true;
-            this.radiobuttonfemale.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radiobuttonfemale.Location = new System.Drawing.Point(261, 255);
-            this.radiobuttonfemale.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.radiobuttonfemale.Name = "radiobuttonfemale";
-            this.radiobuttonfemale.Size = new System.Drawing.Size(79, 23);
-            this.radiobuttonfemale.TabIndex = 68;
-            this.radiobuttonfemale.TabStop = true;
-            this.radiobuttonfemale.Text = "Female";
-            this.radiobuttonfemale.UseVisualStyleBackColor = true;
+            this.phone.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.phone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.phone.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phone.Location = new System.Drawing.Point(178, 144);
+            this.phone.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.phone.Multiline = true;
+            this.phone.Name = "phone";
+            this.phone.Size = new System.Drawing.Size(255, 27);
+            this.phone.TabIndex = 69;
             // 
             // register
             // 
@@ -273,30 +201,117 @@
             this.register.TabIndex = 60;
             this.register.Text = "Register";
             this.register.UseVisualStyleBackColor = false;
+            this.register.Click += new System.EventHandler(this.register_Click);
             // 
-            // phone
+            // radiobuttonfemale
             // 
-            this.phone.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.phone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.phone.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.phone.Location = new System.Drawing.Point(178, 144);
-            this.phone.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.phone.Multiline = true;
-            this.phone.Name = "phone";
-            this.phone.Size = new System.Drawing.Size(255, 27);
-            this.phone.TabIndex = 69;
+            this.radiobuttonfemale.AutoSize = true;
+            this.radiobuttonfemale.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radiobuttonfemale.Location = new System.Drawing.Point(261, 244);
+            this.radiobuttonfemale.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.radiobuttonfemale.Name = "radiobuttonfemale";
+            this.radiobuttonfemale.Size = new System.Drawing.Size(79, 23);
+            this.radiobuttonfemale.TabIndex = 68;
+            this.radiobuttonfemale.TabStop = true;
+            this.radiobuttonfemale.Text = "Female";
+            this.radiobuttonfemale.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // radiobuttonmale
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Roboto", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(15, 146);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(109, 18);
-            this.label2.TabIndex = 70;
-            this.label2.Text = "Phone Number:\r\n";
+            this.radiobuttonmale.AutoSize = true;
+            this.radiobuttonmale.BackColor = System.Drawing.Color.Transparent;
+            this.radiobuttonmale.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radiobuttonmale.Location = new System.Drawing.Point(178, 244);
+            this.radiobuttonmale.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.radiobuttonmale.Name = "radiobuttonmale";
+            this.radiobuttonmale.Size = new System.Drawing.Size(62, 23);
+            this.radiobuttonmale.TabIndex = 67;
+            this.radiobuttonmale.TabStop = true;
+            this.radiobuttonmale.Text = "Male";
+            this.radiobuttonmale.UseVisualStyleBackColor = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Roboto", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(15, 247);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(63, 18);
+            this.label7.TabIndex = 66;
+            this.label7.Text = "Gender :";
+            // 
+            // center
+            // 
+            this.center.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.center.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.center.FormattingEnabled = true;
+            this.center.Location = new System.Drawing.Point(178, 194);
+            this.center.Name = "center";
+            this.center.Size = new System.Drawing.Size(255, 26);
+            this.center.TabIndex = 65;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Roboto", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(15, 198);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(124, 18);
+            this.label6.TabIndex = 64;
+            this.label6.Text = "Choose a center :";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Roboto", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(14, 93);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(40, 18);
+            this.label5.TabIndex = 63;
+            this.label5.Text = "NID :\r\n";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // nid
+            // 
+            this.nid.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.nid.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nid.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nid.Location = new System.Drawing.Point(178, 91);
+            this.nid.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.nid.Multiline = true;
+            this.nid.Name = "nid";
+            this.nid.Size = new System.Drawing.Size(255, 27);
+            this.nid.TabIndex = 62;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Roboto", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(14, 43);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(55, 18);
+            this.label4.TabIndex = 61;
+            this.label4.Text = "Name :\r\n";
+            // 
+            // name
+            // 
+            this.name.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.name.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.name.Location = new System.Drawing.Point(178, 43);
+            this.name.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.name.Multiline = true;
+            this.name.Name = "name";
+            this.name.Size = new System.Drawing.Size(255, 27);
+            this.name.TabIndex = 60;
             // 
             // back
             // 
@@ -324,6 +339,8 @@
             this.goback.Cursor = System.Windows.Forms.Cursors.Default;
             this.goback.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
             this.goback.FlatAppearance.BorderSize = 0;
+            this.goback.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.goback.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.goback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.goback.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.goback.ForeColor = System.Drawing.Color.Crimson;
@@ -337,12 +354,18 @@
             this.goback.Size = new System.Drawing.Size(57, 45);
             this.goback.TabIndex = 60;
             this.goback.UseVisualStyleBackColor = false;
+            this.goback.Click += new System.EventHandler(this.goback_Click);
+            // 
+            // timer
+            // 
+            this.timer.Interval = 30;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
             // adult_nid
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(809, 480);
             this.Controls.Add(this.goback);
             this.Controls.Add(this.back);
@@ -383,5 +406,7 @@
         private FontAwesome.Sharp.IconButton register;
         private FontAwesome.Sharp.IconButton back;
         private FontAwesome.Sharp.IconButton goback;
+        private System.Windows.Forms.ProgressBar progressbar;
+        private System.Windows.Forms.Timer timer;
     }
 }

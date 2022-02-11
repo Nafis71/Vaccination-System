@@ -17,6 +17,8 @@ namespace Vaccination_System
         {
             InitializeComponent();
             fillcombo();
+            progressbar.Visible = false;
+           
         }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
 
@@ -48,13 +50,14 @@ namespace Vaccination_System
         }
         private void clear()
         {
-            name.Text = String.Empty;
+            mnid.Text = String.Empty;
             fname.Text = String.Empty;
             fnid.Text = String.Empty;
-            mnid.Text = String.Empty;
+            name.Text = String.Empty;
             mname.Text = String.Empty;
             birthnum.Text = String.Empty;
             pnum.Text = String.Empty;
+            center.Text = String.Empty;
             radiobuttonfemale.Checked = false;
             radiobuttonmale.Checked = false;
         }
@@ -93,13 +96,87 @@ namespace Vaccination_System
             }
         }
 
-        private void register_Click(object sender, EventArgs e)
+        
+
+        private void progressbar_Click(object sender, EventArgs e)
         {
-            if (name.Text == String.Empty)
+
+        }
+
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            progressbar.Increment(1);
+            if (progressbar.Value == 100)
+            {
+                timer.Stop();
+                int indicator = 0;
+                MessageBox.Show("Registration Done Please Collect your registration number", "Registration Successfull", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                string con = "datasource =127.0.0.1; username =root;password=; database= vaccination_system";
+                MySqlConnection connect = new MySqlConnection(con);
+                string reg = "Select *from registration where father_nid = '" + fnid.Text + "'and indicator ='" + indicator + "'";
+                MySqlCommand command2 = new MySqlCommand(reg, connect);
+                try
+                {
+                    connect.Open();
+                    child_final final = new child_final();
+                    MySqlDataReader reader = command2.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        final.regno.Text = reader["reg_no"].ToString();
+                        final.name.Text = reader["name"].ToString();
+                        final.fname.Text = reader["father_name"].ToString();
+                        final.mname.Text = reader["mother_name"].ToString();
+                        final.fnid.Text = reader["father_nid"].ToString();
+                        final.mnid.Text = reader["mother_nid"].ToString();
+                        final.pnum.Text = reader["parent_num"].ToString();
+                        int birthnum = int.Parse(reader["birth_certificate_num"].ToString());
+                        if (birthnum == 0)
+                        {
+                            final.birthnum.Text = "No Data (Must be updated later on)";
+                        }
+                        else
+                        {
+                            final.birthnum.Text = birthnum.ToString();
+                        }
+                        int doze1 = int.Parse(reader["doze_1"].ToString());
+                        if (doze1 == 0)
+                        {
+                            final.doze1.Text = "incomplete";
+                        }
+                        else
+                        {
+                            final.doze1.Text = "complete";
+                        }
+                        int doze2 = int.Parse(reader["doze_2"].ToString());
+                        if (doze2 == 0)
+                        {
+                            final.doze2.Text = "incomplete";
+
+                        }
+                        else
+                        {
+                            final.doze2.Text = "complete";
+                        }
+                        final.Show();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                progressbar.Value = 0;
+                progressbar.Visible = false;
+                clear();
+            }
+        }
+
+        private void register_Click_1(object sender, EventArgs e)
+        {
+            if (mnid.Text == String.Empty)
             {
                 MessageBox.Show("Please fill up Name field", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if(fname.Text == String.Empty)
+            else if (fname.Text == String.Empty)
             {
                 MessageBox.Show("Please fill up Father Name field ", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -111,7 +188,7 @@ namespace Vaccination_System
             {
                 MessageBox.Show("Please fill up Father NID field ", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (mnid.Text == String.Empty)
+            else if (name.Text == String.Empty)
             {
                 MessageBox.Show("Please fill up Mother NID field ", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -119,17 +196,17 @@ namespace Vaccination_System
             {
                 MessageBox.Show("Please fill up Parent's Number field ", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (radiobuttonmale.Checked==false && radiobuttonfemale.Checked==false)
+            else if (radiobuttonmale.Checked == false && radiobuttonfemale.Checked == false)
             {
                 MessageBox.Show("Please Choose the gender of your child", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (center.Text==String.Empty)
+            else if (center.Text == String.Empty)
             {
                 MessageBox.Show("Please Choose a center ", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                
+              
                 string gender;
                 int indicator = 0;
                 if (radiobuttonmale.Checked)
@@ -140,78 +217,44 @@ namespace Vaccination_System
                 {
                     gender = radiobuttonfemale.Text;
                 }
-          
-                        string con = "datasource =127.0.0.1; username =root;password=; database= vaccination_system";
+
+                string con = "datasource =127.0.0.1; username =root;password=; database= vaccination_system";
                 MySqlConnection connect = new MySqlConnection(con);
-                string cmd = "insert into registration(name,father_name,mother_name,father_nid,mother_nid,parent_num,birth_certificate_num,gender,indicator,center_name) values('" + name.Text + "','" + fname.Text + "','" + mname.Text + "','" + fnid.Text + "','" + mnid.Text + "','" + pnum.Text + "','" + birthnum.Text + "','" + gender + "','"+indicator+"','"+center.Text+"');";
-                string reg = "Select *from registration where father_nid = '" + fnid.Text + "'and indicator ='"+indicator+"'";
+                string cmd = "insert into registration(name,father_name,mother_name,father_nid,mother_nid,parent_num,birth_certificate_num,gender,indicator,center_name) values('" + name.Text + "','" + fname.Text + "','" + mname.Text + "','" + fnid.Text + "','" + mnid.Text + "','" + pnum.Text + "','" + birthnum.Text + "','" + gender + "','" + indicator + "','" + center.Text + "');";
                 MySqlCommand command = new MySqlCommand(cmd, connect);
-                MySqlCommand command2 = new MySqlCommand(reg, connect);
-               
+                
 
                 try
                 {
-                    
+
                     if (MessageBox.Show("Please make sure you have entered information correctly & Press Yes", "Registration Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                     {
                         connect.Open();
+                        progressbar.Visible = true;
                         command.ExecuteNonQuery();
-                        MessageBox.Show("Registration Done Please Collect your registration number", "Registration Successfull", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        
-                        clear();
-                        child_final final = new child_final();
-                        MySqlDataReader reader = command2.ExecuteReader();
-                        while (reader.Read())
-                        {
-                            final.regno.Text = reader["reg_no"].ToString();
-                            final.name.Text = reader["name"].ToString();
-                            final.fname.Text = reader["father_name"].ToString();
-                            final.mname.Text = reader["mother_name"].ToString();
-                            final.fnid.Text = reader["father_nid"].ToString();
-                            final.mnid.Text = reader["mother_nid"].ToString();
-                            final.pnum.Text = reader["parent_num"].ToString();
-                            int birthnum = int.Parse(reader["birth_certificate_num"].ToString());
-                            if(birthnum==0)
-                            {
-                                final.birthnum.Text = "No Data (Must be updated later on)"; 
-                            }
-                            else
-                            {
-                                final.birthnum.Text = birthnum.ToString();
-                            }
-                            int doze1 = int.Parse(reader["doze_1"].ToString());
-                            if(doze1 ==0)
-                            {
-                                final.doze1.Text = "incomplete";
-                            }
-                            else
-                            {
-                                final.doze1.Text = "complete";
-                            }
-                            int doze2 = int.Parse(reader["doze_2"].ToString());
-                        if(doze2 ==0)
-                            {
-                                final.doze2.Text = "incomplete";
-                                
-                            }
-                            else
-                            {
-                                final.doze2.Text = "complete";
-                            }
-                        }
                         connect.Close();
-                        final.ShowDialog();
-                        
-
+                        connect.Open();
+                        timer.Start();
                     }
-                    
-                    
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
             }
+        }
+      
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void back_Click_1(object sender, EventArgs e)
+        {
+            Registration2 reg = new Registration2();
+            this.Close();
+            reg.Show();
         }
     }
 }

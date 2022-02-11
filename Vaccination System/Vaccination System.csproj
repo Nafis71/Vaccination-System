@@ -144,6 +144,12 @@
     <Compile Include="adult_option.Designer.cs">
       <DependentUpon>adult_option.cs</DependentUpon>
     </Compile>
+    <Compile Include="adult_regcard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adult_regcard.Designer.cs">
+      <DependentUpon>adult_regcard.cs</DependentUpon>
+    </Compile>
     <Compile Include="child.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -235,6 +241,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="adult_option.resx">
       <DependentUpon>adult_option.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adult_regcard.resx">
+      <DependentUpon>adult_regcard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="child.resx">
       <DependentUpon>child.cs</DependentUpon>
