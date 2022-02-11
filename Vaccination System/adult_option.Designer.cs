@@ -122,6 +122,7 @@
             this.proceed.TabIndex = 51;
             this.proceed.Text = "   Proceed";
             this.proceed.UseVisualStyleBackColor = false;
+            this.proceed.Click += new System.EventHandler(this.proceed_Click);
             // 
             // label3
             // 

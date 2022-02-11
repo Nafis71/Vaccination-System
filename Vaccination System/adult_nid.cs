@@ -109,10 +109,10 @@ namespace Vaccination_System
                 {
                     gender = radiobuttonfemale.Text;
                 }
-
+                
                 string con = "datasource =127.0.0.1; username =root;password=; database= vaccination_system";
                 MySqlConnection connect = new MySqlConnection(con);
-                string cmd = "insert into registration(name,nid,phone,gender,indicator,center_name) values('" + name.Text + "','"+nid.Text+"','"+phone.Text+"''" + gender + "','" + indicator + "','" + center.Text + "');";
+                string cmd = "insert into registration(name,nid,phone_num,gender,indicator,center_name)values('" + name.Text + "','"+nid.Text+"','"+phone.Text+"','" + gender + "','" + indicator + "','" + center.Text + "');";
                 MySqlCommand command = new MySqlCommand(cmd, connect);
 
 
@@ -125,7 +125,6 @@ namespace Vaccination_System
                         progressbar.Visible = true;
                         command.ExecuteNonQuery();
                         connect.Close();
-                        connect.Open();
                         timer.Start();
                     }
                 }
@@ -165,7 +164,7 @@ namespace Vaccination_System
                     while (reader.Read())
                     {
                        
-                        final.Show();
+                        
                     }
                 }
                 catch (Exception ex)

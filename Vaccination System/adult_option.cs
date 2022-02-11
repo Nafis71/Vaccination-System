@@ -33,5 +33,12 @@ namespace Vaccination_System
             this.Close();
             reg.Show();
         }
+
+        private void proceed_Click(object sender, EventArgs e)
+        {
+            adult_nid adult = new adult_nid();  
+            this.Close();
+            adult.Show();
+        }
     }
 }
