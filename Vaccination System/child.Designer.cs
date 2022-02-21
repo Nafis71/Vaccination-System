@@ -44,6 +44,8 @@
             this.fname = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.comboboxdivision = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.center = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -260,6 +262,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.comboboxdivision);
+            this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.center);
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.label12);
@@ -273,18 +277,50 @@
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.pnum);
             this.groupBox2.Controls.Add(this.mnid);
-            this.groupBox2.Location = new System.Drawing.Point(505, 105);
+            this.groupBox2.Location = new System.Drawing.Point(505, 87);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(491, 254);
+            this.groupBox2.Size = new System.Drawing.Size(491, 317);
             this.groupBox2.TabIndex = 23;
             this.groupBox2.TabStop = false;
+            // 
+            // comboboxdivision
+            // 
+            this.comboboxdivision.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.comboboxdivision.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboboxdivision.FormattingEnabled = true;
+            this.comboboxdivision.Items.AddRange(new object[] {
+            "Barishal",
+            "Chattogram",
+            "Dhaka",
+            "Khulna",
+            "Rajshahi",
+            "Rangpur",
+            "Mymensingh",
+            "Sylhet"});
+            this.comboboxdivision.Location = new System.Drawing.Point(213, 193);
+            this.comboboxdivision.Name = "comboboxdivision";
+            this.comboboxdivision.Size = new System.Drawing.Size(255, 26);
+            this.comboboxdivision.TabIndex = 90;
+            this.comboboxdivision.SelectedIndexChanged += new System.EventHandler(this.comboboxdivision_SelectedIndexChanged);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(16, 199);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(114, 17);
+            this.label14.TabIndex = 89;
+            this.label14.Text = "Choose Division:";
             // 
             // center
             // 
             this.center.BackColor = System.Drawing.Color.AntiqueWhite;
             this.center.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.center.FormattingEnabled = true;
-            this.center.Location = new System.Drawing.Point(213, 182);
+            this.center.Location = new System.Drawing.Point(213, 239);
             this.center.Name = "center";
             this.center.Size = new System.Drawing.Size(255, 26);
             this.center.TabIndex = 88;
@@ -294,7 +330,7 @@
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(16, 188);
+            this.label13.Location = new System.Drawing.Point(16, 245);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(118, 17);
@@ -353,7 +389,7 @@
             // radiobuttonfemale
             // 
             this.radiobuttonfemale.AutoSize = true;
-            this.radiobuttonfemale.Location = new System.Drawing.Point(274, 226);
+            this.radiobuttonfemale.Location = new System.Drawing.Point(274, 283);
             this.radiobuttonfemale.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.radiobuttonfemale.Name = "radiobuttonfemale";
             this.radiobuttonfemale.Size = new System.Drawing.Size(67, 19);
@@ -365,7 +401,7 @@
             // radiobuttonmale
             // 
             this.radiobuttonmale.AutoSize = true;
-            this.radiobuttonmale.Location = new System.Drawing.Point(213, 226);
+            this.radiobuttonmale.Location = new System.Drawing.Point(213, 283);
             this.radiobuttonmale.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.radiobuttonmale.Name = "radiobuttonmale";
             this.radiobuttonmale.Size = new System.Drawing.Size(53, 19);
@@ -379,7 +415,7 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(16, 228);
+            this.label8.Location = new System.Drawing.Point(16, 285);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(62, 17);
@@ -439,7 +475,7 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.register);
-            this.groupBox3.Location = new System.Drawing.Point(388, 379);
+            this.groupBox3.Location = new System.Drawing.Point(388, 424);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(231, 100);
             this.groupBox3.TabIndex = 24;
@@ -483,10 +519,10 @@
             this.back.IconColor = System.Drawing.Color.Crimson;
             this.back.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.back.IconSize = 31;
-            this.back.Location = new System.Drawing.Point(916, 61);
+            this.back.Location = new System.Drawing.Point(916, 53);
             this.back.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.back.Name = "back";
-            this.back.Size = new System.Drawing.Size(57, 45);
+            this.back.Size = new System.Drawing.Size(57, 40);
             this.back.TabIndex = 61;
             this.back.UseVisualStyleBackColor = false;
             this.back.Click += new System.EventHandler(this.back_Click_1);
@@ -494,7 +530,7 @@
             // progressbar
             // 
             this.progressbar.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.progressbar.Location = new System.Drawing.Point(388, 365);
+            this.progressbar.Location = new System.Drawing.Point(388, 410);
             this.progressbar.Name = "progressbar";
             this.progressbar.Size = new System.Drawing.Size(231, 23);
             this.progressbar.TabIndex = 62;
@@ -510,7 +546,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(1008, 491);
+            this.ClientSize = new System.Drawing.Size(1008, 536);
             this.Controls.Add(this.progressbar);
             this.Controls.Add(this.back);
             this.Controls.Add(this.groupBox3);
@@ -574,5 +610,7 @@
         private System.Windows.Forms.ProgressBar progressbar;
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ComboBox comboboxdivision;
+        private System.Windows.Forms.Label label14;
     }
 }

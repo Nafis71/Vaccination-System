@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Vaccination_System
 {
-    public partial class adult_option : Form
+    public partial class adult_birth_option : Form
     {
-        public adult_option()
+        public adult_birth_option()
         {
             InitializeComponent();
         }
@@ -27,27 +27,25 @@ namespace Vaccination_System
             Application.Exit();
         }
 
-        private void back_Click(object sender, EventArgs e)
+        private void registration_Click(object sender, EventArgs e)
         {
-            Registration2 reg = new Registration2();
+            adult_birth adult = new adult_birth();
             this.Close();
-            reg.Show();
+            adult.Show();
         }
 
-        private void proceed_Click(object sender, EventArgs e)
+        private void update_Click(object sender, EventArgs e)
         {
-            if (radiobuttonnid.Checked)
-            {
-                adult_nid adult = new adult_nid();
-                this.Close();
-                adult.Show();
-            }
-            else
-            {
-                adult_birth_option adult = new adult_birth_option();
-                this.Close();
-                adult.Show();
-            }
+            adult_birthupdate adult = new adult_birthupdate();
+            this.Close();
+            adult.Show();
+        }
+
+        private void back_Click(object sender, EventArgs e)
+        {
+            adult_option adult = new adult_option();
+            this.Close();
+            adult.Show();
         }
     }
 }

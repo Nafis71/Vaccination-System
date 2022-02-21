@@ -62,6 +62,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.comboboxdivision = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.toppanel.SuspendLayout();
@@ -88,10 +90,10 @@
             this.back.IconColor = System.Drawing.Color.Crimson;
             this.back.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.back.IconSize = 31;
-            this.back.Location = new System.Drawing.Point(901, 56);
+            this.back.Location = new System.Drawing.Point(901, 51);
             this.back.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.back.Name = "back";
-            this.back.Size = new System.Drawing.Size(57, 45);
+            this.back.Size = new System.Drawing.Size(57, 35);
             this.back.TabIndex = 68;
             this.back.UseVisualStyleBackColor = false;
             this.back.Click += new System.EventHandler(this.back_Click_1);
@@ -121,7 +123,7 @@
             // progressbar
             // 
             this.progressbar.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.progressbar.Location = new System.Drawing.Point(363, 360);
+            this.progressbar.Location = new System.Drawing.Point(363, 407);
             this.progressbar.Name = "progressbar";
             this.progressbar.Size = new System.Drawing.Size(231, 23);
             this.progressbar.TabIndex = 69;
@@ -129,7 +131,7 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.register);
-            this.groupBox3.Location = new System.Drawing.Point(363, 374);
+            this.groupBox3.Location = new System.Drawing.Point(363, 424);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(231, 100);
             this.groupBox3.TabIndex = 67;
@@ -141,13 +143,15 @@
             this.center.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.center.FormattingEnabled = true;
             this.center.ItemHeight = 18;
-            this.center.Location = new System.Drawing.Point(213, 182);
+            this.center.Location = new System.Drawing.Point(213, 238);
             this.center.Name = "center";
             this.center.Size = new System.Drawing.Size(255, 26);
             this.center.TabIndex = 88;
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.comboboxdivision);
+            this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.center);
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.label12);
@@ -161,9 +165,9 @@
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.pnum);
             this.groupBox2.Controls.Add(this.mnid);
-            this.groupBox2.Location = new System.Drawing.Point(500, 100);
+            this.groupBox2.Location = new System.Drawing.Point(500, 82);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(491, 254);
+            this.groupBox2.Size = new System.Drawing.Size(491, 309);
             this.groupBox2.TabIndex = 66;
             this.groupBox2.TabStop = false;
             // 
@@ -172,7 +176,7 @@
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(16, 188);
+            this.label13.Location = new System.Drawing.Point(16, 244);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(118, 17);
@@ -230,7 +234,7 @@
             // radiobuttonfemale
             // 
             this.radiobuttonfemale.AutoSize = true;
-            this.radiobuttonfemale.Location = new System.Drawing.Point(274, 226);
+            this.radiobuttonfemale.Location = new System.Drawing.Point(274, 282);
             this.radiobuttonfemale.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.radiobuttonfemale.Name = "radiobuttonfemale";
             this.radiobuttonfemale.Size = new System.Drawing.Size(59, 17);
@@ -242,7 +246,7 @@
             // radiobuttonmale
             // 
             this.radiobuttonmale.AutoSize = true;
-            this.radiobuttonmale.Location = new System.Drawing.Point(213, 226);
+            this.radiobuttonmale.Location = new System.Drawing.Point(213, 282);
             this.radiobuttonmale.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.radiobuttonmale.Name = "radiobuttonmale";
             this.radiobuttonmale.Size = new System.Drawing.Size(48, 17);
@@ -256,7 +260,7 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(16, 228);
+            this.label8.Location = new System.Drawing.Point(16, 283);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(62, 17);
@@ -455,7 +459,7 @@
             this.groupBox1.Controls.Add(this.fname);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(10, 100);
+            this.groupBox1.Location = new System.Drawing.Point(12, 111);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(472, 254);
             this.groupBox1.TabIndex = 65;
@@ -498,12 +502,44 @@
             this.label3.TabIndex = 52;
             this.label3.Text = "Father\'s Name :\r\n";
             // 
+            // comboboxdivision
+            // 
+            this.comboboxdivision.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.comboboxdivision.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboboxdivision.FormattingEnabled = true;
+            this.comboboxdivision.Items.AddRange(new object[] {
+            "Barishal",
+            "Chattogram",
+            "Dhaka",
+            "Khulna",
+            "Rajshahi",
+            "Rangpur",
+            "Mymensingh",
+            "Sylhet"});
+            this.comboboxdivision.Location = new System.Drawing.Point(213, 191);
+            this.comboboxdivision.Name = "comboboxdivision";
+            this.comboboxdivision.Size = new System.Drawing.Size(255, 26);
+            this.comboboxdivision.TabIndex = 92;
+            this.comboboxdivision.SelectedIndexChanged += new System.EventHandler(this.comboboxdivision_SelectedIndexChanged);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(16, 197);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(114, 17);
+            this.label14.TabIndex = 91;
+            this.label14.Text = "Choose Division:";
+            // 
             // teenager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(1008, 491);
+            this.ClientSize = new System.Drawing.Size(1008, 536);
             this.Controls.Add(this.back);
             this.Controls.Add(this.progressbar);
             this.Controls.Add(this.groupBox3);
@@ -565,5 +601,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox comboboxdivision;
+        private System.Windows.Forms.Label label14;
     }
 }

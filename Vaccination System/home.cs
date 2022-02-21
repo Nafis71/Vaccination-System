@@ -88,6 +88,13 @@ namespace Vaccination_System
             this.Close();
             login.Show();
         }
+
+        private void regcard_Click(object sender, EventArgs e)
+        {
+            adult_regcard adult = new adult_regcard();
+            this.Close();
+            adult.Show();
+        }
     }
    
 }

@@ -132,6 +132,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="adult_birth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adult_birth.Designer.cs">
+      <DependentUpon>adult_birth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adult_birthupdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adult_birthupdate.Designer.cs">
+      <DependentUpon>adult_birthupdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adult_birth_option.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adult_birth_option.Designer.cs">
+      <DependentUpon>adult_birth_option.cs</DependentUpon>
+    </Compile>
     <Compile Include="adult_nid.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +168,12 @@
     <Compile Include="adult_regcard.Designer.cs">
       <DependentUpon>adult_regcard.cs</DependentUpon>
     </Compile>
+    <Compile Include="adult_regcard2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adult_regcard2.Designer.cs">
+      <DependentUpon>adult_regcard2.cs</DependentUpon>
+    </Compile>
     <Compile Include="child.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,11 +186,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="child_final.cs">
+    <Compile Include="child_regcard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="child_final.Designer.cs">
-      <DependentUpon>child_final.cs</DependentUpon>
+    <Compile Include="child_regcard.Designer.cs">
+      <DependentUpon>child_regcard.cs</DependentUpon>
     </Compile>
     <Compile Include="child_option.cs">
       <SubType>Form</SubType>
@@ -179,6 +203,18 @@
     </Compile>
     <Compile Include="login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teenager_regcard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teenager_regcard.Designer.cs">
+      <DependentUpon>Teenager_regcard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="update_adultbirth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="update_adultbirth.Designer.cs">
+      <DependentUpon>update_adultbirth.cs</DependentUpon>
     </Compile>
     <Compile Include="update_teenager.cs">
       <SubType>Form</SubType>
@@ -230,12 +266,28 @@
     <Compile Include="teenager.Designer.cs">
       <DependentUpon>teenager.cs</DependentUpon>
     </Compile>
+    <Compile Include="vac_center_admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vac_center_admin.Designer.cs">
+      <DependentUpon>vac_center_admin.cs</DependentUpon>
+    </Compile>
     <Compile Include="vac_center_adminlogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="vac_center_adminlogin.Designer.cs">
       <DependentUpon>vac_center_adminlogin.cs</DependentUpon>
     </Compile>
+    <None Include="Resources\Covid-19 Vaccination System-logos_transparent.png" />
+    <EmbeddedResource Include="adult_birth.resx">
+      <DependentUpon>adult_birth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adult_birthupdate.resx">
+      <DependentUpon>adult_birthupdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adult_birth_option.resx">
+      <DependentUpon>adult_birth_option.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="adult_nid.resx">
       <DependentUpon>adult_nid.cs</DependentUpon>
     </EmbeddedResource>
@@ -245,14 +297,17 @@
     <EmbeddedResource Include="adult_regcard.resx">
       <DependentUpon>adult_regcard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="adult_regcard2.resx">
+      <DependentUpon>adult_regcard2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="child.resx">
       <DependentUpon>child.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="child_final.resx">
-      <DependentUpon>child_final.cs</DependentUpon>
+    <EmbeddedResource Include="child_regcard.resx">
+      <DependentUpon>child_regcard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="child_option.resx">
       <DependentUpon>child_option.cs</DependentUpon>
@@ -271,6 +326,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Registration2.resx">
       <DependentUpon>Registration2.cs</DependentUpon>
@@ -280,6 +336,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="teenager_option.resx">
       <DependentUpon>teenager_option.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teenager_regcard.resx">
+      <DependentUpon>Teenager_regcard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="update_adultbirth.resx">
+      <DependentUpon>update_adultbirth.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="update_child2.resx">
       <DependentUpon>update_child2.cs</DependentUpon>
@@ -298,6 +360,9 @@
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\fontawesome-webfont.woff2" />
     <Content Include="fonts\FontAwesome.otf" />
+    <EmbeddedResource Include="vac_center_admin.resx">
+      <DependentUpon>vac_center_admin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="vac_center_adminlogin.resx">
       <DependentUpon>vac_center_adminlogin.cs</DependentUpon>
     </EmbeddedResource>

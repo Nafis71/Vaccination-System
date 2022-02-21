@@ -8,44 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+
 namespace Vaccination_System
 {
-    public partial class adult_nid : Form
+    public partial class adult_birth : Form
     {
-        public adult_nid()
+        public adult_birth()
         {
             InitializeComponent();
             
-            progressbar.Visible= false;
+            progressbar.Visible = false;
         }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void minimize_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
-
-        private void close_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void goback_Click(object sender, EventArgs e)
-        {
-            Registration2 reg = new Registration2();
-            this.Close();
-            reg.Show();
-        }
-        
+       
         private void intcheck(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
@@ -58,16 +32,22 @@ namespace Vaccination_System
                 e.Handled = false;
             }
         }
+        private void clear()
+        {
+            name.Text = String.Empty;
+            phone.Text = String.Empty;
+            center.Text = String.Empty;
+            birthno.Text = String.Empty;
+            datetimepicker.Text = String.Empty;
+            radiobuttonfemale.Checked = false;
+            radiobuttonmale.Checked = false;
+        }
+
         private void register_Click(object sender, EventArgs e)
         {
-
             if (name.Text == String.Empty)
             {
                 MessageBox.Show("Please fill up Name field ", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else if (nid.Text == String.Empty)
-            {
-                MessageBox.Show("Please enter your NID ", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else if (phone.Text == String.Empty)
             {
@@ -101,33 +81,20 @@ namespace Vaccination_System
 
                 string con = "datasource =127.0.0.1; username =root;password=; database= vaccination_system";
                 MySqlConnection connect = new MySqlConnection(con);
-                string cmd = "insert into registration(name,nid,phone_num,birth_certificate_num,birth_date,gender,indicator,center_name)values('" + name.Text + "','" + nid.Text + "','" + phone.Text + "','" + birthno.Text + "','" + datetimepicker.Text + "','" + gender + "','" + indicator + "','" + center.Text + "');";
+                string cmd = "insert into registration(name,phone_num,birth_certificate_num,birth_date,gender,indicator,center_name)values('" + name.Text + "','" + phone.Text + "','" + birthno.Text + "','" + datetimepicker.Text + "','" + gender + "','" + indicator + "','" + center.Text + "');";
                 MySqlCommand command = new MySqlCommand(cmd, connect);
-                string check = "select *from registration where nid ='" + nid.Text + "'";
+                string check = "select *from registration where birth_certificate_num ='" + birthno.Text + "'";
                 MySqlCommand check_command = new MySqlCommand(check, connect);
                 connect.Open();
                 MySqlDataReader reader = check_command.ExecuteReader();
                 reader.Read();
                 if (reader.HasRows)
                 {
-                    MessageBox.Show("Please enter a valid NID ", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    MessageBox.Show("Please enter a valid Birth Certificate Number", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     reader.Close();
                     connect.Close();
                 }
-                else
-                {
-                    connect.Close();
-                    string check_birthno = "select *from registration where birth_certificate_num ='" + birthno.Text + "'";
-                    MySqlCommand command2 = new MySqlCommand(check_birthno, connect);
-                    connect.Open();
-                    MySqlDataReader birth_reader = command2.ExecuteReader();
-                    birth_reader.Read();
-                    if (birth_reader.HasRows)
-                    {
-                        MessageBox.Show("Please enter a valid Birth Certificate Number ", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                        reader.Close();
-                        connect.Close();
-                    }
+                
                     else
                     {
                         connect.Close();
@@ -148,21 +115,7 @@ namespace Vaccination_System
                             MessageBox.Show(ex.Message);
                         }
                     }
-                }
-
-
             }
-        }
-        private void clear()
-        {
-            name.Text=String.Empty;
-            phone.Text=String.Empty;
-            nid.Text=String.Empty;
-            center.Text=String.Empty;
-            birthno.Text=String.Empty;
-            datetimepicker.Text=String.Empty;
-            radiobuttonfemale.Checked=false;
-            radiobuttonmale.Checked=false;
         }
 
         private void timer_Tick(object sender, EventArgs e)
@@ -175,7 +128,7 @@ namespace Vaccination_System
                 MessageBox.Show("Registration Done Please Collect your registration number", "Registration Successfull", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 string con = "datasource =127.0.0.1; username =root;password=; database= vaccination_system";
                 MySqlConnection connect = new MySqlConnection(con);
-                string reg = "Select *from registration where nid = '" + nid.Text + "'and indicator ='" + indicator + "'";
+                string reg = "Select *from registration where birth_certificate_num = '" + birthno.Text + "'and indicator ='" + indicator + "'";
                 MySqlCommand command2 = new MySqlCommand(reg, connect);
                 try
                 {
@@ -186,7 +139,15 @@ namespace Vaccination_System
                     {
                         adult.regno.Text = reader["reg_no"].ToString();
                         adult.name.Text = reader["name"].ToString();
-                        adult.nid.Text = reader["nid"].ToString();
+                        int nid = int.Parse(reader["nid"].ToString());
+                        if(nid == 0)
+                        {
+                            adult.nid.Text = "N/A";
+                        }
+                        else
+                        {
+                            adult.nid.Text = nid.ToString();
+                        }
                         adult.birthdate.Text = reader["birth_date"].ToString();
                         adult.center.Text = reader["center_name"].ToString();
                         adult.regdate.Text = reader["reg_date"].ToString();
@@ -208,9 +169,21 @@ namespace Vaccination_System
             }
         }
 
-        private void label18_Click(object sender, EventArgs e)
+        private void back_Click(object sender, EventArgs e)
         {
+            Registration2 reg = new Registration2();
+            this.Close();
+            reg.Show();
+        }
 
+        private void minimize_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void close_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
         private void comboboxdivision_SelectedIndexChanged(object sender, EventArgs e)
@@ -219,7 +192,7 @@ namespace Vaccination_System
             center.Text = String.Empty;
             string con = "datasource =127.0.0.1; username =root;password=; database= vaccination_system";
             MySqlConnection connect = new MySqlConnection(con);
-            string query = "select DISTINCT center_name from center natural join vaccine_stock where vaccine_quantity>0 AND division ='" + comboboxdivision.Text + "'";
+            string query = "select DISTINCT center_name from center natural join vaccine_stock where vaccine_quantity>0 AND division ='"+comboboxdivision.Text+"'";
             MySqlCommand command = new MySqlCommand(query, connect);
             try
             {

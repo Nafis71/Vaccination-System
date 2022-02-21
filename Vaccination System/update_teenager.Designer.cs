@@ -57,6 +57,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.success = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
             this.infobox.SuspendLayout();
             this.toppanel.SuspendLayout();
             this.SuspendLayout();
@@ -139,13 +148,22 @@
             this.label11.Location = new System.Drawing.Point(16, 31);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(115, 17);
+            this.label11.Size = new System.Drawing.Size(108, 17);
             this.label11.TabIndex = 45;
-            this.label11.Text = "Registration No :";
+            this.label11.Text = "Registration No";
             // 
             // infobox
             // 
             this.infobox.BackColor = System.Drawing.Color.Transparent;
+            this.infobox.Controls.Add(this.label21);
+            this.infobox.Controls.Add(this.label20);
+            this.infobox.Controls.Add(this.label19);
+            this.infobox.Controls.Add(this.label18);
+            this.infobox.Controls.Add(this.label17);
+            this.infobox.Controls.Add(this.label16);
+            this.infobox.Controls.Add(this.label15);
+            this.infobox.Controls.Add(this.label14);
+            this.infobox.Controls.Add(this.label13);
             this.infobox.Controls.Add(this.label11);
             this.infobox.Controls.Add(this.regno);
             this.infobox.Controls.Add(this.label9);
@@ -170,7 +188,7 @@
             this.infobox.ForeColor = System.Drawing.SystemColors.ControlText;
             this.infobox.Location = new System.Drawing.Point(12, 87);
             this.infobox.Name = "infobox";
-            this.infobox.Size = new System.Drawing.Size(405, 363);
+            this.infobox.Size = new System.Drawing.Size(439, 363);
             this.infobox.TabIndex = 52;
             this.infobox.TabStop = false;
             this.infobox.Text = "INFO";
@@ -180,7 +198,7 @@
             this.regno.BackColor = System.Drawing.Color.Silver;
             this.regno.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.regno.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.regno.Location = new System.Drawing.Point(160, 29);
+            this.regno.Location = new System.Drawing.Point(193, 29);
             this.regno.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.regno.Multiline = true;
             this.regno.Name = "regno";
@@ -193,12 +211,12 @@
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(16, 332);
+            this.label9.Location = new System.Drawing.Point(16, 327);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(106, 17);
+            this.label9.Size = new System.Drawing.Size(55, 17);
             this.label9.TabIndex = 43;
-            this.label9.Text = "Child\'s Gender :\r\n";
+            this.label9.Text = "Gender";
             // 
             // label8
             // 
@@ -208,9 +226,9 @@
             this.label8.Location = new System.Drawing.Point(16, 251);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(120, 17);
+            this.label8.Size = new System.Drawing.Size(113, 17);
             this.label8.TabIndex = 42;
-            this.label8.Text = "Parent\'s Number :\r\n";
+            this.label8.Text = "Parent\'s Number";
             // 
             // label7
             // 
@@ -220,21 +238,21 @@
             this.label7.Location = new System.Drawing.Point(16, 216);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(95, 17);
+            this.label7.Size = new System.Drawing.Size(88, 17);
             this.label7.TabIndex = 40;
-            this.label7.Text = "Mother\'s NID :\r\n";
+            this.label7.Text = "Mother\'s NID";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(16, 292);
+            this.label6.Location = new System.Drawing.Point(16, 289);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(138, 17);
+            this.label6.Size = new System.Drawing.Size(131, 17);
             this.label6.TabIndex = 41;
-            this.label6.Text = "Birth Certificate No :";
+            this.label6.Text = "Birth Certificate No";
             // 
             // label5
             // 
@@ -244,9 +262,9 @@
             this.label5.Location = new System.Drawing.Point(16, 180);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(91, 17);
+            this.label5.Size = new System.Drawing.Size(84, 17);
             this.label5.TabIndex = 39;
-            this.label5.Text = "Father\'s NID :\r\n";
+            this.label5.Text = "Father\'s NID";
             // 
             // label4
             // 
@@ -256,9 +274,9 @@
             this.label4.Location = new System.Drawing.Point(16, 145);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(110, 17);
+            this.label4.Size = new System.Drawing.Size(103, 17);
             this.label4.TabIndex = 38;
-            this.label4.Text = "Mother\'s Name :\r\n";
+            this.label4.Text = "Mother\'s Name";
             // 
             // label3
             // 
@@ -268,9 +286,9 @@
             this.label3.Location = new System.Drawing.Point(16, 105);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(106, 17);
+            this.label3.Size = new System.Drawing.Size(99, 17);
             this.label3.TabIndex = 37;
-            this.label3.Text = "Father\'s Name :\r\n";
+            this.label3.Text = "Father\'s Name";
             // 
             // label2
             // 
@@ -280,16 +298,16 @@
             this.label2.Location = new System.Drawing.Point(16, 68);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 17);
+            this.label2.Size = new System.Drawing.Size(46, 17);
             this.label2.TabIndex = 36;
-            this.label2.Text = "Name :\r\n";
+            this.label2.Text = "Name";
             // 
             // gender
             // 
             this.gender.BackColor = System.Drawing.Color.Silver;
             this.gender.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gender.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gender.Location = new System.Drawing.Point(160, 327);
+            this.gender.Location = new System.Drawing.Point(193, 327);
             this.gender.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.gender.Multiline = true;
             this.gender.Name = "gender";
@@ -302,7 +320,7 @@
             this.bnum.BackColor = System.Drawing.Color.Silver;
             this.bnum.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.bnum.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bnum.Location = new System.Drawing.Point(160, 287);
+            this.bnum.Location = new System.Drawing.Point(193, 287);
             this.bnum.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.bnum.Multiline = true;
             this.bnum.Name = "bnum";
@@ -315,7 +333,7 @@
             this.mnid.BackColor = System.Drawing.Color.Silver;
             this.mnid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.mnid.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mnid.Location = new System.Drawing.Point(160, 214);
+            this.mnid.Location = new System.Drawing.Point(193, 214);
             this.mnid.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.mnid.Multiline = true;
             this.mnid.Name = "mnid";
@@ -328,7 +346,7 @@
             this.pnum.BackColor = System.Drawing.Color.Silver;
             this.pnum.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.pnum.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnum.Location = new System.Drawing.Point(160, 249);
+            this.pnum.Location = new System.Drawing.Point(193, 249);
             this.pnum.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pnum.Multiline = true;
             this.pnum.Name = "pnum";
@@ -341,7 +359,7 @@
             this.fnid.BackColor = System.Drawing.Color.Silver;
             this.fnid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.fnid.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fnid.Location = new System.Drawing.Point(160, 178);
+            this.fnid.Location = new System.Drawing.Point(193, 178);
             this.fnid.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.fnid.Multiline = true;
             this.fnid.Name = "fnid";
@@ -354,7 +372,7 @@
             this.mname.BackColor = System.Drawing.Color.Silver;
             this.mname.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.mname.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mname.Location = new System.Drawing.Point(160, 143);
+            this.mname.Location = new System.Drawing.Point(193, 143);
             this.mname.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.mname.Multiline = true;
             this.mname.Name = "mname";
@@ -367,7 +385,7 @@
             this.fname.BackColor = System.Drawing.Color.Silver;
             this.fname.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.fname.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fname.Location = new System.Drawing.Point(160, 105);
+            this.fname.Location = new System.Drawing.Point(193, 105);
             this.fname.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.fname.Multiline = true;
             this.fname.Name = "fname";
@@ -380,7 +398,7 @@
             this.name.BackColor = System.Drawing.Color.Silver;
             this.name.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.name.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.name.Location = new System.Drawing.Point(160, 66);
+            this.name.Location = new System.Drawing.Point(193, 66);
             this.name.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.name.Multiline = true;
             this.name.Name = "name";
@@ -475,6 +493,114 @@
             this.success.Text = "Updated Successfully";
             this.success.Visible = false;
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(160, 31);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(25, 17);
+            this.label13.TabIndex = 58;
+            this.label13.Text = "-->";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(160, 68);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(25, 17);
+            this.label14.TabIndex = 59;
+            this.label14.Text = "-->";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(160, 107);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(25, 17);
+            this.label15.TabIndex = 60;
+            this.label15.Text = "-->";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(160, 145);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(25, 17);
+            this.label16.TabIndex = 61;
+            this.label16.Text = "-->";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.Transparent;
+            this.label17.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(160, 180);
+            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(25, 17);
+            this.label17.TabIndex = 62;
+            this.label17.Text = "-->";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.Transparent;
+            this.label18.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(160, 216);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(25, 17);
+            this.label18.TabIndex = 63;
+            this.label18.Text = "-->";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.Color.Transparent;
+            this.label19.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(160, 251);
+            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(25, 17);
+            this.label19.TabIndex = 64;
+            this.label19.Text = "-->";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.Transparent;
+            this.label20.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(160, 289);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(25, 17);
+            this.label20.TabIndex = 65;
+            this.label20.Text = "-->";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.BackColor = System.Drawing.Color.Transparent;
+            this.label21.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(160, 329);
+            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(25, 17);
+            this.label21.TabIndex = 66;
+            this.label21.Text = "-->";
+            // 
             // update_teenager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -534,5 +660,14 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label success;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
     }
 }
