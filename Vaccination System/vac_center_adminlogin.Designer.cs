@@ -263,7 +263,6 @@
         private System.Windows.Forms.Label label2;
         private FontAwesome.Sharp.IconButton login;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox id;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconButton minimize;
@@ -272,5 +271,6 @@
         private System.Windows.Forms.TextBox pass;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckBox showpass;
+        public System.Windows.Forms.TextBox id;
     }
 }

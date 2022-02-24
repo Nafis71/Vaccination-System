@@ -280,5 +280,10 @@ namespace Vaccination_System
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+        }
     }
 }

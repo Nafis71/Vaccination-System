@@ -89,11 +89,16 @@ namespace Vaccination_System
                     MySqlDataReader reader = command.ExecuteReader();
                     if(reader.HasRows)
                     {
-                        MessageBox.Show("Login Successfull","Logged IN",MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        
+                        MessageBox.Show("Login Successfull","Logged IN",MessageBoxButtons.OK, MessageBoxIcon.Information);  
+                        vac_center_admin admin = new vac_center_admin();
+                        admin.hid.Text = id.Text;
+                        this.Hide();
+                        admin.Show();
                     }
                     else
                     {
-                        MessageBox.Show("Login failed", "Login error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Login failed : Invalid Password Or Username", "Login error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     connect.Close();
                 }

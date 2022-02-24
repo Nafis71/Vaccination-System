@@ -541,6 +541,10 @@
             this.timer.Interval = 30;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // child
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
