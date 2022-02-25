@@ -96,11 +96,15 @@ namespace Vaccination_System
                 vac_admin_dashboard.Instance.Dock = DockStyle.Fill;
                 vac_admin_dashboard.Instance.BringToFront();
                 vac_admin_dashboard.Instance.id.Text = hid.Text;
+                title.Text = "Dashboard";
 
             }
             else
             {
                 vac_admin_dashboard.Instance.BringToFront();
+                vac_admin_dashboard.Instance.vaccineinfo();
+                vac_admin_dashboard.Instance.registrationinfo();
+                title.Text = "Dashboard";
             }
         }
 
@@ -117,11 +121,13 @@ namespace Vaccination_System
                 childvac.Instance.Dock = DockStyle.Fill;
                 childvac.Instance.BringToFront();
                 childvac.Instance.id.Text = hid.Text;
+                title.Text = "Child Vaccination";
 
             }
             else
             {
                 childvac.Instance.BringToFront();
+                title.Text = "Child Vaccination";
             }
         }
     }

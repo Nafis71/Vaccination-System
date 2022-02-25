@@ -30,33 +30,33 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.regno = new System.Windows.Forms.Label();
-            this.name = new System.Windows.Forms.Label();
-            this.fname = new System.Windows.Forms.Label();
-            this.mname = new System.Windows.Forms.Label();
-            this.pnum = new System.Windows.Forms.Label();
-            this.bnum = new System.Windows.Forms.Label();
-            this.gender = new System.Windows.Forms.Label();
-            this.doze1 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
             this.doze2 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
+            this.doze1 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.gender = new System.Windows.Forms.Label();
+            this.bnum = new System.Windows.Forms.Label();
+            this.pnum = new System.Windows.Forms.Label();
+            this.mname = new System.Windows.Forms.Label();
+            this.fname = new System.Windows.Forms.Label();
+            this.name = new System.Windows.Forms.Label();
+            this.regno = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.searchreg = new System.Windows.Forms.TextBox();
             this.search = new FontAwesome.Sharp.IconButton();
@@ -64,24 +64,24 @@
             this.progressbar = new System.Windows.Forms.ProgressBar();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.checkboxdoze1 = new System.Windows.Forms.CheckBox();
-            this.checkboxdoze2 = new System.Windows.Forms.CheckBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.vacname = new System.Windows.Forms.ComboBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.datetimepicker = new System.Windows.Forms.DateTimePicker();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
             this.vac_admin_name = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.datetimepicker = new System.Windows.Forms.DateTimePicker();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.vacname = new System.Windows.Forms.ComboBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.checkboxdoze2 = new System.Windows.Forms.CheckBox();
+            this.checkboxdoze1 = new System.Windows.Forms.CheckBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.proceed = new FontAwesome.Sharp.IconButton();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.pvalue = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
+            this.pvalue = new System.Windows.Forms.Label();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.proceed = new FontAwesome.Sharp.IconButton();
             this.id = new System.Windows.Forms.Label();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
@@ -131,197 +131,32 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "INFO";
             // 
-            // label1
+            // doze2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 52);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 18);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Name";
+            this.doze2.AutoSize = true;
+            this.doze2.Location = new System.Drawing.Point(194, 248);
+            this.doze2.Name = "doze2";
+            this.doze2.Size = new System.Drawing.Size(129, 18);
+            this.doze2.TabIndex = 28;
+            this.doze2.Text = "Waiting For input..";
             // 
-            // label2
+            // label20
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 82);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 18);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Father\'s Name";
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(176, 248);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(12, 18);
+            this.label20.TabIndex = 27;
+            this.label20.Text = ":";
             // 
-            // label3
+            // label21
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 111);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(110, 18);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Mother\'s Name";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 140);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(118, 18);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Parent\'s Number";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 22);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 18);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Reg No";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 167);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(169, 18);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Birth Certificate Number";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 194);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(55, 18);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "Gender";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(176, 22);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(12, 18);
-            this.label8.TabIndex = 8;
-            this.label8.Text = ":";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(176, 52);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(12, 18);
-            this.label9.TabIndex = 9;
-            this.label9.Text = ":";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(176, 82);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(12, 18);
-            this.label10.TabIndex = 10;
-            this.label10.Text = ":";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(176, 111);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(12, 18);
-            this.label11.TabIndex = 11;
-            this.label11.Text = ":";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(176, 140);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(12, 18);
-            this.label12.TabIndex = 12;
-            this.label12.Text = ":";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(176, 167);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(12, 18);
-            this.label13.TabIndex = 13;
-            this.label13.Text = ":";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(176, 194);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(12, 18);
-            this.label14.TabIndex = 14;
-            this.label14.Text = ":";
-            // 
-            // regno
-            // 
-            this.regno.AutoSize = true;
-            this.regno.Location = new System.Drawing.Point(194, 22);
-            this.regno.Name = "regno";
-            this.regno.Size = new System.Drawing.Size(129, 18);
-            this.regno.TabIndex = 15;
-            this.regno.Text = "Waiting For input..";
-            this.regno.Click += new System.EventHandler(this.label15_Click);
-            // 
-            // name
-            // 
-            this.name.AutoSize = true;
-            this.name.Location = new System.Drawing.Point(194, 52);
-            this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(129, 18);
-            this.name.TabIndex = 16;
-            this.name.Text = "Waiting For input..";
-            // 
-            // fname
-            // 
-            this.fname.AutoSize = true;
-            this.fname.Location = new System.Drawing.Point(194, 82);
-            this.fname.Name = "fname";
-            this.fname.Size = new System.Drawing.Size(129, 18);
-            this.fname.TabIndex = 17;
-            this.fname.Text = "Waiting For input..";
-            // 
-            // mname
-            // 
-            this.mname.AutoSize = true;
-            this.mname.Location = new System.Drawing.Point(194, 111);
-            this.mname.Name = "mname";
-            this.mname.Size = new System.Drawing.Size(129, 18);
-            this.mname.TabIndex = 18;
-            this.mname.Text = "Waiting For input..";
-            // 
-            // pnum
-            // 
-            this.pnum.AutoSize = true;
-            this.pnum.Location = new System.Drawing.Point(194, 140);
-            this.pnum.Name = "pnum";
-            this.pnum.Size = new System.Drawing.Size(129, 18);
-            this.pnum.TabIndex = 19;
-            this.pnum.Text = "Waiting For input..";
-            // 
-            // bnum
-            // 
-            this.bnum.AutoSize = true;
-            this.bnum.Location = new System.Drawing.Point(194, 167);
-            this.bnum.Name = "bnum";
-            this.bnum.Size = new System.Drawing.Size(129, 18);
-            this.bnum.TabIndex = 20;
-            this.bnum.Text = "Waiting For input..";
-            // 
-            // gender
-            // 
-            this.gender.AutoSize = true;
-            this.gender.Location = new System.Drawing.Point(194, 194);
-            this.gender.Name = "gender";
-            this.gender.Size = new System.Drawing.Size(129, 18);
-            this.gender.TabIndex = 21;
-            this.gender.Text = "Waiting For input..";
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(6, 248);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(54, 18);
+            this.label21.TabIndex = 26;
+            this.label21.Text = "Doze 2";
             // 
             // doze1
             // 
@@ -350,32 +185,197 @@
             this.label18.TabIndex = 23;
             this.label18.Text = "Doze 1";
             // 
-            // doze2
+            // gender
             // 
-            this.doze2.AutoSize = true;
-            this.doze2.Location = new System.Drawing.Point(194, 248);
-            this.doze2.Name = "doze2";
-            this.doze2.Size = new System.Drawing.Size(129, 18);
-            this.doze2.TabIndex = 28;
-            this.doze2.Text = "Waiting For input..";
+            this.gender.AutoSize = true;
+            this.gender.Location = new System.Drawing.Point(194, 194);
+            this.gender.Name = "gender";
+            this.gender.Size = new System.Drawing.Size(129, 18);
+            this.gender.TabIndex = 21;
+            this.gender.Text = "Waiting For input..";
             // 
-            // label20
+            // bnum
             // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(176, 248);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(12, 18);
-            this.label20.TabIndex = 27;
-            this.label20.Text = ":";
+            this.bnum.AutoSize = true;
+            this.bnum.Location = new System.Drawing.Point(194, 167);
+            this.bnum.Name = "bnum";
+            this.bnum.Size = new System.Drawing.Size(129, 18);
+            this.bnum.TabIndex = 20;
+            this.bnum.Text = "Waiting For input..";
             // 
-            // label21
+            // pnum
             // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(6, 248);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(54, 18);
-            this.label21.TabIndex = 26;
-            this.label21.Text = "Doze 2";
+            this.pnum.AutoSize = true;
+            this.pnum.Location = new System.Drawing.Point(194, 140);
+            this.pnum.Name = "pnum";
+            this.pnum.Size = new System.Drawing.Size(129, 18);
+            this.pnum.TabIndex = 19;
+            this.pnum.Text = "Waiting For input..";
+            // 
+            // mname
+            // 
+            this.mname.AutoSize = true;
+            this.mname.Location = new System.Drawing.Point(194, 111);
+            this.mname.Name = "mname";
+            this.mname.Size = new System.Drawing.Size(129, 18);
+            this.mname.TabIndex = 18;
+            this.mname.Text = "Waiting For input..";
+            // 
+            // fname
+            // 
+            this.fname.AutoSize = true;
+            this.fname.Location = new System.Drawing.Point(194, 82);
+            this.fname.Name = "fname";
+            this.fname.Size = new System.Drawing.Size(129, 18);
+            this.fname.TabIndex = 17;
+            this.fname.Text = "Waiting For input..";
+            // 
+            // name
+            // 
+            this.name.AutoSize = true;
+            this.name.Location = new System.Drawing.Point(194, 52);
+            this.name.Name = "name";
+            this.name.Size = new System.Drawing.Size(129, 18);
+            this.name.TabIndex = 16;
+            this.name.Text = "Waiting For input..";
+            // 
+            // regno
+            // 
+            this.regno.AutoSize = true;
+            this.regno.Location = new System.Drawing.Point(194, 22);
+            this.regno.Name = "regno";
+            this.regno.Size = new System.Drawing.Size(129, 18);
+            this.regno.TabIndex = 15;
+            this.regno.Text = "Waiting For input..";
+            this.regno.Click += new System.EventHandler(this.label15_Click);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(176, 194);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(12, 18);
+            this.label14.TabIndex = 14;
+            this.label14.Text = ":";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(176, 167);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(12, 18);
+            this.label13.TabIndex = 13;
+            this.label13.Text = ":";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(176, 140);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(12, 18);
+            this.label12.TabIndex = 12;
+            this.label12.Text = ":";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(176, 111);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(12, 18);
+            this.label11.TabIndex = 11;
+            this.label11.Text = ":";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(176, 82);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(12, 18);
+            this.label10.TabIndex = 10;
+            this.label10.Text = ":";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(176, 52);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(12, 18);
+            this.label9.TabIndex = 9;
+            this.label9.Text = ":";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(176, 22);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(12, 18);
+            this.label8.TabIndex = 8;
+            this.label8.Text = ":";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 194);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(55, 18);
+            this.label7.TabIndex = 7;
+            this.label7.Text = "Gender";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 167);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(169, 18);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Birth Certificate Number";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 22);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(57, 18);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Reg No";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 140);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(118, 18);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Parent\'s Number";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 111);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(110, 18);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Mother\'s Name";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 82);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(104, 18);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Father\'s Name";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(6, 52);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(48, 18);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Name";
             // 
             // label15
             // 
@@ -444,7 +444,7 @@
             // 
             // timer1
             // 
-            this.timer1.Interval = 50;
+            this.timer1.Interval = 30;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // groupBox3
@@ -471,102 +471,21 @@
             this.groupBox3.Text = "Vaccination Info";
             this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
-            // label16
+            // vac_admin_name
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(6, 84);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(88, 18);
-            this.label16.TabIndex = 60;
-            this.label16.Text = "Select Doze";
-            this.label16.Click += new System.EventHandler(this.label16_Click);
+            this.vac_admin_name.Location = new System.Drawing.Point(197, 161);
+            this.vac_admin_name.Name = "vac_admin_name";
+            this.vac_admin_name.Size = new System.Drawing.Size(200, 26);
+            this.vac_admin_name.TabIndex = 73;
             // 
-            // checkboxdoze1
+            // label27
             // 
-            this.checkboxdoze1.AutoSize = true;
-            this.checkboxdoze1.Location = new System.Drawing.Point(197, 83);
-            this.checkboxdoze1.Name = "checkboxdoze1";
-            this.checkboxdoze1.Size = new System.Drawing.Size(73, 22);
-            this.checkboxdoze1.TabIndex = 61;
-            this.checkboxdoze1.Text = "Doze 1";
-            this.checkboxdoze1.UseVisualStyleBackColor = true;
-            // 
-            // checkboxdoze2
-            // 
-            this.checkboxdoze2.AutoSize = true;
-            this.checkboxdoze2.Location = new System.Drawing.Point(276, 83);
-            this.checkboxdoze2.Name = "checkboxdoze2";
-            this.checkboxdoze2.Size = new System.Drawing.Size(73, 22);
-            this.checkboxdoze2.TabIndex = 63;
-            this.checkboxdoze2.Text = "Doze 2";
-            this.checkboxdoze2.UseVisualStyleBackColor = true;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(164, 83);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(24, 18);
-            this.label19.TabIndex = 64;
-            this.label19.Text = "-->";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(6, 39);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(125, 18);
-            this.label22.TabIndex = 65;
-            this.label22.Text = "Name Of Vaccine";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(164, 39);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(24, 18);
-            this.label23.TabIndex = 66;
-            this.label23.Text = "-->";
-            this.label23.Click += new System.EventHandler(this.label23_Click);
-            // 
-            // vacname
-            // 
-            this.vacname.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vacname.FormattingEnabled = true;
-            this.vacname.Location = new System.Drawing.Point(197, 38);
-            this.vacname.Name = "vacname";
-            this.vacname.Size = new System.Drawing.Size(200, 23);
-            this.vacname.TabIndex = 67;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(6, 125);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(141, 18);
-            this.label24.TabIndex = 68;
-            this.label24.Text = "Date of Vaccination";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(164, 125);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(24, 18);
-            this.label25.TabIndex = 69;
-            this.label25.Text = "-->";
-            // 
-            // datetimepicker
-            // 
-            this.datetimepicker.CalendarFont = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datetimepicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.datetimepicker.Location = new System.Drawing.Point(197, 119);
-            this.datetimepicker.Name = "datetimepicker";
-            this.datetimepicker.Size = new System.Drawing.Size(200, 26);
-            this.datetimepicker.TabIndex = 70;
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(164, 164);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(24, 18);
+            this.label27.TabIndex = 72;
+            this.label27.Text = "-->";
             // 
             // label26
             // 
@@ -578,21 +497,103 @@
             this.label26.TabIndex = 71;
             this.label26.Text = "Vaccinated By";
             // 
-            // label27
+            // datetimepicker
             // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(164, 164);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(24, 18);
-            this.label27.TabIndex = 72;
-            this.label27.Text = "-->";
+            this.datetimepicker.CalendarFont = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.datetimepicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.datetimepicker.Location = new System.Drawing.Point(197, 119);
+            this.datetimepicker.Name = "datetimepicker";
+            this.datetimepicker.Size = new System.Drawing.Size(200, 26);
+            this.datetimepicker.TabIndex = 70;
             // 
-            // vac_admin_name
+            // label25
             // 
-            this.vac_admin_name.Location = new System.Drawing.Point(197, 161);
-            this.vac_admin_name.Name = "vac_admin_name";
-            this.vac_admin_name.Size = new System.Drawing.Size(200, 26);
-            this.vac_admin_name.TabIndex = 73;
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(164, 125);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(24, 18);
+            this.label25.TabIndex = 69;
+            this.label25.Text = "-->";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(6, 125);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(141, 18);
+            this.label24.TabIndex = 68;
+            this.label24.Text = "Date of Vaccination";
+            // 
+            // vacname
+            // 
+            this.vacname.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vacname.FormattingEnabled = true;
+            this.vacname.Location = new System.Drawing.Point(197, 38);
+            this.vacname.Name = "vacname";
+            this.vacname.Size = new System.Drawing.Size(200, 23);
+            this.vacname.TabIndex = 67;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(164, 39);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(24, 18);
+            this.label23.TabIndex = 66;
+            this.label23.Text = "-->";
+            this.label23.Click += new System.EventHandler(this.label23_Click);
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(6, 39);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(125, 18);
+            this.label22.TabIndex = 65;
+            this.label22.Text = "Name Of Vaccine";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(164, 83);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(24, 18);
+            this.label19.TabIndex = 64;
+            this.label19.Text = "-->";
+            // 
+            // checkboxdoze2
+            // 
+            this.checkboxdoze2.AutoSize = true;
+            this.checkboxdoze2.Location = new System.Drawing.Point(276, 83);
+            this.checkboxdoze2.Name = "checkboxdoze2";
+            this.checkboxdoze2.Size = new System.Drawing.Size(73, 22);
+            this.checkboxdoze2.TabIndex = 63;
+            this.checkboxdoze2.Text = "Doze 2";
+            this.checkboxdoze2.UseVisualStyleBackColor = true;
+            this.checkboxdoze2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.checkboxcheck);
+            // 
+            // checkboxdoze1
+            // 
+            this.checkboxdoze1.AutoSize = true;
+            this.checkboxdoze1.Location = new System.Drawing.Point(197, 83);
+            this.checkboxdoze1.Name = "checkboxdoze1";
+            this.checkboxdoze1.Size = new System.Drawing.Size(73, 22);
+            this.checkboxdoze1.TabIndex = 61;
+            this.checkboxdoze1.Text = "Doze 1";
+            this.checkboxdoze1.UseVisualStyleBackColor = true;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(6, 84);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(88, 18);
+            this.label16.TabIndex = 60;
+            this.label16.Text = "Select Doze";
+            this.label16.Click += new System.EventHandler(this.label16_Click);
             // 
             // groupBox4
             // 
@@ -606,6 +607,34 @@
             this.groupBox4.Size = new System.Drawing.Size(253, 185);
             this.groupBox4.TabIndex = 60;
             this.groupBox4.TabStop = false;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Location = new System.Drawing.Point(79, 124);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(83, 18);
+            this.label29.TabIndex = 62;
+            this.label29.Text = "Processing";
+            // 
+            // pvalue
+            // 
+            this.pvalue.AutoSize = true;
+            this.pvalue.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pvalue.Location = new System.Drawing.Point(159, 124);
+            this.pvalue.Name = "pvalue";
+            this.pvalue.Size = new System.Drawing.Size(12, 18);
+            this.pvalue.TabIndex = 61;
+            this.pvalue.Text = "i";
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(17, 145);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(216, 23);
+            this.progressBar1.TabIndex = 59;
+            this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
             // 
             // proceed
             // 
@@ -632,34 +661,6 @@
             this.proceed.UseVisualStyleBackColor = false;
             this.proceed.Click += new System.EventHandler(this.proceed_Click);
             // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(17, 145);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(216, 23);
-            this.progressBar1.TabIndex = 59;
-            this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
-            // 
-            // pvalue
-            // 
-            this.pvalue.AutoSize = true;
-            this.pvalue.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pvalue.Location = new System.Drawing.Point(159, 124);
-            this.pvalue.Name = "pvalue";
-            this.pvalue.Size = new System.Drawing.Size(12, 18);
-            this.pvalue.TabIndex = 61;
-            this.pvalue.Text = "i";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(79, 124);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(83, 18);
-            this.label29.TabIndex = 62;
-            this.label29.Text = "Processing";
-            // 
             // id
             // 
             this.id.AutoSize = true;
@@ -672,23 +673,27 @@
             // 
             // timer2
             // 
-            this.timer2.Interval = 60;
+            this.timer2.Interval = 30;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // timer3
             // 
+            this.timer3.Interval = 30;
             this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
             // 
             // timer4
             // 
+            this.timer4.Interval = 30;
             this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
             // 
             // timer5
             // 
+            this.timer5.Interval = 30;
             this.timer5.Tick += new System.EventHandler(this.timer5_Tick);
             // 
             // timer6
             // 
+            this.timer6.Interval = 30;
             this.timer6.Tick += new System.EventHandler(this.timer6_Tick);
             // 
             // childvac

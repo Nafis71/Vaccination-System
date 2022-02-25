@@ -16,7 +16,7 @@ namespace Vaccination_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new vac_center_adminlogin());
+            Application.Run(new Form1());
         }
     }
 }

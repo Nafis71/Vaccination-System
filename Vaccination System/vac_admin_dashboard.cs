@@ -82,7 +82,7 @@ namespace Vaccination_System
 
 
         }
-        private void vaccineinfo()
+        public void vaccineinfo()
         {
             try
             {
@@ -114,7 +114,7 @@ namespace Vaccination_System
             }
 
         }
-        private void registrationinfo()
+        public void registrationinfo()
         {
             try
             {
