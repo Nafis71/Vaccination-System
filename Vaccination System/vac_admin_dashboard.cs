@@ -33,14 +33,9 @@ namespace Vaccination_System
         public vac_admin_dashboard()
         {
             InitializeComponent();
-            text = label3.Text;
-            label3.Text = String.Empty;
-            timer1.Start();
-           
-            text2 = label10.Text;
-            label10.Text = String.Empty;
-            timer2.Start();
-            timer3.Start();
+            
+            
+            
            
         }
       
@@ -55,10 +50,28 @@ namespace Vaccination_System
             else
             {
 
-                timer1.Stop();    
+                timer1.Stop(); 
+                length = 0;
             }
         }
-        private void centerinfo()
+        public void t1()
+        {
+            text = label3.Text;
+            label3.Text = String.Empty;
+            timer1.Start();
+        }
+        public void t2()
+        { 
+
+            text2 = label10.Text;
+            label10.Text = String.Empty;
+            timer2.Start();
+        }
+        public void t3()
+        {
+            timer3.Start();
+        }
+        public void centerinfo()
         {
             try
             {
@@ -171,12 +184,15 @@ namespace Vaccination_System
             else
             {
                 timer2.Stop();
+                length1 = 0;
             }
 
         }
 
         private void timer3_Tick(object sender, EventArgs e)
         {
+            progressbar.Visible = true;
+            label10.Visible = true;
             progressbar.Increment(1);
             if (progressbar.Value == 30)
             {

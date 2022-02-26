@@ -68,10 +68,12 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // progressbar
@@ -432,6 +434,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(244)))));
+            this.panel4.Controls.Add(this.pictureBox1);
             this.panel4.Controls.Add(this.label10);
             this.panel4.Controls.Add(this.progressbar);
             this.panel4.Controls.Add(this.label32);
@@ -480,6 +483,16 @@
             this.timer3.Interval = 30;
             this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Vaccination_System.Properties.Resources.Covid_19_Vaccination_System_logos_transparent;
+            this.pictureBox1.Location = new System.Drawing.Point(629, 18);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(134, 115);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 41;
+            this.pictureBox1.TabStop = false;
+            // 
             // vac_admin_dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -495,6 +508,7 @@
             this.groupBox1.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -504,12 +518,8 @@
         private System.Windows.Forms.ProgressBar progressbar;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label child;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Label teenager;
-        private System.Windows.Forms.Label adult;
-        private System.Windows.Forms.Label total_registration;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
@@ -540,5 +550,10 @@
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Timer timer3;
         public System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.Label child;
+        public System.Windows.Forms.Label teenager;
+        public System.Windows.Forms.Label adult;
+        public System.Windows.Forms.Label total_registration;
     }
 }

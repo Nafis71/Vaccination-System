@@ -36,17 +36,19 @@
             this.hid = new System.Windows.Forms.Label();
             this.title = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.close = new FontAwesome.Sharp.IconButton();
             this.minimize = new FontAwesome.Sharp.IconButton();
-            this.teenagervac = new FontAwesome.Sharp.IconButton();
+            this.childvac1 = new FontAwesome.Sharp.IconButton();
+            this.teenvac = new FontAwesome.Sharp.IconButton();
             this.adultvac = new FontAwesome.Sharp.IconButton();
             this.dash = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.childvac1 = new FontAwesome.Sharp.IconButton();
+            this.signout = new FontAwesome.Sharp.IconButton();
+            this.start = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -57,7 +59,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(219)))), ((int)(((byte)(221)))));
             this.panel1.Controls.Add(this.childvac1);
-            this.panel1.Controls.Add(this.teenagervac);
+            this.panel1.Controls.Add(this.teenvac);
             this.panel1.Controls.Add(this.adultvac);
             this.panel1.Controls.Add(this.dash);
             this.panel1.Controls.Add(this.panel3);
@@ -91,6 +93,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(219)))), ((int)(((byte)(221)))));
+            this.panel2.Controls.Add(this.signout);
             this.panel2.Controls.Add(this.hid);
             this.panel2.Controls.Add(this.close);
             this.panel2.Controls.Add(this.minimize);
@@ -117,7 +120,7 @@
             this.title.AutoSize = true;
             this.title.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.title.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.title.Location = new System.Drawing.Point(349, 14);
+            this.title.Location = new System.Drawing.Point(343, 14);
             this.title.Name = "title";
             this.title.Size = new System.Drawing.Size(87, 19);
             this.title.TabIndex = 0;
@@ -126,6 +129,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(244)))));
+            this.panel4.Controls.Add(this.start);
             this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.progressBar1);
@@ -136,37 +140,37 @@
             this.panel4.TabIndex = 2;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
-            // timer1
+            // label4
             // 
-            this.timer1.Interval = 20;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(241, 233);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(313, 26);
-            this.progressBar1.TabIndex = 7;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(450, 270);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(13, 19);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "i";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(323, 211);
+            this.label1.Location = new System.Drawing.Point(314, 270);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(140, 19);
             this.label1.TabIndex = 3;
             this.label1.Text = "Creating Session...";
             // 
-            // label4
+            // progressBar1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(466, 211);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(13, 19);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "i";
+            this.progressBar1.Location = new System.Drawing.Point(232, 292);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(313, 26);
+            this.progressBar1.TabIndex = 7;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 15;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // close
             // 
@@ -202,26 +206,49 @@
             this.minimize.UseVisualStyleBackColor = true;
             this.minimize.Click += new System.EventHandler(this.minimize_Click);
             // 
-            // teenagervac
+            // childvac1
             // 
-            this.teenagervac.BackColor = System.Drawing.Color.Transparent;
-            this.teenagervac.FlatAppearance.BorderSize = 0;
-            this.teenagervac.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(173)))), ((int)(((byte)(226)))));
-            this.teenagervac.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(173)))), ((int)(((byte)(226)))));
-            this.teenagervac.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.teenagervac.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.teenagervac.ForeColor = System.Drawing.Color.Black;
-            this.teenagervac.IconChar = FontAwesome.Sharp.IconChar.Crutch;
-            this.teenagervac.IconColor = System.Drawing.SystemColors.Highlight;
-            this.teenagervac.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.teenagervac.IconSize = 30;
-            this.teenagervac.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.teenagervac.Location = new System.Drawing.Point(-1, 379);
-            this.teenagervac.Name = "teenagervac";
-            this.teenagervac.Size = new System.Drawing.Size(200, 49);
-            this.teenagervac.TabIndex = 12;
-            this.teenagervac.Text = "       Teenager Vaccination";
-            this.teenagervac.UseVisualStyleBackColor = false;
+            this.childvac1.BackColor = System.Drawing.Color.Transparent;
+            this.childvac1.FlatAppearance.BorderSize = 0;
+            this.childvac1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(173)))), ((int)(((byte)(226)))));
+            this.childvac1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(173)))), ((int)(((byte)(226)))));
+            this.childvac1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.childvac1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.childvac1.ForeColor = System.Drawing.Color.Black;
+            this.childvac1.IconChar = FontAwesome.Sharp.IconChar.Crutch;
+            this.childvac1.IconColor = System.Drawing.SystemColors.Highlight;
+            this.childvac1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.childvac1.IconSize = 30;
+            this.childvac1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.childvac1.Location = new System.Drawing.Point(0, 229);
+            this.childvac1.Name = "childvac1";
+            this.childvac1.Size = new System.Drawing.Size(200, 49);
+            this.childvac1.TabIndex = 13;
+            this.childvac1.Text = "    Child Vaccination";
+            this.childvac1.UseVisualStyleBackColor = false;
+            this.childvac1.Click += new System.EventHandler(this.childvac1_Click);
+            // 
+            // teenvac
+            // 
+            this.teenvac.BackColor = System.Drawing.Color.Transparent;
+            this.teenvac.FlatAppearance.BorderSize = 0;
+            this.teenvac.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(173)))), ((int)(((byte)(226)))));
+            this.teenvac.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(173)))), ((int)(((byte)(226)))));
+            this.teenvac.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.teenvac.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.teenvac.ForeColor = System.Drawing.Color.Black;
+            this.teenvac.IconChar = FontAwesome.Sharp.IconChar.Crutch;
+            this.teenvac.IconColor = System.Drawing.SystemColors.Highlight;
+            this.teenvac.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.teenvac.IconSize = 30;
+            this.teenvac.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.teenvac.Location = new System.Drawing.Point(-1, 379);
+            this.teenvac.Name = "teenvac";
+            this.teenvac.Size = new System.Drawing.Size(200, 49);
+            this.teenvac.TabIndex = 12;
+            this.teenvac.Text = "       Teenager Vaccination";
+            this.teenvac.UseVisualStyleBackColor = false;
+            this.teenvac.Click += new System.EventHandler(this.teenvac_Click);
             // 
             // adultvac
             // 
@@ -285,27 +312,46 @@
             this.iconButton2.TabIndex = 11;
             this.iconButton2.UseVisualStyleBackColor = false;
             // 
-            // childvac1
+            // signout
             // 
-            this.childvac1.BackColor = System.Drawing.Color.Transparent;
-            this.childvac1.FlatAppearance.BorderSize = 0;
-            this.childvac1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(173)))), ((int)(((byte)(226)))));
-            this.childvac1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(173)))), ((int)(((byte)(226)))));
-            this.childvac1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.childvac1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.childvac1.ForeColor = System.Drawing.Color.Black;
-            this.childvac1.IconChar = FontAwesome.Sharp.IconChar.Crutch;
-            this.childvac1.IconColor = System.Drawing.SystemColors.Highlight;
-            this.childvac1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.childvac1.IconSize = 30;
-            this.childvac1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.childvac1.Location = new System.Drawing.Point(0, 229);
-            this.childvac1.Name = "childvac1";
-            this.childvac1.Size = new System.Drawing.Size(200, 49);
-            this.childvac1.TabIndex = 13;
-            this.childvac1.Text = "    Child Vaccination";
-            this.childvac1.UseVisualStyleBackColor = false;
-            this.childvac1.Click += new System.EventHandler(this.childvac1_Click);
+            this.signout.FlatAppearance.BorderSize = 0;
+            this.signout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.signout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.signout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.signout.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
+            this.signout.IconColor = System.Drawing.Color.IndianRed;
+            this.signout.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.signout.IconSize = 30;
+            this.signout.Location = new System.Drawing.Point(627, 18);
+            this.signout.Name = "signout";
+            this.signout.Size = new System.Drawing.Size(75, 23);
+            this.signout.TabIndex = 7;
+            this.signout.UseVisualStyleBackColor = true;
+            this.signout.Click += new System.EventHandler(this.signout_Click_1);
+            // 
+            // start
+            // 
+            this.start.BackColor = System.Drawing.Color.Transparent;
+            this.start.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.start.FlatAppearance.BorderSize = 0;
+            this.start.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(173)))), ((int)(((byte)(226)))));
+            this.start.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(173)))), ((int)(((byte)(226)))));
+            this.start.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.start.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.start.ForeColor = System.Drawing.Color.Black;
+            this.start.IconChar = FontAwesome.Sharp.IconChar.Play;
+            this.start.IconColor = System.Drawing.SystemColors.Highlight;
+            this.start.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.start.IconSize = 30;
+            this.start.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.start.Location = new System.Drawing.Point(282, 237);
+            this.start.Name = "start";
+            this.start.Size = new System.Drawing.Size(200, 49);
+            this.start.TabIndex = 14;
+            this.start.Text = "Start Session";
+            this.start.UseVisualStyleBackColor = false;
+            this.start.Visible = false;
+            this.start.Click += new System.EventHandler(this.start_Click);
             // 
             // vac_center_admin
             // 
@@ -348,8 +394,10 @@
         private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconButton dash;
         private FontAwesome.Sharp.IconButton iconButton2;
-        private FontAwesome.Sharp.IconButton teenagervac;
+        private FontAwesome.Sharp.IconButton teenvac;
         private FontAwesome.Sharp.IconButton adultvac;
         private FontAwesome.Sharp.IconButton childvac1;
+        private FontAwesome.Sharp.IconButton signout;
+        private FontAwesome.Sharp.IconButton start;
     }
 }

@@ -35,9 +35,10 @@ namespace Vaccination_System
                 vac_admin_dashboard.Instance.Dock = DockStyle.Fill;
                 vac_admin_dashboard.Instance.BringToFront();
                 vac_admin_dashboard.Instance.id.Text = hid.Text;
+                title.Text = "Dashboard";
 
-            }
-        }
+            } 
+    }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
 
         private extern static void ReleaseCapture();
@@ -82,7 +83,7 @@ namespace Vaccination_System
                 label4.Visible=false;
                 progressBar1.Visible=false;
                 label1.Visible=false;
-                dashboard();
+                start.Visible=true;
                 }
             
            
@@ -108,10 +109,7 @@ namespace Vaccination_System
             }
         }
 
-        private void childvac_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void childvac1_Click(object sender, EventArgs e)
         {
@@ -122,13 +120,81 @@ namespace Vaccination_System
                 childvac.Instance.BringToFront();
                 childvac.Instance.id.Text = hid.Text;
                 title.Text = "Child Vaccination";
-
             }
             else
             {
                 childvac.Instance.BringToFront();
                 title.Text = "Child Vaccination";
             }
+        }
+
+        private void teenvac_Click(object sender, EventArgs e)
+        {
+            if (!panel4.Controls.Contains(teenagervac.Instance))
+            {
+                panel4.Controls.Add(teenagervac.Instance);
+                teenagervac.Instance.Dock = DockStyle.Fill;
+                teenagervac.Instance.BringToFront();
+                teenagervac.Instance.id.Text = hid.Text;
+                title.Text = "Teenager Vaccination";
+
+            }
+            else
+            {
+                teenagervac.Instance.BringToFront();
+                title.Text = "Teenager Vaccination";
+            }
+        }
+      
+        private void signout_Click(object sender, EventArgs e)
+        {
+            vac_center_adminlogin admin = new vac_center_adminlogin();
+            this.Hide();
+            admin.Show();
+        }
+
+        private void start_Click(object sender, EventArgs e)
+        {
+            start.Visible = false;
+            if (!panel4.Controls.Contains(vac_admin_dashboard.Instance))
+            {
+                panel4.Controls.Add(vac_admin_dashboard.Instance);
+                vac_admin_dashboard.Instance.Dock = DockStyle.Fill;
+                vac_admin_dashboard.Instance.BringToFront();
+                vac_admin_dashboard.Instance.id.Text = hid.Text;
+                vac_admin_dashboard.Instance.t1();
+                vac_admin_dashboard.Instance.t2();
+                vac_admin_dashboard.Instance.t3();
+                vac_admin_dashboard.Instance.vaccineinfo();
+                vac_admin_dashboard.Instance.registrationinfo();
+                vac_admin_dashboard.Instance.centerinfo();
+              
+                
+                title.Text = "Dashboard";
+
+            }
+            else
+            {
+                vac_admin_dashboard.Instance.BringToFront();
+                vac_admin_dashboard.Instance.t1();
+                vac_admin_dashboard.Instance.t2();
+                vac_admin_dashboard.Instance.vaccineinfo();
+                vac_admin_dashboard.Instance.registrationinfo();
+                vac_admin_dashboard.Instance.centerinfo();
+                title.Text = "Dashboard";
+            }
+        }
+
+        private void signout_Click_1(object sender, EventArgs e)
+        {
+            vac_center_adminlogin admin = new vac_center_adminlogin();
+            vac_admin_dashboard.Instance.total_registration.Text = "fetching...";
+            vac_admin_dashboard.Instance.adult.Text = "fetching...";
+            vac_admin_dashboard.Instance.child.Text = "fetching...";
+            vac_admin_dashboard.Instance.teenager.Text = "fetching...";
+            this.Hide();
+
+            admin.Show();
         }
     }
 }

@@ -8,23 +8,24 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+
 namespace Vaccination_System
 {
-    public partial class childvac : UserControl
+    public partial class teenagervac : UserControl
     {
-        private static childvac instance;
-        public static childvac Instance
+        private static teenagervac instance;
+        public static teenagervac Instance
         {
             get
             {
                 if (instance == null)
 
-                    instance = new childvac();
+                    instance = new teenagervac();
 
                 return instance;
             }
         }
-        public childvac()
+        public teenagervac()
         {
             InitializeComponent();
             proceed.Enabled = false;
@@ -47,21 +48,6 @@ namespace Vaccination_System
             label29.Visible = false;
             pvalue.Visible = false;
         }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label15_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox3_Enter(object sender, EventArgs e)
-        {
-
-        }
         private void intcheck(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
@@ -76,7 +62,7 @@ namespace Vaccination_System
         }
         public void checkboxcheck(object sender, MouseEventArgs e)
         {
-            if(doze1.Text=="Not Completed")
+            if (doze1.Text == "Not Completed")
             {
                 if (checkboxdoze1.Enabled == true)
                 {
@@ -87,21 +73,6 @@ namespace Vaccination_System
                     }
                 }
             }
-        }
-
-        private void label16_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label23_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void progressBar1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void search_Click(object sender, EventArgs e)
@@ -125,18 +96,18 @@ namespace Vaccination_System
                     center_read.Read();
                     string center_name = center_read["center_name"].ToString();
                     center_read.Close();
-                    string query = "select *from registration where indicator=0 AND reg_no='" + searchreg.Text + "' AND center_name ='" + center_name + "'";
+                    string query = "select *from registration where indicator=1 AND reg_no='" + searchreg.Text + "' AND center_name ='" + center_name + "'";
                     MySqlCommand command2 = new MySqlCommand(query, connect);
                     MySqlDataReader reader = command2.ExecuteReader();
                     if (reader.HasRows)
                     {
-                       connect.Close();
+                        connect.Close();
                         timer1.Start();
 
                     }
                     else
                     {
-                        MessageBox.Show("No Entry Found in the child database", "No Results", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("No Entry Found in the Teenager database", "No Results", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     connect.Close();
                 }
@@ -145,6 +116,7 @@ namespace Vaccination_System
                     MessageBox.Show(ex.Message);
                 }
             }
+
         }
         private void vaccinename()
         {
@@ -165,7 +137,7 @@ namespace Vaccination_System
         {
             string connection = "datasource=127.0.0.1; username=root;password=; database =vaccination_system";
             MySqlConnection connect = new MySqlConnection(connection);
-            string query = "select vaccine_name from vaccinated where reg_no='"+regno.Text+"'";
+            string query = "select vaccine_name from vaccinated where reg_no='" + regno.Text + "'";
             MySqlCommand command = new MySqlCommand(query, connect);
             connect.Open();
             MySqlDataReader reader = command.ExecuteReader();
@@ -174,28 +146,29 @@ namespace Vaccination_System
             reader.Close();
             connect.Close();
         }
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             try
             {
-                
+
                 progressbar.Visible = true;
                 progressbar.Increment(1);
                 if (progressbar.Value == 100)
                 {
                     timer1.Stop();
-                string connection = "datasource=127.0.0.1; username=root;password=; database =vaccination_system";
-                MySqlConnection connect = new MySqlConnection(connection);
-                string center = "select center_name from center where center_id = '" + id.Text + "'";
-                MySqlCommand command = new MySqlCommand(center, connect);
-                connect.Open();
-                MySqlDataReader center_read = command.ExecuteReader();
-                center_read.Read();
-                string center_name = center_read["center_name"].ToString();
-                center_read.Close();   
-                string query = "select *from registration where indicator=0 AND reg_no='" + searchreg.Text + "' AND center_name ='" + center_name + "'";
-                MySqlCommand command2 = new MySqlCommand(query, connect);
-                MySqlDataReader reader = command2.ExecuteReader();
+                    string connection = "datasource=127.0.0.1; username=root;password=; database =vaccination_system";
+                    MySqlConnection connect = new MySqlConnection(connection);
+                    string center = "select center_name from center where center_id = '" + id.Text + "'";
+                    MySqlCommand command = new MySqlCommand(center, connect);
+                    connect.Open();
+                    MySqlDataReader center_read = command.ExecuteReader();
+                    center_read.Read();
+                    string center_name = center_read["center_name"].ToString();
+                    center_read.Close();
+                    string query = "select *from registration where indicator=1 AND reg_no='" + searchreg.Text + "' AND center_name ='" + center_name + "'";
+                    MySqlCommand command2 = new MySqlCommand(query, connect);
+                    MySqlDataReader reader = command2.ExecuteReader();
                     reader.Read();
                     regno.Text = reader["reg_no"].ToString();
                     name.Text = reader["name"].ToString();
@@ -204,7 +177,7 @@ namespace Vaccination_System
                     pnum.Text = reader["parent_num"].ToString();
                     gender.Text = reader["gender"].ToString();
                     int birthnum = int.Parse(reader["birth_certificate_num"].ToString());
-                    if (birthnum !=0)
+                    if (birthnum != 0)
                     {
                         bnum.Text = reader["birth_certificate_num"].ToString();
                     }
@@ -213,19 +186,19 @@ namespace Vaccination_System
                         bnum.Text = "N/A";
                     }
                     int doze_1 = int.Parse(reader["doze_1"].ToString());
-                    if(doze_1 != 0)
-                    { 
-                                doze1.Text = "Completed";
-                                checkboxdoze1.Enabled = false;
-                                proceed.Enabled = true;
-                                vacname.Enabled = true;
-                                vac_admin_name.Enabled = true;
-                                datetimepicker.Enabled = true;
-                    }   
-                    
+                    if (doze_1 != 0)
+                    {
+                        doze1.Text = "Completed";
+                        checkboxdoze1.Enabled = false;
+                        proceed.Enabled = true;
+                        vacname.Enabled = true;
+                        vac_admin_name.Enabled = true;
+                        datetimepicker.Enabled = true;
+                    }
+
                     else
                     {
-                        
+
                         doze1.Text = "Not Completed";
                         checkboxdoze1.Enabled = true;
                         proceed.Enabled = true;
@@ -235,11 +208,11 @@ namespace Vaccination_System
 
                     }
                     int doze_2 = int.Parse(reader["doze_2"].ToString());
-                    if(doze_2 != 0)
+                    if (doze_2 != 0)
                     {
                         doze2.Text = "Completed";
                         checkboxdoze2.Enabled = false;
-                        checkboxdoze1.Enabled= false;
+                        checkboxdoze1.Enabled = false;
                         proceed.Enabled = false;
                         vacname.Enabled = false;
                         vac_admin_name.Enabled = false;
@@ -247,7 +220,7 @@ namespace Vaccination_System
                     }
                     else
                     {
-                        
+
                         doze2.Text = "Not Completed";
                         checkboxdoze2.Enabled = true;
                         proceed.Enabled = true;
@@ -267,8 +240,8 @@ namespace Vaccination_System
                     gender.Visible = true;
                     doze1.Visible = true;
                     doze2.Visible = true;
-                    searchreg.Text= String.Empty;
-                    if(doze_1 == 1)
+                    searchreg.Text = String.Empty;
+                    if (doze_1 == 1)
                     {
                         checker();
                     }
@@ -284,91 +257,9 @@ namespace Vaccination_System
             }
         }
 
-        private void proceed_Click(object sender, EventArgs e)
-        {
-            if(vacname.Text == String.Empty)
-            {
-                MessageBox.Show("Please choose a vaccine name", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else if(checkboxdoze1.Checked==false && checkboxdoze2.Checked==false)
-             {
-                MessageBox.Show("Please choose a Doze", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else if(vac_admin_name.Text==String.Empty)
-            {
-                MessageBox.Show("Please enter a vac admin name", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                try
-                {
-                    if (doze1.Text == "Completed")
-                    {
-                        timer6.Start();
-
-                    }
-                    else
-                    {
-
-                        if (bnum.Text == "N/A")
-                        {
-
-                            if (checkboxdoze1.Checked == true)
-                            {
-
-                                timer2.Start();
-
-                            }
-                            else
-                            {
-
-                                timer3.Start();
-                            }
-                        }
-                        else
-                        {
-                            if (checkboxdoze1.Checked == true)
-                            {
-
-                                timer4.Start();
-
-                            }
-                            else
-                            {
-
-                                timer5.Start();
-                            }
-                        }
-                    }
-
-                }
-                catch(Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-            }
-        }
-        private void clear()
-        {
-            vacname.Text = String.Empty;
-            datetimepicker.Text = String.Empty;
-            vac_admin_name.Text = String.Empty;
-            checkboxdoze1.Checked = false;
-            checkboxdoze2.Checked = false;
-            name.Text = String.Empty;
-            fname.Text = String.Empty;
-            regno.Text = String.Empty;
-            mname.Text = String.Empty;
-            bnum.Text = String.Empty;
-            pnum.Text = String.Empty;
-            doze1.Text = String.Empty;
-            doze2.Text = String.Empty;
-            gender.Text = String.Empty;
-            vacname.Items.Clear();
-        }
         private void timer2_Tick(object sender, EventArgs e)
         {
-            int doze=1;
+            int doze = 1;
             progressBar1.Visible = true;
             label29.Visible = true;
             pvalue.Visible = true;
@@ -468,7 +359,7 @@ namespace Vaccination_System
                 }
                 else
                 {
-                    MessageBox.Show("Vaccine "+vacname.Text+" Not available ,Please Contact to the health admin", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Vaccine " + vacname.Text + " Not available ,Please Contact to the health admin", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
         }
@@ -534,11 +425,11 @@ namespace Vaccination_System
             pvalue.Visible = true;
             pvalue.Text = progressBar1.Value.ToString() + "%";
             progressBar1.Increment(1);
-            if(progressBar1.Value == 100)
+            if (progressBar1.Value == 100)
             {
                 timer5.Stop();
                 progressBar1.Value = 0;
-                progressBar1.Visible=false;
+                progressBar1.Visible = false;
                 label29.Visible = false;
                 pvalue.Visible = false;
                 string connection = "datasource=127.0.0.1; username=root;password=; database =vaccination_system";
@@ -584,7 +475,7 @@ namespace Vaccination_System
             progressBar1.Visible = true;
             label29.Visible = true;
             pvalue.Visible = true;
-            pvalue.Text = progressBar1.Value.ToString()+"%";
+            pvalue.Text = progressBar1.Value.ToString() + "%";
             progressBar1.Increment(1);
             if (progressBar1.Value == 100)
             {
@@ -617,7 +508,7 @@ namespace Vaccination_System
                     connect.Open();
                     command.ExecuteNonQuery();
                     connect.Close();
-                    string query2 = "update registration set doze_2 ='" + doze + "' where reg_no='"+regno.Text+"'";
+                    string query2 = "update registration set doze_2 ='" + doze + "'where reg_no='" + regno.Text + "'";
                     MySqlCommand command2 = new MySqlCommand(query2, connect);
                     connect.Open();
                     command2.ExecuteNonQuery();
@@ -630,6 +521,89 @@ namespace Vaccination_System
                     MessageBox.Show("Vaccine " + vacname.Text + " Not available ,Please Contact to the health admin", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
+        }
+
+        private void proceed_Click(object sender, EventArgs e)
+        {
+            if (vacname.Text == String.Empty)
+            {
+                MessageBox.Show("Please choose a vaccine name", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (checkboxdoze1.Checked == false && checkboxdoze2.Checked == false)
+            {
+                MessageBox.Show("Please choose a Doze", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (vac_admin_name.Text == String.Empty)
+            {
+                MessageBox.Show("Please enter a vac admin name", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                try
+                {
+                    if (doze1.Text == "Completed")
+                    {
+                        timer6.Start();
+
+                    }
+                    else
+                    {
+
+                        if (bnum.Text == "N/A")
+                        {
+
+                            if (checkboxdoze1.Checked == true)
+                            {
+
+                                timer2.Start();
+
+                            }
+                            else
+                            {
+
+                                timer3.Start();
+                            }
+                        }
+                        else
+                        {
+                            if (checkboxdoze1.Checked == true)
+                            {
+
+                                timer4.Start();
+
+                            }
+                            else
+                            {
+
+                                timer5.Start();
+                            }
+                        }
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+        private void clear()
+        {
+            vacname.Text = String.Empty;
+            datetimepicker.Text = String.Empty;
+            vac_admin_name.Text = String.Empty;
+            checkboxdoze1.Checked = false;
+            checkboxdoze2.Checked = false;
+            name.Text = String.Empty;
+            fname.Text = String.Empty;
+            regno.Text = String.Empty;
+            mname.Text = String.Empty;
+            bnum.Text = String.Empty;
+            pnum.Text = String.Empty;
+            doze1.Text = String.Empty;
+            doze2.Text = String.Empty;
+            gender.Text = String.Empty;
+            vacname.Items.Clear();
         }
     }
 }

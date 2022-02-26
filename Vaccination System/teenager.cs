@@ -228,7 +228,6 @@ namespace Vaccination_System
                             progressbar.Visible = true;
                             command.ExecuteNonQuery();
                             connect.Close();
-                            connect.Open();
                             timer.Start();
                         }
                     }

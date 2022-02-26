@@ -216,6 +216,12 @@
     <Compile Include="login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
+    <Compile Include="teenagervac.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="teenagervac.Designer.cs">
+      <DependentUpon>teenagervac.cs</DependentUpon>
+    </Compile>
     <Compile Include="Teenager_regcard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -357,6 +363,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="teenager.resx">
       <DependentUpon>teenager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="teenagervac.resx">
+      <DependentUpon>teenagervac.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="teenager_option.resx">
       <DependentUpon>teenager_option.cs</DependentUpon>
