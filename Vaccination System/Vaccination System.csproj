@@ -92,6 +92,9 @@
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="QRCoder, Version=1.4.3.0, Culture=neutral, PublicKeyToken=c4ed5b9ae8358a28, processorArchitecture=MSIL">
+      <HintPath>..\packages\QRCoder.1.4.3\lib\net40\QRCoder.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
@@ -132,6 +135,30 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin.Designer.cs">
+      <DependentUpon>admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin_dashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="admin_dashboard.Designer.cs">
+      <DependentUpon>admin_dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin_login.Designer.cs">
+      <DependentUpon>admin_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adultvac.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="adultvac.Designer.cs">
+      <DependentUpon>adultvac.cs</DependentUpon>
+    </Compile>
     <Compile Include="adult_birth.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,6 +176,18 @@
     </Compile>
     <Compile Include="adult_birth_option.Designer.cs">
       <DependentUpon>adult_birth_option.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adult_birth_regcard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adult_birth_regcard.Designer.cs">
+      <DependentUpon>adult_birth_regcard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adult_certificate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adult_certificate.Designer.cs">
+      <DependentUpon>adult_certificate.cs</DependentUpon>
     </Compile>
     <Compile Include="adult_nid.cs">
       <SubType>Form</SubType>
@@ -168,11 +207,17 @@
     <Compile Include="adult_regcard.Designer.cs">
       <DependentUpon>adult_regcard.cs</DependentUpon>
     </Compile>
-    <Compile Include="adult_regcard2.cs">
+    <Compile Include="center.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="center.Designer.cs">
+      <DependentUpon>center.cs</DependentUpon>
+    </Compile>
+    <Compile Include="certificate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="adult_regcard2.Designer.cs">
-      <DependentUpon>adult_regcard2.cs</DependentUpon>
+    <Compile Include="certificate.Designer.cs">
+      <DependentUpon>certificate.cs</DependentUpon>
     </Compile>
     <Compile Include="child.cs">
       <SubType>Form</SubType>
@@ -186,11 +231,11 @@
     <Compile Include="childvac.Designer.cs">
       <DependentUpon>childvac.cs</DependentUpon>
     </Compile>
-    <Compile Include="dashboard.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="child_certificate.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="dashboard.Designer.cs">
-      <DependentUpon>dashboard.cs</DependentUpon>
+    <Compile Include="child_certificate.Designer.cs">
+      <DependentUpon>child_certificate.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -216,11 +261,23 @@
     <Compile Include="login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
+    <Compile Include="regcard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="regcard.Designer.cs">
+      <DependentUpon>regcard.cs</DependentUpon>
+    </Compile>
     <Compile Include="teenagervac.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="teenagervac.Designer.cs">
       <DependentUpon>teenagervac.cs</DependentUpon>
+    </Compile>
+    <Compile Include="teenager_certificate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="teenager_certificate.Designer.cs">
+      <DependentUpon>teenager_certificate.cs</DependentUpon>
     </Compile>
     <Compile Include="Teenager_regcard.cs">
       <SubType>Form</SubType>
@@ -302,7 +359,46 @@
     <Compile Include="vac_center_adminlogin.Designer.cs">
       <DependentUpon>vac_center_adminlogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="vac_manage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="vac_manage.Designer.cs">
+      <DependentUpon>vac_manage.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="adult_birth_regcard.resx">
+      <DependentUpon>adult_birth_regcard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adult_certificate.resx">
+      <DependentUpon>adult_certificate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="certificate.resx">
+      <DependentUpon>certificate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="child_certificate.resx">
+      <DependentUpon>child_certificate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="regcard.resx">
+      <DependentUpon>regcard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="teenager_certificate.resx">
+      <DependentUpon>teenager_certificate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vac_manage.resx">
+      <DependentUpon>vac_manage.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Resources\Covid-19 Vaccination System-logos_transparent.png" />
+    <EmbeddedResource Include="admin.resx">
+      <DependentUpon>admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin_dashboard.resx">
+      <DependentUpon>admin_dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin_login.resx">
+      <DependentUpon>admin_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adultvac.resx">
+      <DependentUpon>adultvac.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="adult_birth.resx">
       <DependentUpon>adult_birth.cs</DependentUpon>
     </EmbeddedResource>
@@ -321,17 +417,14 @@
     <EmbeddedResource Include="adult_regcard.resx">
       <DependentUpon>adult_regcard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="adult_regcard2.resx">
-      <DependentUpon>adult_regcard2.cs</DependentUpon>
+    <EmbeddedResource Include="center.resx">
+      <DependentUpon>center.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="child.resx">
       <DependentUpon>child.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="childvac.resx">
       <DependentUpon>childvac.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="dashboard.resx">
-      <DependentUpon>dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

@@ -8,34 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using QRCoder;
 namespace Vaccination_System
 {
-    public partial class adult_regcard2 : Form
+    public partial class child_certificate : Form
     {
-        public adult_regcard2()
+        public child_certificate()
         {
             InitializeComponent();
-            Doze();
-            Info();
-        }
-        private void Info()
-        {
-            String connection = "datasource=127.0.0.1;username=root;password=;database=vaccination_system";
-            MySqlConnection connect = new MySqlConnection(connection);
-            string sql = "select *from registration where reg_no='" + regno.Text + "'";
-            MySqlCommand command = new MySqlCommand(sql, connect);
-            connect.Open();
-            MySqlDataReader reader = command.ExecuteReader();
-            reader.Read();
-            name.Text = reader["name"].ToString();
-            nid.Text = reader["nid"].ToString();
-            phoneno.Text = reader["phone_num"].ToString();
-            gender.Text = reader["gender"].ToString();
-            birthdate.Text = reader["birth_date"].ToString();
-            regdate.Text = reader["reg_date"].ToString();
-            center.Text = reader["center_name"].ToString();
-            birthno.Text = reader["birth_certificate_num"].ToString();
-            reader.Close();
+            timer1.Start();
+            qrcode();
         }
         private void Doze()
         {
@@ -82,6 +64,7 @@ namespace Vaccination_System
             }
 
         }
+
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             e.Graphics.DrawImage(bitmap, 0, 0);
@@ -103,22 +86,26 @@ namespace Vaccination_System
             printPreviewDialog1.ShowDialog();
             goback.Visible = true;
             print.Visible = true;
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            timer1.Stop();
+            Doze();
         }
 
         private void goback_Click(object sender, EventArgs e)
         {
-            
-            name.Text = "value";
-            nid.Text = "value";
-            birthdate.Text = "value";
-            phoneno.Text = "value";
-            regno.Text = "value";
-            center.Text = "value";
-            gender.Text = "value";
-            regdate.Text = "value";
-            home home = new home();
             this.Close();
-            home.Show();
+        }
+        private void qrcode()
+        {
+                label24.Text = "Vaccinated";
+                QRCodeGenerator qr = new QRCodeGenerator();
+                QRCodeData qrCode = qr.CreateQrCode(label24.Text,QRCodeGenerator.ECCLevel.Q);
+                QRCode code = new QRCode(qrCode);
+            pic.Image = code.GetGraphic(5);
         }
     }
 }

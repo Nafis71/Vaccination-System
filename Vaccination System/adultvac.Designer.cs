@@ -1,6 +1,6 @@
 ﻿namespace Vaccination_System
 {
-    partial class teenagervac
+    partial class adultvac
     {
         /// <summary> 
         /// Required designer variable.
@@ -59,7 +59,7 @@
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.timer4 = new System.Windows.Forms.Timer(this.components);
             this.timer6 = new System.Windows.Forms.Timer(this.components);
-            this.mname = new System.Windows.Forms.Label();
+            this.nid = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.doze2 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -69,14 +69,12 @@
             this.label18 = new System.Windows.Forms.Label();
             this.gender = new System.Windows.Forms.Label();
             this.bnum = new System.Windows.Forms.Label();
-            this.pnum = new System.Windows.Forms.Label();
-            this.fname = new System.Windows.Forms.Label();
+            this.birthdate = new System.Windows.Forms.Label();
             this.name = new System.Windows.Forms.Label();
             this.regno = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -84,10 +82,12 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.timer5 = new System.Windows.Forms.Timer(this.components);
+            this.label3 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.phoneno = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -404,14 +404,14 @@
             this.timer6.Interval = 30;
             this.timer6.Tick += new System.EventHandler(this.timer6_Tick);
             // 
-            // mname
+            // nid
             // 
-            this.mname.AutoSize = true;
-            this.mname.Location = new System.Drawing.Point(194, 111);
-            this.mname.Name = "mname";
-            this.mname.Size = new System.Drawing.Size(129, 18);
-            this.mname.TabIndex = 18;
-            this.mname.Text = "Waiting For input..";
+            this.nid.AutoSize = true;
+            this.nid.Location = new System.Drawing.Point(194, 82);
+            this.nid.Name = "nid";
+            this.nid.Size = new System.Drawing.Size(129, 18);
+            this.nid.TabIndex = 17;
+            this.nid.Text = "Waiting For input..";
             // 
             // groupBox1
             // 
@@ -423,9 +423,9 @@
             this.groupBox1.Controls.Add(this.label18);
             this.groupBox1.Controls.Add(this.gender);
             this.groupBox1.Controls.Add(this.bnum);
-            this.groupBox1.Controls.Add(this.pnum);
-            this.groupBox1.Controls.Add(this.mname);
-            this.groupBox1.Controls.Add(this.fname);
+            this.groupBox1.Controls.Add(this.birthdate);
+            this.groupBox1.Controls.Add(this.phoneno);
+            this.groupBox1.Controls.Add(this.nid);
             this.groupBox1.Controls.Add(this.name);
             this.groupBox1.Controls.Add(this.regno);
             this.groupBox1.Controls.Add(this.label14);
@@ -522,23 +522,14 @@
             this.bnum.TabIndex = 20;
             this.bnum.Text = "Waiting For input..";
             // 
-            // pnum
+            // birthdate
             // 
-            this.pnum.AutoSize = true;
-            this.pnum.Location = new System.Drawing.Point(194, 140);
-            this.pnum.Name = "pnum";
-            this.pnum.Size = new System.Drawing.Size(129, 18);
-            this.pnum.TabIndex = 19;
-            this.pnum.Text = "Waiting For input..";
-            // 
-            // fname
-            // 
-            this.fname.AutoSize = true;
-            this.fname.Location = new System.Drawing.Point(194, 82);
-            this.fname.Name = "fname";
-            this.fname.Size = new System.Drawing.Size(129, 18);
-            this.fname.TabIndex = 17;
-            this.fname.Text = "Waiting For input..";
+            this.birthdate.AutoSize = true;
+            this.birthdate.Location = new System.Drawing.Point(194, 140);
+            this.birthdate.Name = "birthdate";
+            this.birthdate.Size = new System.Drawing.Size(129, 18);
+            this.birthdate.TabIndex = 19;
+            this.birthdate.Text = "Waiting For input..";
             // 
             // name
             // 
@@ -584,15 +575,6 @@
             this.label12.Size = new System.Drawing.Size(12, 18);
             this.label12.TabIndex = 12;
             this.label12.Text = ":";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(176, 111);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(12, 18);
-            this.label11.TabIndex = 11;
-            this.label11.Text = ":";
             // 
             // label10
             // 
@@ -653,27 +635,18 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(6, 140);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(118, 18);
+            this.label4.Size = new System.Drawing.Size(74, 18);
             this.label4.TabIndex = 4;
-            this.label4.Text = "Parent\'s Number";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 111);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(110, 18);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Mother\'s Name";
+            this.label4.Text = "Birth Date";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(6, 82);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 18);
+            this.label2.Size = new System.Drawing.Size(83, 18);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Father\'s Name";
+            this.label2.Text = "National ID";
             // 
             // label1
             // 
@@ -690,7 +663,34 @@
             this.timer5.Interval = 30;
             this.timer5.Tick += new System.EventHandler(this.timer5_Tick);
             // 
-            // teenagervac
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 111);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(107, 18);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Phone Number";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(176, 111);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(12, 18);
+            this.label11.TabIndex = 11;
+            this.label11.Text = ":";
+            // 
+            // phoneno
+            // 
+            this.phoneno.AutoSize = true;
+            this.phoneno.Location = new System.Drawing.Point(194, 111);
+            this.phoneno.Name = "phoneno";
+            this.phoneno.Size = new System.Drawing.Size(129, 18);
+            this.phoneno.TabIndex = 18;
+            this.phoneno.Text = "Waiting For input..";
+            // 
+            // adultvac
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -700,9 +700,8 @@
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.id);
             this.Controls.Add(this.groupBox1);
-            this.Name = "teenagervac";
+            this.Name = "adultvac";
             this.Size = new System.Drawing.Size(795, 581);
-            this.Load += new System.EventHandler(this.teenagervac_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -748,7 +747,7 @@
         private System.Windows.Forms.Timer timer3;
         private System.Windows.Forms.Timer timer4;
         private System.Windows.Forms.Timer timer6;
-        private System.Windows.Forms.Label mname;
+        private System.Windows.Forms.Label nid;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label doze2;
         private System.Windows.Forms.Label label20;
@@ -758,8 +757,8 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label gender;
         private System.Windows.Forms.Label bnum;
-        private System.Windows.Forms.Label pnum;
-        private System.Windows.Forms.Label fname;
+        private System.Windows.Forms.Label birthdate;
+        private System.Windows.Forms.Label phoneno;
         private System.Windows.Forms.Label name;
         private System.Windows.Forms.Label regno;
         private System.Windows.Forms.Label label14;

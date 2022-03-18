@@ -39,15 +39,15 @@
             this.regcard = new FontAwesome.Sharp.IconButton();
             this.login1 = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.certificate = new FontAwesome.Sharp.IconButton();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.titlebar.SuspendLayout();
             this.animate.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -210,6 +210,26 @@
             this.panel1.Size = new System.Drawing.Size(799, 259);
             this.panel1.TabIndex = 10;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Vaccination_System.Properties.Resources.Covid_19_Vaccination_System_logos_transparent;
+            this.pictureBox2.Location = new System.Drawing.Point(67, 56);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(150, 130);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 12;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Vaccination_System.Properties.Resources.Covid_19_Vaccination_System_logos_transparent;
+            this.pictureBox1.Location = new System.Drawing.Point(603, 56);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(150, 130);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            // 
             // certificate
             // 
             this.certificate.AutoSize = true;
@@ -229,32 +249,13 @@
             this.certificate.TabIndex = 10;
             this.certificate.Text = "Certificate";
             this.certificate.UseVisualStyleBackColor = false;
+            this.certificate.Click += new System.EventHandler(this.certificate_Click);
             // 
             // timer1
             // 
             this.timer1.Enabled = true;
             this.timer1.Interval = 14;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Vaccination_System.Properties.Resources.Covid_19_Vaccination_System_logos_transparent;
-            this.pictureBox1.Location = new System.Drawing.Point(603, 56);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(150, 130);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Vaccination_System.Properties.Resources.Covid_19_Vaccination_System_logos_transparent;
-            this.pictureBox2.Location = new System.Drawing.Point(67, 56);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(150, 130);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 12;
-            this.pictureBox2.TabStop = false;
             // 
             // home
             // 
@@ -277,8 +278,8 @@
             this.animate.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

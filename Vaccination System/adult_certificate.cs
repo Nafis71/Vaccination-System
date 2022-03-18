@@ -8,27 +8,38 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using QRCoder;
 namespace Vaccination_System
 {
-    public partial class child_regcard : Form
+    public partial class adult_certificate : Form
     {
-        public child_regcard()
+        public adult_certificate()
         {
             InitializeComponent();
-           timer1.Start();
-            
+            timer1.Start();
+            qrcode();
         }
-
-        private void back_Click(object sender, EventArgs e)
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
-            
-            this.Hide();
-           
-
+            e.Graphics.DrawImage(bitmap, 0, 0);
         }
-
-        private void doze2_Click(object sender, EventArgs e)
+        Bitmap bitmap;
+        private void print_Click(object sender, EventArgs e)
         {
+            print.Visible = false;
+            goback.Visible = false;
+            Panel panel = new Panel();
+            this.Controls.Add(panel);
+            Graphics graphics = panel.CreateGraphics();
+            Size size = this.ClientSize;
+            bitmap = new Bitmap(size.Width, size.Height, graphics);
+            graphics = Graphics.FromImage(bitmap);
+            Point point = PointToScreen(panel.Location);
+            graphics.CopyFromScreen(point.X, point.Y, 0, 0, size);
+            printPreviewDialog1.Document = printDocument1;
+            printPreviewDialog1.ShowDialog();
+            goback.Visible = true;
+            print.Visible = true;
 
         }
         private void Doze()
@@ -76,40 +87,16 @@ namespace Vaccination_System
             }
 
         }
-
-        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        private void qrcode()
         {
-            e.Graphics.DrawImage(bitmap, 0, 0);
+            label24.Text = "Vaccinated";
+            QRCodeGenerator qr = new QRCodeGenerator();
+            QRCodeData qrCode = qr.CreateQrCode(label24.Text, QRCodeGenerator.ECCLevel.Q);
+            QRCode code = new QRCode(qrCode);
+            pic.Image = code.GetGraphic(5);
         }
-        Bitmap bitmap;
-        private void print_Click(object sender, EventArgs e)
-        {
-            print.Visible = false;
-            goback.Visible = false;
-            Panel panel = new Panel();
-            this.Controls.Add(panel);
-            Graphics graphics = panel.CreateGraphics();
-            Size size = this.ClientSize;
-            bitmap = new Bitmap(size.Width, size.Height, graphics);
-            graphics = Graphics.FromImage(bitmap);
-            Point point = PointToScreen(panel.Location);
-            graphics.CopyFromScreen(point.X, point.Y, 0, 0, size);
-            printPreviewDialog1.Document = printDocument1;
-            printPreviewDialog1.ShowDialog();
-            goback.Visible = true;
-            print.Visible = true;
-        }
-
         private void goback_Click(object sender, EventArgs e)
         {
-            name.Text = "value";
-            fname.Text = "value";
-            birthno.Text = "value";
-            mname.Text = "value";
-            regno.Text = "value";
-            center.Text = "value";
-            gender.Text = "value";
-            regdate.Text = "value";
             this.Close();
         }
 

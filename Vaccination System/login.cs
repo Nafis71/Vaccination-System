@@ -30,5 +30,22 @@ namespace Vaccination_System
             this.Close();
             home.Show();
         }
+
+        private void admin_Click(object sender, EventArgs e)
+        {
+            admin_login admin = new admin_login();
+            this.Close();
+            admin.Show();
+        }
+
+        private void mini_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void iconButtonclose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

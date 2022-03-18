@@ -10,26 +10,12 @@ using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 namespace Vaccination_System
 {
-    public partial class child_regcard : Form
+    public partial class adult_birth_regcard : Form
     {
-        public child_regcard()
+        public adult_birth_regcard()
         {
             InitializeComponent();
-           timer1.Start();
-            
-        }
-
-        private void back_Click(object sender, EventArgs e)
-        {
-            
-            this.Hide();
-           
-
-        }
-
-        private void doze2_Click(object sender, EventArgs e)
-        {
-
+            timer1.Start();
         }
         private void Doze()
         {
@@ -76,7 +62,6 @@ namespace Vaccination_System
             }
 
         }
-
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             e.Graphics.DrawImage(bitmap, 0, 0);
@@ -100,23 +85,15 @@ namespace Vaccination_System
             print.Visible = true;
         }
 
-        private void goback_Click(object sender, EventArgs e)
-        {
-            name.Text = "value";
-            fname.Text = "value";
-            birthno.Text = "value";
-            mname.Text = "value";
-            regno.Text = "value";
-            center.Text = "value";
-            gender.Text = "value";
-            regdate.Text = "value";
-            this.Close();
-        }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             timer1.Stop();
             Doze();
+        }
+
+        private void goback_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

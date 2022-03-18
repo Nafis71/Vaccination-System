@@ -163,6 +163,7 @@ namespace Vaccination_System
             datetimepicker.Text=String.Empty;
             radiobuttonfemale.Checked=false;
             radiobuttonmale.Checked=false;
+            comboboxdivision.Text=String.Empty;
         }
 
         private void timer_Tick(object sender, EventArgs e)
@@ -172,39 +173,34 @@ namespace Vaccination_System
             {
                 timer.Stop();
                 int indicator = 2;
-                MessageBox.Show("Registration Done Please Collect your registration number", "Registration Successfull", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                string con = "datasource =127.0.0.1; username =root;password=; database= vaccination_system";
-                MySqlConnection connect = new MySqlConnection(con);
-                string reg = "Select *from registration where nid = '" + nid.Text + "'and indicator ='" + indicator + "'";
-                MySqlCommand command2 = new MySqlCommand(reg, connect);
-                try
+
+                if (MessageBox.Show("Registration Done Please Collect your registration number", "Registration Successfull", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
                 {
-                    connect.Open();
+                    string con = "datasource =127.0.0.1; username =root;password=; database= vaccination_system";
+                    MySqlConnection connect = new MySqlConnection(con);
+                    string reg = "Select *from registration where nid = '" + nid.Text + "'and indicator ='" + indicator + "'";
+                    MySqlCommand command2 = new MySqlCommand(reg, connect);
                     adult_regcard adult = new adult_regcard();
+                    connect.Open();
                     MySqlDataReader reader = command2.ExecuteReader();
                     while (reader.Read())
-                    {
-                        adult.regno.Text = reader["reg_no"].ToString();
-                        adult.name.Text = reader["name"].ToString();
-                        adult.nid.Text = reader["nid"].ToString();
-                        adult.birthdate.Text = reader["birth_date"].ToString();
-                        adult.center.Text = reader["center_name"].ToString();
-                        adult.regdate.Text = reader["reg_date"].ToString();
-                        adult.gender.Text = reader["gender"].ToString();
-                        adult.phoneno.Text = reader["phone_num"].ToString();
-                        adult.birthno.Text = reader["birth_certificate_num"].ToString();
-                        adult.ShowDialog();
-
+                    { 
+                    adult.regno.Text = reader["reg_no"].ToString();
+                    adult.name.Text = reader["name"].ToString();
+                    adult.nid.Text = reader["nid"].ToString();
+                    adult.birthdate.Text = reader["birth_date"].ToString();
+                    adult.center.Text = reader["center_name"].ToString();
+                    adult.regdate.Text = reader["reg_date"].ToString();
+                    adult.gender.Text = reader["gender"].ToString();
+                    adult.phoneno.Text = reader["phone_num"].ToString();
+                    adult.birthno.Text = reader["birth_certificate_num"].ToString();
+                    adult.ShowDialog();
                     }
+                    connect.Close();
+                    progressbar.Value = 0;
+                    progressbar.Visible = false;
+                    clear();
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                connect.Close();
-                progressbar.Value = 0;
-                progressbar.Visible = false;
-                clear();
             }
         }
 

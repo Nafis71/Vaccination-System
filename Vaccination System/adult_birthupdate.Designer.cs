@@ -47,12 +47,12 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(275, 52);
+            this.label2.Location = new System.Drawing.Point(322, 51);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(294, 23);
+            this.label2.Size = new System.Drawing.Size(196, 23);
             this.label2.TabIndex = 30;
-            this.label2.Text = "Birth Certificate Number Updation";
+            this.label2.Text = "NID Updation Process";
             // 
             // panel1
             // 

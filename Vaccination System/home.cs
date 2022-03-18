@@ -91,9 +91,16 @@ namespace Vaccination_System
 
         private void regcard_Click(object sender, EventArgs e)
         {
-            adult_regcard adult = new adult_regcard();
+            regcard reg = new regcard();
             this.Close();
-            adult.Show();
+            reg.Show();
+        }
+
+        private void certificate_Click(object sender, EventArgs e)
+        {
+            certificate cer = new certificate();
+            this.Close();
+            cer.Show();
         }
     }
    

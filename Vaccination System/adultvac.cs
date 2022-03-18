@@ -11,21 +11,22 @@ using MySql.Data.MySqlClient;
 
 namespace Vaccination_System
 {
-    public partial class teenagervac : UserControl
+    public partial class adultvac : UserControl
     {
-        private static teenagervac instance;
-        public static teenagervac Instance
-        {
-            get
+      
+            private static adultvac instance;
+            public static adultvac Instance
             {
-                if (instance == null)
+                get
+                {
+                    if (instance == null)
 
-                    instance = new teenagervac();
+                        instance = new adultvac();
 
-                return instance;
+                    return instance;
+                }
             }
-        }
-        public teenagervac()
+            public adultvac()
         {
             InitializeComponent();
             proceed.Enabled = false;
@@ -36,9 +37,9 @@ namespace Vaccination_System
             datetimepicker.Enabled = false;
             name.Visible = false;
             regno.Visible = false;
-            fname.Visible = false;
-            mname.Visible = false;
-            pnum.Visible = false;
+            nid.Visible = false;
+            birthdate.Visible = false;
+            phoneno.Visible = false;
             bnum.Visible = false;
             gender.Visible = false;
             doze1.Visible = false;
@@ -75,80 +76,9 @@ namespace Vaccination_System
             }
         }
 
-        private void search_Click(object sender, EventArgs e)
-        {
-            if (searchreg.Text == String.Empty)
-            {
-                MessageBox.Show("Please Enter A Registration Number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-
-
-                string connection = "datasource=127.0.0.1; username=root;password=; database =vaccination_system";
-                MySqlConnection connect = new MySqlConnection(connection);
-                string center = "select center_name from center where center_id = '" + id.Text + "'";
-                MySqlCommand command = new MySqlCommand(center, connect);
-                try
-                {
-                    connect.Open();
-                    MySqlDataReader center_read = command.ExecuteReader();
-                    center_read.Read();
-                    string center_name = center_read["center_name"].ToString();
-                    center_read.Close();
-                    string query = "select *from registration where indicator=1 AND reg_no='" + searchreg.Text + "' AND center_name ='" + center_name + "'";
-                    MySqlCommand command2 = new MySqlCommand(query, connect);
-                    MySqlDataReader reader = command2.ExecuteReader();
-                    if (reader.HasRows)
-                    {
-                        connect.Close();
-                        timer1.Start();
-
-                    }
-                    else
-                    {
-                        MessageBox.Show("No Entry Found in the Teenager database", "No Results", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    connect.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-            }
-
-        }
-        private void vaccinename()
-        {
-            vacname.Items.Clear();
-            string connection = "datasource=127.0.0.1; username=root;password=; database =vaccination_system";
-            MySqlConnection connect = new MySqlConnection(connection);
-            string query3 = "select vaccine_name from vaccine_stock where center_id ='" + id.Text + "'";
-            MySqlCommand command3 = new MySqlCommand(query3, connect);
-            connect.Open();
-            MySqlDataReader reader3 = command3.ExecuteReader();
-            while (reader3.Read())
-            {
-                vacname.Items.Add(reader3["vaccine_name"].ToString());
-            }
-            connect.Close();
-        }
-        private void checker()
-        {
-            string connection = "datasource=127.0.0.1; username=root;password=; database =vaccination_system";
-            MySqlConnection connect = new MySqlConnection(connection);
-            string query = "select vaccine_name from vaccinated where reg_no='" + regno.Text + "'";
-            MySqlCommand command = new MySqlCommand(query, connect);
-            connect.Open();
-            MySqlDataReader reader = command.ExecuteReader();
-            reader.Read();
-            vacname.Items.Add(reader["vaccine_name"].ToString());
-            reader.Close();
-            connect.Close();
-        }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
+
             try
             {
 
@@ -166,15 +96,23 @@ namespace Vaccination_System
                     center_read.Read();
                     string center_name = center_read["center_name"].ToString();
                     center_read.Close();
-                    string query = "select *from registration where indicator=1 AND reg_no='" + searchreg.Text + "' AND center_name ='" + center_name + "'";
+                    string query = "select *from registration where indicator=2 AND reg_no='" + searchreg.Text + "' AND center_name ='" + center_name + "'";
                     MySqlCommand command2 = new MySqlCommand(query, connect);
                     MySqlDataReader reader = command2.ExecuteReader();
                     reader.Read();
                     regno.Text = reader["reg_no"].ToString();
                     name.Text = reader["name"].ToString();
-                    fname.Text = reader["father_name"].ToString();
-                    mname.Text = reader["mother_name"].ToString();
-                    pnum.Text = reader["parent_num"].ToString();
+                    int nid1 = int.Parse(reader["nid"].ToString());
+                    if(nid1 == 0)
+                    {
+                        nid.Text = "N/A";
+                    }
+                    else
+                    {
+                        nid.Text = reader["nid"].ToString();
+                    }
+                    birthdate.Text = reader["birth_date"].ToString();
+                    phoneno.Text = reader["phone_num"].ToString();
                     gender.Text = reader["gender"].ToString();
                     int birthnum = int.Parse(reader["birth_certificate_num"].ToString());
                     if (birthnum != 0)
@@ -233,9 +171,9 @@ namespace Vaccination_System
                     progressbar.Visible = false;
                     name.Visible = true;
                     regno.Visible = true;
-                    fname.Visible = true;
-                    mname.Visible = true;
-                    pnum.Visible = true;
+                    nid.Visible = true;
+                    birthdate.Visible = true;
+                    phoneno.Visible = true;
                     bnum.Visible = true;
                     gender.Visible = true;
                     doze1.Visible = true;
@@ -255,6 +193,34 @@ namespace Vaccination_System
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+        private void vaccinename()
+        {
+            vacname.Items.Clear();
+            string connection = "datasource=127.0.0.1; username=root;password=; database =vaccination_system";
+            MySqlConnection connect = new MySqlConnection(connection);
+            string query3 = "select vaccine_name from vaccine_stock where center_id ='" + id.Text + "'";
+            MySqlCommand command3 = new MySqlCommand(query3, connect);
+            connect.Open();
+            MySqlDataReader reader3 = command3.ExecuteReader();
+            while (reader3.Read())
+            {
+                vacname.Items.Add(reader3["vaccine_name"].ToString());
+            }
+            connect.Close();
+        }
+        private void checker()
+        {
+            string connection = "datasource=127.0.0.1; username=root;password=; database =vaccination_system";
+            MySqlConnection connect = new MySqlConnection(connection);
+            string query = "select vaccine_name from vaccinated where reg_no='" + regno.Text + "'";
+            MySqlCommand command = new MySqlCommand(query, connect);
+            connect.Open();
+            MySqlDataReader reader = command.ExecuteReader();
+            reader.Read();
+            vacname.Items.Add(reader["vaccine_name"].ToString());
+            reader.Close();
+            connect.Close();
         }
 
         private void timer2_Tick(object sender, EventArgs e)
@@ -290,7 +256,7 @@ namespace Vaccination_System
                     connect.Open();
                     command4.ExecuteNonQuery();
                     connect.Close();
-                    string query = "insert into vaccinated(reg_no,name,gender,vaccine_name,doze1,doze1_date,vaccinator_name_doze1) values('" + regno.Text + "','" + name.Text + "','" + gender.Text + "','" + vacname.Text + "','" + doze + "','" + datetimepicker.Text + "','" + vac_admin_name.Text + "')";
+                    string query = "insert into vaccinated(reg_no,name,birth_certificate_num,gender,vaccine_name,doze1,doze1_date,vaccinator_name_doze1) values('" + regno.Text + "','" + name.Text + "','"+bnum.Text+"','" + gender.Text + "','" + vacname.Text + "','" + doze + "','" + datetimepicker.Text + "','" + vac_admin_name.Text + "')";
                     MySqlCommand command = new MySqlCommand(query, connect);
                     connect.Open();
                     command.ExecuteNonQuery();
@@ -344,7 +310,7 @@ namespace Vaccination_System
                     connect.Open();
                     command4.ExecuteNonQuery();
                     connect.Close();
-                    string query = "insert into vaccinated(reg_no,name,gender,vaccine_name,doze2,doze2_date,vaccinator_name_doze2) values('" + regno.Text + "','" + name.Text + "','" + gender.Text + "','" + vacname.Text + "','" + doze + "','" + datetimepicker.Text + "','" + vac_admin_name.Text + "')";
+                    string query = "insert into vaccinated(reg_no,name,birth_certificate_num,gender,vaccine_name,doze2,doze2_date,vaccinator_name_doze2) values('" + regno.Text + "','" + name.Text + "','"+bnum.Text+"','" + gender.Text + "','" + vacname.Text + "','" + doze + "','" + datetimepicker.Text + "','" + vac_admin_name.Text + "')";
                     MySqlCommand command = new MySqlCommand(query, connect);
                     connect.Open();
                     command.ExecuteNonQuery();
@@ -397,7 +363,7 @@ namespace Vaccination_System
                     connect.Open();
                     command4.ExecuteNonQuery();
                     connect.Close();
-                    string query = "insert into vaccinated(reg_no,name,birth_certificate_num,gender,vaccine_name,doze1,doze1_date,vaccinator_name_doze1) values('" + regno.Text + "','" + name.Text + "','" + bnum.Text + "','" + gender.Text + "','" + vacname.Text + "','" + doze + "','" + datetimepicker.Text + "','" + vac_admin_name.Text + "')";
+                    string query = "insert into vaccinated(reg_no,name,nid,gender,vaccine_name,doze1,doze1_date,vaccinator_name_doze1) values('" + regno.Text + "','" + name.Text + "','" + nid.Text + "','" + gender.Text + "','" + vacname.Text + "','" + doze + "','" + datetimepicker.Text + "','" + vac_admin_name.Text + "')";
                     MySqlCommand command = new MySqlCommand(query, connect);
                     connect.Open();
                     command.ExecuteNonQuery();
@@ -450,7 +416,7 @@ namespace Vaccination_System
                     connect.Open();
                     command4.ExecuteNonQuery();
                     connect.Close();
-                    string query = "insert into vaccinated(reg_no,name,birth_certificate_num,gender,vaccine_name,doze2,doze2_date,vaccinator_name_doze2) values('" + regno.Text + "','" + name.Text + "','" + bnum.Text + "','" + gender.Text + "','" + vacname.Text + "','" + doze + "','" + datetimepicker.Text + "','" + vac_admin_name.Text + "')";
+                    string query = "insert into vaccinated(reg_no,name,nid,gender,vaccine_name,doze2,doze2_date,vaccinator_name_doze2) values('" + regno.Text + "','" + name.Text + "','" + nid.Text + "','" + gender.Text + "','" + vacname.Text + "','" + doze + "','" + datetimepicker.Text + "','" + vac_admin_name.Text + "')";
                     MySqlCommand command = new MySqlCommand(query, connect);
                     connect.Open();
                     command.ExecuteNonQuery();
@@ -508,7 +474,7 @@ namespace Vaccination_System
                     connect.Open();
                     command.ExecuteNonQuery();
                     connect.Close();
-                    string query2 = "update registration set doze_2 ='" + doze + "'where reg_no='" + regno.Text + "'";
+                    string query2 = "update registration set doze_2 ='" + doze + "' where reg_no='" + regno.Text + "'";
                     MySqlCommand command2 = new MySqlCommand(query2, connect);
                     connect.Open();
                     command2.ExecuteNonQuery();
@@ -521,6 +487,68 @@ namespace Vaccination_System
                     MessageBox.Show("Vaccine " + vacname.Text + " Not available ,Please Contact to the health admin", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
+        }
+
+        private void search_Click(object sender, EventArgs e)
+        {
+            if (searchreg.Text == String.Empty)
+            {
+                MessageBox.Show("Please Enter A Registration Number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+
+
+                string connection = "datasource=127.0.0.1; username=root;password=; database =vaccination_system";
+                MySqlConnection connect = new MySqlConnection(connection);
+                string center = "select center_name from center where center_id = '" + id.Text + "'";
+                MySqlCommand command = new MySqlCommand(center, connect);
+                try
+                {
+                    connect.Open();
+                    MySqlDataReader center_read = command.ExecuteReader();
+                    center_read.Read();
+                    string center_name = center_read["center_name"].ToString();
+                    center_read.Close();
+                    string query = "select *from registration where indicator=2 AND reg_no='" + searchreg.Text + "' AND center_name ='" + center_name + "'";
+                    MySqlCommand command2 = new MySqlCommand(query, connect);
+                    MySqlDataReader reader = command2.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        connect.Close();
+                        timer1.Start();
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("No Entry Found in the child database", "No Results", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    connect.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            
+        }
+        private void clear()
+        {
+            vacname.Text = String.Empty;
+            datetimepicker.Text = String.Empty;
+            vac_admin_name.Text = String.Empty;
+            checkboxdoze1.Checked = false;
+            checkboxdoze2.Checked = false;
+            name.Text = String.Empty;
+            nid.Text = String.Empty;
+            regno.Text = String.Empty;
+            birthdate.Text = String.Empty;
+            bnum.Text = String.Empty;
+            phoneno.Text = String.Empty;
+            doze1.Text = String.Empty;
+            doze2.Text = String.Empty;
+            gender.Text = String.Empty;
+            vacname.Items.Clear();
         }
 
         private void proceed_Click(object sender, EventArgs e)
@@ -549,7 +577,7 @@ namespace Vaccination_System
                     else
                     {
 
-                        if (bnum.Text == "N/A")
+                        if (nid.Text == "N/A")
                         {
 
                             if (checkboxdoze1.Checked == true)
@@ -586,29 +614,6 @@ namespace Vaccination_System
                     MessageBox.Show(ex.Message);
                 }
             }
-        }
-        private void clear()
-        {
-            vacname.Text = String.Empty;
-            datetimepicker.Text = String.Empty;
-            vac_admin_name.Text = String.Empty;
-            checkboxdoze1.Checked = false;
-            checkboxdoze2.Checked = false;
-            name.Text = String.Empty;
-            fname.Text = String.Empty;
-            regno.Text = String.Empty;
-            mname.Text = String.Empty;
-            bnum.Text = String.Empty;
-            pnum.Text = String.Empty;
-            doze1.Text = String.Empty;
-            doze2.Text = String.Empty;
-            gender.Text = String.Empty;
-            vacname.Items.Clear();
-        }
-
-        private void teenagervac_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

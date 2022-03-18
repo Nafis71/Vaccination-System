@@ -16,7 +16,7 @@ namespace Vaccination_System
         public adult_regcard()
         {
             InitializeComponent();
-            Doze();
+            timer1.Start();
             
         }
         
@@ -130,6 +130,12 @@ namespace Vaccination_System
         private void adult_regcard_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            timer1.Stop();
+            Doze();
         }
     }
 }

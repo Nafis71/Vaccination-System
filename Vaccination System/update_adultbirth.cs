@@ -50,8 +50,8 @@ namespace Vaccination_System
                         connect.Open();
                         command.ExecuteNonQuery();
                         newnid.Text = String.Empty;
-                        MessageBox.Show("Birth Certificate Number Updated Successfully", "Updation Complete", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        String query3 = "select birth_certificate_num from registration where reg_no ='" + regno.Text + "'And indicator ='" + indicator + "'";
+                        MessageBox.Show("NID Updated Successfully", "Updation Complete", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        String query3 = "select nid from registration where reg_no ='" + regno.Text + "'And indicator ='" + indicator + "'";
                         MySqlCommand commmand4 = new MySqlCommand(query3, connect);
                         MySqlDataReader reader3 = commmand4.ExecuteReader();
                         reader3.Read();

@@ -193,8 +193,25 @@ namespace Vaccination_System
             vac_admin_dashboard.Instance.child.Text = "fetching...";
             vac_admin_dashboard.Instance.teenager.Text = "fetching...";
             this.Hide();
-
             admin.Show();
+        }
+
+        private void adultvac1_Click(object sender, EventArgs e)
+        {
+            if (!panel4.Controls.Contains(adultvac.Instance))
+            {
+                panel4.Controls.Add(adultvac.Instance);
+                adultvac.Instance.Dock = DockStyle.Fill;
+                adultvac.Instance.BringToFront();
+                adultvac.Instance.id.Text = hid.Text;
+                title.Text = "Adult Vaccination";
+
+            }
+            else
+            {
+                adultvac.Instance.BringToFront();
+                title.Text = "Adult Vaccination";
+            }
         }
     }
 }

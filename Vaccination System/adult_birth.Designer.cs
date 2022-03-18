@@ -41,10 +41,14 @@
             this.datetimepicker = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.comboboxdivision = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.progressbar = new System.Windows.Forms.ProgressBar();
             this.label2 = new System.Windows.Forms.Label();
             this.phone = new System.Windows.Forms.TextBox();
+            this.register = new FontAwesome.Sharp.IconButton();
             this.radiobuttonfemale = new System.Windows.Forms.RadioButton();
             this.radiobuttonmale = new System.Windows.Forms.RadioButton();
             this.label7 = new System.Windows.Forms.Label();
@@ -53,15 +57,11 @@
             this.name = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.close = new FontAwesome.Sharp.IconButton();
+            this.minimize = new FontAwesome.Sharp.IconButton();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.back = new FontAwesome.Sharp.IconButton();
             this.goback = new FontAwesome.Sharp.IconButton();
-            this.register = new FontAwesome.Sharp.IconButton();
-            this.close = new FontAwesome.Sharp.IconButton();
-            this.minimize = new FontAwesome.Sharp.IconButton();
-            this.comboboxdivision = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -233,6 +233,50 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registration";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(146, 255);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(12, 18);
+            this.label9.TabIndex = 95;
+            this.label9.Text = ":";
+            // 
+            // comboboxdivision
+            // 
+            this.comboboxdivision.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.comboboxdivision.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboboxdivision.FormattingEnabled = true;
+            this.comboboxdivision.Items.AddRange(new object[] {
+            "Barishal",
+            "Chattogram",
+            "Dhaka",
+            "Khulna",
+            "Rajshahi",
+            "Rangpur",
+            "Mymensingh",
+            "Sylhet"});
+            this.comboboxdivision.Location = new System.Drawing.Point(178, 252);
+            this.comboboxdivision.Name = "comboboxdivision";
+            this.comboboxdivision.Size = new System.Drawing.Size(255, 26);
+            this.comboboxdivision.TabIndex = 94;
+            this.comboboxdivision.SelectedIndexChanged += new System.EventHandler(this.comboboxdivision_SelectedIndexChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(14, 257);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(110, 17);
+            this.label5.TabIndex = 93;
+            this.label5.Text = "Choose Division";
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -275,6 +319,28 @@
             this.phone.Name = "phone";
             this.phone.Size = new System.Drawing.Size(255, 27);
             this.phone.TabIndex = 69;
+            // 
+            // register
+            // 
+            this.register.BackColor = System.Drawing.Color.Snow;
+            this.register.Cursor = System.Windows.Forms.Cursors.Default;
+            this.register.FlatAppearance.BorderColor = System.Drawing.Color.YellowGreen;
+            this.register.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.register.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.register.ForeColor = System.Drawing.Color.ForestGreen;
+            this.register.IconChar = FontAwesome.Sharp.IconChar.Save;
+            this.register.IconColor = System.Drawing.Color.ForestGreen;
+            this.register.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.register.IconSize = 23;
+            this.register.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.register.Location = new System.Drawing.Point(175, 412);
+            this.register.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.register.Name = "register";
+            this.register.Size = new System.Drawing.Size(152, 45);
+            this.register.TabIndex = 60;
+            this.register.Text = "Register";
+            this.register.UseVisualStyleBackColor = false;
+            this.register.Click += new System.EventHandler(this.register_Click);
             // 
             // radiobuttonfemale
             // 
@@ -375,6 +441,40 @@
             this.panel1.Size = new System.Drawing.Size(809, 49);
             this.panel1.TabIndex = 61;
             // 
+            // close
+            // 
+            this.close.FlatAppearance.BorderSize = 0;
+            this.close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.close.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.close.ForeColor = System.Drawing.Color.IndianRed;
+            this.close.IconChar = FontAwesome.Sharp.IconChar.Times;
+            this.close.IconColor = System.Drawing.Color.IndianRed;
+            this.close.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.close.IconSize = 25;
+            this.close.Location = new System.Drawing.Point(762, 9);
+            this.close.Name = "close";
+            this.close.Size = new System.Drawing.Size(44, 28);
+            this.close.TabIndex = 7;
+            this.close.UseVisualStyleBackColor = true;
+            this.close.Click += new System.EventHandler(this.close_Click);
+            // 
+            // minimize
+            // 
+            this.minimize.FlatAppearance.BorderSize = 0;
+            this.minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.minimize.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.minimize.ForeColor = System.Drawing.Color.IndianRed;
+            this.minimize.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
+            this.minimize.IconColor = System.Drawing.Color.IndianRed;
+            this.minimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.minimize.IconSize = 25;
+            this.minimize.Location = new System.Drawing.Point(712, 9);
+            this.minimize.Name = "minimize";
+            this.minimize.Size = new System.Drawing.Size(44, 28);
+            this.minimize.TabIndex = 6;
+            this.minimize.UseVisualStyleBackColor = true;
+            this.minimize.Click += new System.EventHandler(this.minimize_Click);
+            // 
             // timer
             // 
             this.timer.Interval = 30;
@@ -422,106 +522,6 @@
             this.goback.Size = new System.Drawing.Size(57, 45);
             this.goback.TabIndex = 65;
             this.goback.UseVisualStyleBackColor = false;
-            // 
-            // register
-            // 
-            this.register.BackColor = System.Drawing.Color.Snow;
-            this.register.Cursor = System.Windows.Forms.Cursors.Default;
-            this.register.FlatAppearance.BorderColor = System.Drawing.Color.YellowGreen;
-            this.register.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.register.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.register.ForeColor = System.Drawing.Color.ForestGreen;
-            this.register.IconChar = FontAwesome.Sharp.IconChar.Save;
-            this.register.IconColor = System.Drawing.Color.ForestGreen;
-            this.register.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.register.IconSize = 23;
-            this.register.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.register.Location = new System.Drawing.Point(175, 412);
-            this.register.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.register.Name = "register";
-            this.register.Size = new System.Drawing.Size(152, 45);
-            this.register.TabIndex = 60;
-            this.register.Text = "Register";
-            this.register.UseVisualStyleBackColor = false;
-            this.register.Click += new System.EventHandler(this.register_Click);
-            // 
-            // close
-            // 
-            this.close.FlatAppearance.BorderSize = 0;
-            this.close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.close.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.close.ForeColor = System.Drawing.Color.IndianRed;
-            this.close.IconChar = FontAwesome.Sharp.IconChar.Times;
-            this.close.IconColor = System.Drawing.Color.IndianRed;
-            this.close.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.close.IconSize = 25;
-            this.close.Location = new System.Drawing.Point(762, 9);
-            this.close.Name = "close";
-            this.close.Size = new System.Drawing.Size(44, 28);
-            this.close.TabIndex = 7;
-            this.close.UseVisualStyleBackColor = true;
-            this.close.Click += new System.EventHandler(this.close_Click);
-            // 
-            // minimize
-            // 
-            this.minimize.FlatAppearance.BorderSize = 0;
-            this.minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.minimize.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.minimize.ForeColor = System.Drawing.Color.IndianRed;
-            this.minimize.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
-            this.minimize.IconColor = System.Drawing.Color.IndianRed;
-            this.minimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.minimize.IconSize = 25;
-            this.minimize.Location = new System.Drawing.Point(712, 9);
-            this.minimize.Name = "minimize";
-            this.minimize.Size = new System.Drawing.Size(44, 28);
-            this.minimize.TabIndex = 6;
-            this.minimize.UseVisualStyleBackColor = true;
-            this.minimize.Click += new System.EventHandler(this.minimize_Click);
-            // 
-            // comboboxdivision
-            // 
-            this.comboboxdivision.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.comboboxdivision.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboboxdivision.FormattingEnabled = true;
-            this.comboboxdivision.Items.AddRange(new object[] {
-            "Barishal",
-            "Chattogram",
-            "Dhaka",
-            "Khulna",
-            "Rajshahi",
-            "Rangpur",
-            "Mymensingh",
-            "Sylhet"});
-            this.comboboxdivision.Location = new System.Drawing.Point(178, 252);
-            this.comboboxdivision.Name = "comboboxdivision";
-            this.comboboxdivision.Size = new System.Drawing.Size(255, 26);
-            this.comboboxdivision.TabIndex = 94;
-            this.comboboxdivision.SelectedIndexChanged += new System.EventHandler(this.comboboxdivision_SelectedIndexChanged);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(14, 257);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(110, 17);
-            this.label5.TabIndex = 93;
-            this.label5.Text = "Choose Division";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(146, 255);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(12, 18);
-            this.label9.TabIndex = 95;
-            this.label9.Text = ":";
             // 
             // adult_birth
             // 

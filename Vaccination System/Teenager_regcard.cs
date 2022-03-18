@@ -16,7 +16,7 @@ namespace Vaccination_System
         public Teenager_regcard()
         {
             InitializeComponent();
-            Doze();
+            timer1.Start(); 
         }
 
         private void label22_Click(object sender, EventArgs e)
@@ -95,6 +95,12 @@ namespace Vaccination_System
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             e.Graphics.DrawImage(bitmap, 0, 0);
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            timer1.Stop();
+            Doze();
         }
     }
 }

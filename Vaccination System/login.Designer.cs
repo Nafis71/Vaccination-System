@@ -30,15 +30,15 @@
         {
             this.admin = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.mini = new FontAwesome.Sharp.IconButton();
             this.label3 = new System.Windows.Forms.Label();
+            this.iconButtonclose = new FontAwesome.Sharp.IconButton();
             this.minimize = new FontAwesome.Sharp.IconButton();
             this.close = new FontAwesome.Sharp.IconButton();
             this.back = new FontAwesome.Sharp.IconButton();
             this.label4 = new System.Windows.Forms.Label();
             this.vaccenteradmin = new FontAwesome.Sharp.IconButton();
-            this.iconButtonclose = new FontAwesome.Sharp.IconButton();
-            this.mini = new FontAwesome.Sharp.IconButton();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,6 +61,7 @@
             this.admin.TabIndex = 20;
             this.admin.Text = "Admin";
             this.admin.UseVisualStyleBackColor = false;
+            this.admin.Click += new System.EventHandler(this.admin_Click);
             // 
             // panel2
             // 
@@ -76,6 +77,34 @@
             this.panel2.Size = new System.Drawing.Size(783, 36);
             this.panel2.TabIndex = 18;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(253, 2);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(332, 29);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Covid-19 Vaccination System";
+            // 
+            // mini
+            // 
+            this.mini.FlatAppearance.BorderSize = 0;
+            this.mini.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.mini.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mini.ForeColor = System.Drawing.Color.IndianRed;
+            this.mini.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
+            this.mini.IconColor = System.Drawing.Color.IndianRed;
+            this.mini.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.mini.IconSize = 25;
+            this.mini.Location = new System.Drawing.Point(711, 2);
+            this.mini.Name = "mini";
+            this.mini.Size = new System.Drawing.Size(44, 28);
+            this.mini.TabIndex = 4;
+            this.mini.UseVisualStyleBackColor = true;
+            this.mini.Click += new System.EventHandler(this.mini_Click);
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -86,6 +115,23 @@
             this.label3.Size = new System.Drawing.Size(332, 29);
             this.label3.TabIndex = 2;
             this.label3.Text = "Covid-19 Vaccination System";
+            // 
+            // iconButtonclose
+            // 
+            this.iconButtonclose.FlatAppearance.BorderSize = 0;
+            this.iconButtonclose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonclose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButtonclose.ForeColor = System.Drawing.Color.IndianRed;
+            this.iconButtonclose.IconChar = FontAwesome.Sharp.IconChar.Times;
+            this.iconButtonclose.IconColor = System.Drawing.Color.IndianRed;
+            this.iconButtonclose.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButtonclose.IconSize = 25;
+            this.iconButtonclose.Location = new System.Drawing.Point(741, 2);
+            this.iconButtonclose.Name = "iconButtonclose";
+            this.iconButtonclose.Size = new System.Drawing.Size(44, 28);
+            this.iconButtonclose.TabIndex = 3;
+            this.iconButtonclose.UseVisualStyleBackColor = true;
+            this.iconButtonclose.Click += new System.EventHandler(this.iconButtonclose_Click);
             // 
             // minimize
             // 
@@ -172,49 +218,6 @@
             this.vaccenteradmin.Text = "  VAC Center Admin";
             this.vaccenteradmin.UseVisualStyleBackColor = false;
             this.vaccenteradmin.Click += new System.EventHandler(this.vaccenteradmin_Click);
-            // 
-            // iconButtonclose
-            // 
-            this.iconButtonclose.FlatAppearance.BorderSize = 0;
-            this.iconButtonclose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButtonclose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButtonclose.ForeColor = System.Drawing.Color.IndianRed;
-            this.iconButtonclose.IconChar = FontAwesome.Sharp.IconChar.Times;
-            this.iconButtonclose.IconColor = System.Drawing.Color.IndianRed;
-            this.iconButtonclose.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButtonclose.IconSize = 25;
-            this.iconButtonclose.Location = new System.Drawing.Point(741, 2);
-            this.iconButtonclose.Name = "iconButtonclose";
-            this.iconButtonclose.Size = new System.Drawing.Size(44, 28);
-            this.iconButtonclose.TabIndex = 3;
-            this.iconButtonclose.UseVisualStyleBackColor = true;
-            // 
-            // mini
-            // 
-            this.mini.FlatAppearance.BorderSize = 0;
-            this.mini.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.mini.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mini.ForeColor = System.Drawing.Color.IndianRed;
-            this.mini.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
-            this.mini.IconColor = System.Drawing.Color.IndianRed;
-            this.mini.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.mini.IconSize = 25;
-            this.mini.Location = new System.Drawing.Point(711, 2);
-            this.mini.Name = "mini";
-            this.mini.Size = new System.Drawing.Size(44, 28);
-            this.mini.TabIndex = 4;
-            this.mini.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(253, 2);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(332, 29);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Covid-19 Vaccination System";
             // 
             // login
             // 

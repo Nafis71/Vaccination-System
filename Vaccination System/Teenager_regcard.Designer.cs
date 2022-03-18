@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Teenager_regcard));
             this.regdate = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
@@ -64,8 +65,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.print = new FontAwesome.Sharp.IconButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label23 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -87,13 +86,16 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.goback = new FontAwesome.Sharp.IconButton();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.print = new FontAwesome.Sharp.IconButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.goback = new FontAwesome.Sharp.IconButton();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // regdate
@@ -470,38 +472,6 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Name";
             // 
-            // print
-            // 
-            this.print.BackColor = System.Drawing.Color.Snow;
-            this.print.Cursor = System.Windows.Forms.Cursors.Default;
-            this.print.FlatAppearance.BorderColor = System.Drawing.Color.YellowGreen;
-            this.print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.print.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.print.ForeColor = System.Drawing.Color.ForestGreen;
-            this.print.IconChar = FontAwesome.Sharp.IconChar.Print;
-            this.print.IconColor = System.Drawing.Color.ForestGreen;
-            this.print.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.print.IconSize = 23;
-            this.print.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.print.Location = new System.Drawing.Point(434, 414);
-            this.print.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.print.Name = "print";
-            this.print.Size = new System.Drawing.Size(114, 45);
-            this.print.TabIndex = 78;
-            this.print.Text = "Print";
-            this.print.UseVisualStyleBackColor = false;
-            this.print.Click += new System.EventHandler(this.print_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Vaccination_System.Properties.Resources.Covid_19_Vaccination_System_logos_transparent;
-            this.pictureBox1.Location = new System.Drawing.Point(674, 368);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(131, 124);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 79;
-            this.pictureBox1.TabStop = false;
-            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.regdate);
@@ -738,6 +708,52 @@
             this.label22.Text = "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" +
     "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━";
             // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // print
+            // 
+            this.print.BackColor = System.Drawing.Color.Snow;
+            this.print.Cursor = System.Windows.Forms.Cursors.Default;
+            this.print.FlatAppearance.BorderColor = System.Drawing.Color.YellowGreen;
+            this.print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.print.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.print.ForeColor = System.Drawing.Color.ForestGreen;
+            this.print.IconChar = FontAwesome.Sharp.IconChar.Print;
+            this.print.IconColor = System.Drawing.Color.ForestGreen;
+            this.print.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.print.IconSize = 23;
+            this.print.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.print.Location = new System.Drawing.Point(434, 414);
+            this.print.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.print.Name = "print";
+            this.print.Size = new System.Drawing.Size(114, 45);
+            this.print.TabIndex = 78;
+            this.print.Text = "Print";
+            this.print.UseVisualStyleBackColor = false;
+            this.print.Click += new System.EventHandler(this.print_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Vaccination_System.Properties.Resources.Covid_19_Vaccination_System_logos_transparent;
+            this.pictureBox1.Location = new System.Drawing.Point(674, 368);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(131, 124);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 79;
+            this.pictureBox1.TabStop = false;
+            // 
             // goback
             // 
             this.goback.BackColor = System.Drawing.Color.Transparent;
@@ -761,19 +777,9 @@
             this.goback.UseVisualStyleBackColor = false;
             this.goback.Click += new System.EventHandler(this.goback_Click);
             // 
-            // printPreviewDialog1
+            // timer1
             // 
-            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
-            this.printPreviewDialog1.Enabled = true;
-            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
-            this.printPreviewDialog1.Name = "printPreviewDialog1";
-            this.printPreviewDialog1.Visible = false;
-            // 
-            // printDocument1
-            // 
-            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Teenager_regcard
             // 
@@ -795,11 +801,11 @@
             this.Text = "Teenager_regcard";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -868,5 +874,6 @@
         private FontAwesome.Sharp.IconButton goback;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.Timer timer1;
     }
 }

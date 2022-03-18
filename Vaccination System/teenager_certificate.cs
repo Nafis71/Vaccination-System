@@ -8,28 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using QRCoder;
 namespace Vaccination_System
 {
-    public partial class child_regcard : Form
+    public partial class teenager_certificate : Form
     {
-        public child_regcard()
+        public teenager_certificate()
         {
             InitializeComponent();
-           timer1.Start();
-            
-        }
-
-        private void back_Click(object sender, EventArgs e)
-        {
-            
-            this.Hide();
-           
-
-        }
-
-        private void doze2_Click(object sender, EventArgs e)
-        {
-
+            timer1.Start();
+            qrcode();
         }
         private void Doze()
         {
@@ -76,7 +64,11 @@ namespace Vaccination_System
             }
 
         }
-
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            timer1.Stop();
+            Doze();
+        }
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             e.Graphics.DrawImage(bitmap, 0, 0);
@@ -99,24 +91,18 @@ namespace Vaccination_System
             goback.Visible = true;
             print.Visible = true;
         }
+        private void qrcode()
+        {
+            label24.Text = "Vaccinated";
+            QRCodeGenerator qr = new QRCodeGenerator();
+            QRCodeData qrCode = qr.CreateQrCode(label24.Text, QRCodeGenerator.ECCLevel.Q);
+            QRCode code = new QRCode(qrCode);
+            pic.Image = code.GetGraphic(5);
+        }
 
         private void goback_Click(object sender, EventArgs e)
         {
-            name.Text = "value";
-            fname.Text = "value";
-            birthno.Text = "value";
-            mname.Text = "value";
-            regno.Text = "value";
-            center.Text = "value";
-            gender.Text = "value";
-            regdate.Text = "value";
             this.Close();
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            timer1.Stop();
-            Doze();
         }
     }
 }
